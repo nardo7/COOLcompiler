@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COOL", "COOL\COOL.csproj", "{6008858F-2958-4B4B-88EF-D464197315B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LexingParsingCOOL", "LexingParsingCOOL\LexingParsingCOOL.csproj", "{46DBB260-03BE-4C01-B33D-1E25B1F08627}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COOLLenguage", "COOLLenguage\COOLLenguage.csproj", "{D69DEB86-BEA6-40C3-A300-FB1DA00EDB69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6008858F-2958-4B4B-88EF-D464197315B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6008858F-2958-4B4B-88EF-D464197315B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6008858F-2958-4B4B-88EF-D464197315B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6008858F-2958-4B4B-88EF-D464197315B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46DBB260-03BE-4C01-B33D-1E25B1F08627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46DBB260-03BE-4C01-B33D-1E25B1F08627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46DBB260-03BE-4C01-B33D-1E25B1F08627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46DBB260-03BE-4C01-B33D-1E25B1F08627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D69DEB86-BEA6-40C3-A300-FB1DA00EDB69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D69DEB86-BEA6-40C3-A300-FB1DA00EDB69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D69DEB86-BEA6-40C3-A300-FB1DA00EDB69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D69DEB86-BEA6-40C3-A300-FB1DA00EDB69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
