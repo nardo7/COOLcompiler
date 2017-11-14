@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LexingParsingCOOL.COOLCommonTreeAdaptor" Collapsed="true">
+    <Position X="4" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>COOLCommonTreeAdaptor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LexingParsingCOOL.Parser" Collapsed="true">
+    <Position X="5.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Class1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LexingParsingCOOL.COOLCommonErrorNode" Collapsed="true">
+    <Position X="6.5" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAECgABAAAQAACAAAAAA=</HashCode>
+      <FileName>COOLCommonErrorNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COOLLexer" Collapsed="true">
+    <Position X="6.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>r5nrNIzbb3c/+s64+/P3vkvgifPvG+N4ihfsmSXW174=</HashCode>
+      <FileName>COOLLexer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

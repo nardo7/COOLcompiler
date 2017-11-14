@@ -48,6 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="COOLCommonErrorNode.cs" />
+    <Compile Include="COOLCommonTree.cs" />
+    <Compile Include="COOLCommonTreeAdaptor.cs" />
     <Compile Include="COOLLexer.cs" />
     <Compile Include="COOLParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,6 +61,7 @@
       <CustomToolNamespace>LexingParsingCOOL</CustomToolNamespace>
       <TargetLanguage>CSharp3</TargetLanguage>
     </Antlr3>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -65,6 +69,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="correct.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\COOLLenguage\COOLLenguage.csproj">
+      <Project>{d69deb86-bea6-40c3-a300-fb1da00edb69}</Project>
+      <Name>COOLLenguage</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

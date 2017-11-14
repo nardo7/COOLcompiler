@@ -42,6 +42,35 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SemanticCheck\AST1\ArithmeticOperation.cs" />
+    <Compile Include="SemanticCheck\AST1\Assignment.cs" />
+    <Compile Include="SemanticCheck\AST1\Attribute.cs" />
+    <Compile Include="SemanticCheck\AST1\BinaryExpression.cs" />
+    <Compile Include="SemanticCheck\AST1\Block.cs" />
+    <Compile Include="SemanticCheck\AST1\Case.cs" />
+    <Compile Include="SemanticCheck\AST1\Class.cs" />
+    <Compile Include="SemanticCheck\AST1\Comparison.cs" />
+    <Compile Include="SemanticCheck\AST1\Conditional.cs" />
+    <Compile Include="SemanticCheck\AST1\Constant.cs" />
+    <Compile Include="SemanticCheck\AST1\Dispatch.cs" />
+    <Compile Include="SemanticCheck\AST1\Expression.cs" />
+    <Compile Include="SemanticCheck\AST1\Feature.cs" />
+    <Compile Include="SemanticCheck\AST1\IAttribute.cs" />
+    <Compile Include="SemanticCheck\AST1\Ident.cs" />
+    <Compile Include="SemanticCheck\AST1\IMethod.cs" />
+    <Compile Include="SemanticCheck\AST1\Initializer.cs" />
+    <Compile Include="SemanticCheck\AST1\IsVoid.cs" />
+    <Compile Include="SemanticCheck\AST1\IType.cs" />
+    <Compile Include="SemanticCheck\AST1\Let.cs" />
+    <Compile Include="SemanticCheck\AST1\Loop.cs" />
+    <Compile Include="SemanticCheck\AST1\Method.cs" />
+    <Compile Include="SemanticCheck\AST1\New.cs" />
+    <Compile Include="SemanticCheck\AST1\Node.cs" />
+    <Compile Include="SemanticCheck\AST1\Not.cs" />
+    <Compile Include="SemanticCheck\AST1\Param.cs" />
+    <Compile Include="SemanticCheck\AST1\Program.cs" />
+    <Compile Include="SemanticCheck\AST1\UnaryExpression.cs" />
+    <Compile Include="SemanticCheck\AST1\While.cs" />
     <Compile Include="SemanticCheck\AST\ArithmeticOperation.cs" />
     <Compile Include="SemanticCheck\AST\Assignment.cs" />
     <Compile Include="SemanticCheck\AST\Attribute.cs" />
@@ -70,8 +99,11 @@
     <Compile Include="SemanticCheck\AST\Program.cs" />
     <Compile Include="SemanticCheck\AST\UnaryExpression.cs" />
     <Compile Include="SemanticCheck\AST\While.cs" />
+    <Compile Include="Utils\ErrorLogger.cs" />
+    <Compile Include="Utils\IErrorLogger.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="SemanticCheck\AST1\ClassDiagram1.cd" />
     <None Include="SemanticCheck\AST\AST.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

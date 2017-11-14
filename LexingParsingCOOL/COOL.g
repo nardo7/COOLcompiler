@@ -2,8 +2,11 @@ grammar COOL;
 options{
 language=CSharp3;
 output=AST;
+ASTLabelType=COOLCommonTree;
 }
+
 tokens{
+PROGRAM;
 PARAM;
 PARAMLIST;
 METHODEFINITION;
@@ -13,14 +16,31 @@ VAR_DECLARATION_LIST;
 VAR_DECLARATION;
 ATTRIBUTE;
 METHOD;
+BLOCK;
+DISPATCH;
+CONDITION;
+}
+@header{
+using LexingParsingCOOL;
 }
 @lexer::members {
     public const int HIDDEN = Hidden;
+     public enum tokens
+    {
+        ARROBA = 4, ASSIGNMENT_LIST, ASSING, ATTRIBUTE, BLOCK, BODY, BOOLEAN,
+        CASE, CHAR, CLASS, CL_LLAVE, CL_PARENT, COMA, COMMENT, DIGIT, DISPATCH, DIV,
+        DOUBLEP, ELSE, END, EQ, ESAC, ESC_SEQ, EXPONENT, FI, G, GEQ, HEX_DIGIT, ID,
+        IF, IMPLICS, IN, INHERITS, ISVOID, L, LEQ, LET, LOOP, LOWERCASE, METHOD, METHODEFINITION,
+        MINUS, MULT, NANARITA, NEW, NL, NOT, NUMBER, OCTAL_ESC, OF, OP_LLAVE, OP_PARENT,
+        PARAM, PARAMLIST, PLUS, PNT, POOL, PROGRAM, STRING, THEN, TYPE, UNICODE_ESC,
+        UPERCASE, VAR_DECLARATION, VAR_DECLARATION_LIST, WHILE, WS,
+
+    }
 }
 
- public program: (class)+ EOF ;
+ public program: (class)+ EOF->^(PROGRAM (class)+) ;
 
- class: (CLASS TYPE^ (INHERITS TYPE)? OP_LLAVE! ( feature_list)? CL_LLAVE! END!)
+ class: (CLASS^ TYPE (INHERITS TYPE)? OP_LLAVE! ( feature_list)? CL_LLAVE! END!)
 		;
  feature_list: feature+;
  feature: (ID (attribute-> ^(ATTRIBUTE ID attribute)|methodefinition-> ^(METHOD ID methodefinition)) END) ;
@@ -44,11 +64,11 @@ attribute:  DOUBLEP! TYPE (ASSING expr)?  ;
 	   |nanarita;
 	 //  | auxid;
 //auxid	:(ID|constant)? lvE	;
-
+exprList:	expr END! (expr END!)*;
  assignment: (ID ASSING^  expr) ;
  conditionals: (IF expr (THEN expr) (ELSE expr)? FI)->^(IF expr ^(THEN expr) ^(ELSE expr)?) ;
- loops: WHILE^  expr LOOP expr POOL! ;//-> LOOP^ expr LOOP WHILE^ expr ;
- blocks: OP_LLAVE!  expr END! ( expr END!)* CL_LLAVE! ;
+ loops: WHILE^  expr LOOP! expr POOL! ;//-> LOOP^ expr LOOP WHILE^ expr ;
+ blocks: OP_LLAVE  exprList CL_LLAVE->^(BLOCK exprList) ;
  let: (LET  var_list_declaration IN expr)->^(LET var_list_declaration ^(BODY expr)) ;
  vardeclaration
  	:	ID attribute->^(VAR_DECLARATION ID  attribute);
@@ -56,15 +76,14 @@ attribute:  DOUBLEP! TYPE (ASSING expr)?  ;
  	:	 (vardeclaration-> vardeclaration) (COMA vardeclaration->^(VAR_DECLARATION_LIST $var_list_declaration vardeclaration))*;
  case: CASE^ expr OF (param IMPLICS expr)+ ESAC! ;
  new : (NEW^ TYPE) ;
-// assignment_list
- 	//:	(assignment->assignment) ( COMA assignment-> ^(ASSIGNMENT_LIST $assignment_list COMA assignment))*;
- 	
- dispatch: (ARROBA TYPE |PNT) ID^ OP_PARENT! (expr ( COMA! expr)*)? CL_PARENT! ;
  
- dispatch1
- 	:	(ARROBA TYPE |PNT) OP_PARENT! (expr ( COMA! expr)*)? CL_PARENT! ;
+ dispatch: (ARROBA! TYPE |PNT!) ID OP_PARENT (expr ( COMA! expr)*)? CL_PARENT! ;
+ exprlist1
+ 	:	(expr ( COMA! expr)*)?;
+ //dispatch1
+ 	//:	(ARROBA! TYPE |PNT!) OP_PARENT! (expr ( COMA! expr)*)? CL_PARENT! ;
  dispatch2
- 	:	 OP_PARENT! (expr ( COMA! expr)*)? CL_PARENT! ;
+ 	:	 OP_PARENT (expr ( COMA! expr)*)? CL_PARENT! ;
  operations
  	:	 lv1 ;
  	lv1:  lv2 ( LEQ^ lv1|GEQ^ lv1|L^ lv1|G^ lv1|EQ^ lv1)?;
@@ -72,7 +91,9 @@ attribute:  DOUBLEP! TYPE (ASSING expr)?  ;
  	lv3: lv4( MULT^  lv3|DIV^  lv3)?;
  	lv4: lv5 ;
  	lv5:  lv6 ;
- 	lv6: (ID^ (dispatch2|dispatch)?|tmp2 dispatch?|constant dispatch?)  ;
+ 	lv6: ((ID->ID) (dispatch2->^(DISPATCH  $lv6 dispatch2) |dispatch->^(DISPATCH $lv6 dispatch))?
+ 	|(tmp2->tmp2) (dispatch->^(DISPATCH $lv6 dispatch))?
+ 	|(constant->constant) dispatch?)  ;
  	tmp1: ID tmp ;
  	tmp2: OP_PARENT! expr CL_PARENT!;
  	tmp: (dispatch2);
