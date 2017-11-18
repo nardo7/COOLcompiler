@@ -35,15 +35,17 @@ namespace COOLLenguage.SemanticCheck.AST
             }
         }
 
-        IType IAttribute.Type
+      
+
+        IEnumerable<IAttribute> IMethod.Arguments
         {
             get
             {
-               return ReturnType;
+                return arguments;
             }
         }
 
-        public Method(List<Param> arguments, IType returnType, Expression body)
+        public Method(List<Param> arguments, IType returnType)
         {
             this.arguments = arguments;
             this.body = body;

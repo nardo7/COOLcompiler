@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace COOLLenguage.SemanticCheck.AST
 {
-    public class Param:Node
+    public class Param:Node,IAttribute
     {
         IType type;
         string name;

@@ -19,7 +19,7 @@ namespace COOLLenguage.Utils
 
         public void LogError(string ErrorMessage)
         {
-            Logger.Write(ErrorMessage);
+            Logger.WriteLine(ErrorMessage);
         }
     }
 }

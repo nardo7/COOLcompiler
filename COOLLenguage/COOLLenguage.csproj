@@ -55,9 +55,7 @@
     <Compile Include="SemanticCheck\AST1\Dispatch.cs" />
     <Compile Include="SemanticCheck\AST1\Expression.cs" />
     <Compile Include="SemanticCheck\AST1\Feature.cs" />
-    <Compile Include="SemanticCheck\AST1\IAttribute.cs" />
     <Compile Include="SemanticCheck\AST1\Ident.cs" />
-    <Compile Include="SemanticCheck\AST1\IMethod.cs" />
     <Compile Include="SemanticCheck\AST1\Initializer.cs" />
     <Compile Include="SemanticCheck\AST1\IsVoid.cs" />
     <Compile Include="SemanticCheck\AST1\IType.cs" />
@@ -77,18 +75,15 @@
     <Compile Include="SemanticCheck\AST\BinaryExpression.cs" />
     <Compile Include="SemanticCheck\AST\Block.cs" />
     <Compile Include="SemanticCheck\AST\Case.cs" />
-    <Compile Include="SemanticCheck\AST\Class.cs" />
+    <Compile Include="SemanticCheck\AST\ClassDef.cs" />
     <Compile Include="SemanticCheck\AST\Comparison.cs" />
     <Compile Include="SemanticCheck\AST\Conditional.cs" />
     <Compile Include="SemanticCheck\AST\Constant.cs" />
     <Compile Include="SemanticCheck\AST\Dispatch.cs" />
     <Compile Include="SemanticCheck\AST\Expression.cs" />
     <Compile Include="SemanticCheck\AST\Feature.cs" />
-    <Compile Include="SemanticCheck\AST\IAttribute.cs" />
-    <Compile Include="SemanticCheck\AST\IMethod.cs" />
     <Compile Include="SemanticCheck\AST\Initializer.cs" />
     <Compile Include="SemanticCheck\AST\IsVoid.cs" />
-    <Compile Include="SemanticCheck\AST\IType.cs" />
     <Compile Include="SemanticCheck\AST\Let.cs" />
     <Compile Include="SemanticCheck\AST\Loop.cs" />
     <Compile Include="SemanticCheck\AST\Method.cs" />
@@ -99,6 +94,15 @@
     <Compile Include="SemanticCheck\AST\Program.cs" />
     <Compile Include="SemanticCheck\AST\UnaryExpression.cs" />
     <Compile Include="SemanticCheck\AST\While.cs" />
+    <Compile Include="SemanticCheck\Context.cs" />
+    <Compile Include="SemanticCheck\IAttribute.cs" />
+    <Compile Include="SemanticCheck\IContext.cs" />
+    <Compile Include="SemanticCheck\IMethod.cs" />
+    <Compile Include="SemanticCheck\IType.cs" />
+    <Compile Include="SemanticCheck\IVisitor.cs" />
+    <Compile Include="SemanticCheck\Type.cs" />
+    <Compile Include="SemanticCheck\TypeBuilderVisitor.cs" />
+    <Compile Include="SemanticCheck\TypeCollectorVisitor.cs" />
     <Compile Include="Utils\ErrorLogger.cs" />
     <Compile Include="Utils\IErrorLogger.cs" />
   </ItemGroup>

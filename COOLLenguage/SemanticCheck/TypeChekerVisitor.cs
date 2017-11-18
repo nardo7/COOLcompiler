@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace COOLLenguage.SemanticCheck.AST
+namespace COOLLenguage.SemanticCheck
 {
-    public interface IAttribute
+    class TypeChekerVisitor
     {
-        string Name { get; }
-        IType Type { get; }
     }
 }

@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace COOLLenguage.SemanticCheck.AST1
+namespace COOLLenguage.SemanticCheck
 {
     public interface IMethod
     {
         string Name { get; }
-        List<Param> Arguments { get; }
-        string ReturnType { get; }
-        Expression Body { get; }
-
+        IType ReturnType { get; }
+        IEnumerable<IAttribute> Arguments { get; }
     }
 }

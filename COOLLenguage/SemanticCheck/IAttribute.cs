@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace COOLLenguage.SemanticCheck.AST
+namespace COOLLenguage.SemanticCheck
 {
-    public interface IType
+    public interface IAttribute
     {
-        string Type { get; }
-        List<Feature> Fetures { get; }
+        string Name { get; }
+        IType Type { get; }
     }
 }

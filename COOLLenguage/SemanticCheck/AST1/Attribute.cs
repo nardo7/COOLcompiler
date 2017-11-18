@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace COOLLenguage.SemanticCheck.AST1
 {
-    public class Attribute : Feature, IAttribute
+    public class Attribute : Feature
     {
         public string Type { get; set; }
         Expression expr;    

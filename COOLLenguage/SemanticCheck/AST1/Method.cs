@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace COOLLenguage.SemanticCheck.AST1
 {
-    public class Method : Feature, IMethod
+    public class Method : Feature
     {
         List<Param> arguments;
         Expression body;
