@@ -29,6 +29,19 @@ namespace COOLLenguage.SemanticCheck.AST
             }
         }
 
+        public IType TypeInherited
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         public ClassDef(string type)
         {
             Name = type;
@@ -97,6 +110,26 @@ namespace COOLLenguage.SemanticCheck.AST
             }
             else return false;
             
+        }
+
+        public IAttribute GetAttributeInherited(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<IMethod> GetMethodInherited(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsInheritedClass(string type)
+        {
+            throw new NotImplementedException();
+        }
+
+        IMethod IType.GetMethodInherited(string name)
+        {
+            throw new NotImplementedException();
         }
     }
 }

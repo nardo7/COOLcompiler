@@ -11,7 +11,6 @@ namespace COOLLenguage.SemanticCheck.AST
         public IType Type { get; }
         Expression expr;    
         public Expression Expr { get { return expr; } }
-
         public Attribute(string name, IType type)
         {
             this.Name = name;

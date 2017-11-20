@@ -12,7 +12,7 @@ namespace COOLLenguage.SemanticCheck
         List<Context> childs;
         Dictionary<string, IType> types;
         Dictionary<string, IType> vars;
-
+        Context Parent { get; set; }
         public Context()
         {
             types = new Dictionary<string, IType>();
@@ -22,15 +22,24 @@ namespace COOLLenguage.SemanticCheck
         public IContext CreateChildContext()
         {
             var cont = new Context();
+            cont.Parent = this;
             childs.Add(cont);
+            
             return cont;
         }
 
         public IType CreateType(string name)
         {
-            var typ = new AST.ClassDef(name);
-            types.Add(name, typ);
-            return typ;
+            try
+            {
+                var typ = new Type(name);
+                types.Add(name, typ);
+                return typ;
+            }
+            catch (ArgumentException)
+            {
+                return default(Type);
+            }
         }
 
         public bool DefineVariable(string symbol, IType type)
@@ -44,27 +53,32 @@ namespace COOLLenguage.SemanticCheck
 
         public IType GetType(string typeName)
         {
-            try
+            IType t;
+            if (types.TryGetValue(typeName, out t))
+                return t;
+            else
+                if (Parent != null)
             {
-                return types[typeName];
+                return Parent.GetType(typeName);
             }
-            catch (KeyNotFoundException)
-            {
-                return default(AST.ClassDef);
-            }
+            else
+                return null;
+         
                 
         }
 
         public IType GetTypeFor(string symbol)
         {
-            try
+            IType t;
+            if (vars.TryGetValue(symbol, out t))
+                return t;
+            else
+                if (Parent != null)
             {
-                return vars[symbol];
+                return Parent.GetTypeFor(symbol);
             }
-            catch (KeyNotFoundException)
-            {
-                return default(AST.ClassDef);
-            }
+            else
+                return null;
         }
     }
 }

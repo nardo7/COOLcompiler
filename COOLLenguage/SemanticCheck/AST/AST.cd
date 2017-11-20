@@ -39,7 +39,6 @@
       <FileName>SemanticCheck\AST1\Attribute.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\Attribute.cs</NewMemberFileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="COOLLenguage.SemanticCheck.AST1.Method" Collapsed="true">
     <Position X="8" Y="2.75" Width="1.5" />
@@ -48,7 +47,6 @@
       <FileName>SemanticCheck\AST1\Method.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\Method.cs</NewMemberFileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="COOLLenguage.SemanticCheck.AST1.Expression" Collapsed="true">
     <Position X="15.75" Y="1.75" Width="1.5" />
@@ -201,30 +199,6 @@
       <FileName>SemanticCheck\AST\Dispatch.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="COOLLenguage.SemanticCheck.AST1.IAttribute" Collapsed="true">
-    <Position X="0.75" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAYAAAAAAAAA=</HashCode>
-      <FileName>SemanticCheck\AST1\IAttribute.cs</FileName>
-      <NewMemberFileName>SemanticCheck\AST\IAttribute.cs</NewMemberFileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="COOLLenguage.SemanticCheck.AST1.IMethod" Collapsed="true">
-    <Position X="0.75" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAABAAQAAAAAAAAAIAAAAAAEAAA=</HashCode>
-      <FileName>SemanticCheck\AST1\IMethod.cs</FileName>
-      <NewMemberFileName>SemanticCheck\AST\IMethod.cs</NewMemberFileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="COOLLenguage.SemanticCheck.AST1.IType" Collapsed="true">
-    <Position X="0.75" Y="0.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SemanticCheck\AST1\IType.cs</FileName>
-      <NewMemberFileName>SemanticCheck\AST\IType.cs</NewMemberFileName>
-    </TypeIdentifier>
-  </Interface>
   <Enum Name="COOLLenguage.SemanticCheck.AST.ArithmeticAtomicOperations" Collapsed="true">
     <Position X="0.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>

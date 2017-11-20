@@ -8,10 +8,10 @@ namespace COOLLenguage.SemanticCheck.AST1
 {
     public class New : Expression
     {
-        string type;
+        public string Type { get; set; }
         public New(string type)
         {
-            this.type = type;
+            this.Type = type;
         }
       
     }

@@ -58,7 +58,6 @@
     <Compile Include="SemanticCheck\AST1\Ident.cs" />
     <Compile Include="SemanticCheck\AST1\Initializer.cs" />
     <Compile Include="SemanticCheck\AST1\IsVoid.cs" />
-    <Compile Include="SemanticCheck\AST1\IType.cs" />
     <Compile Include="SemanticCheck\AST1\Let.cs" />
     <Compile Include="SemanticCheck\AST1\Loop.cs" />
     <Compile Include="SemanticCheck\AST1\Method.cs" />
@@ -102,6 +101,7 @@
     <Compile Include="SemanticCheck\IVisitor.cs" />
     <Compile Include="SemanticCheck\Type.cs" />
     <Compile Include="SemanticCheck\TypeBuilderVisitor.cs" />
+    <Compile Include="SemanticCheck\TypeChekerVisitor.cs" />
     <Compile Include="SemanticCheck\TypeCollectorVisitor.cs" />
     <Compile Include="Utils\ErrorLogger.cs" />
     <Compile Include="Utils\IErrorLogger.cs" />

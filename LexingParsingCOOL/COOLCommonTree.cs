@@ -148,7 +148,7 @@ namespace LexingParsingCOOL
                 case COOLLexer.CLASS:
                     var @class = new ClassDef(GetChild(0).Text);
                     
-                    if (GetChild(1).Type == COOLLexer.INHERITS)
+                    if (GetChild(1)!=null&&(GetChild(1).Type == COOLLexer.INHERITS))
                     {
                         @class.typeInherited = GetChild(2).Text;
                         for (int i = 3; i < ChildCount; i++)

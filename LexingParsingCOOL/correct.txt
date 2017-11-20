@@ -109,3 +109,4 @@ testoperations(x:Int): Void{
 	}
 }; 
 };
+//falta parsear e@e1.ID(...)

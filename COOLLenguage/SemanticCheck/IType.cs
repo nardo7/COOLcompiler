@@ -13,8 +13,12 @@ namespace COOLLenguage.SemanticCheck
         IEnumerable<IMethod> Methods { get; }
         IAttribute GetAttribute(string name);
         IMethod GetMethod(string name);
+        IType TypeInherited { get; set; }
         bool DefineAttribute(string name, IType type);
         bool DefineMethod(string name, IType returnType,
         string[] arguments, IType[] argumentTypes);
+        IAttribute GetAttributeInherited(string name);
+        IMethod GetMethodInherited(string name);
+        bool IsInheritedClass(string type);
     }
 }
