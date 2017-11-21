@@ -20,5 +20,6 @@ namespace COOLLenguage.SemanticCheck
         IAttribute GetAttributeInherited(string name);
         IMethod GetMethodInherited(string name);
         bool IsInheritedClass(string type);
+        int LevelHierachy { get; set; }
     }
 }

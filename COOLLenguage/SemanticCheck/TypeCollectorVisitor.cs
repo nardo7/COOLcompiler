@@ -20,6 +20,7 @@ namespace COOLLenguage.SemanticCheck
             Context = new Context();
             foreach (var item in node.Classes)
                 Visit(item);
+            defineObject();
             defineBool();
             defineInt();
             defineString();
@@ -28,22 +29,30 @@ namespace COOLLenguage.SemanticCheck
         void defineInt()
         {
             Context.CreateType("Int");
+            Context.GetType("Int").TypeInherited = Context.GetType("Object");
         }
         void defineString()
         {
             Context.CreateType("String");
             var str = Context.GetType("String");
             str.DefineMethod("concat", str, new string[] { "value" }, new IType[] { str });
+            Context.GetType("String").TypeInherited = Context.GetType("Object");
+
         }
         void defineBool()
         {
             Context.CreateType("Bool");
+            Context.GetType("Bool").TypeInherited = Context.GetType("Object");
         }
         void defineVoid()
         {
             Context.CreateType("Void");
+            Context.GetType("Void").TypeInherited = Context.GetType("Object");
         }
-       
+        void defineObject()
+        {
+            Context.CreateType("Object");
+        }
         public void Visit(ClassDef node)
         {
             if(Context.GetType(node.Type)!=null)

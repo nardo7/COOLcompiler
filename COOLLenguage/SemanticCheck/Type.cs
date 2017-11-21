@@ -13,6 +13,7 @@ namespace COOLLenguage.SemanticCheck
         Dictionary<string, IAttribute> attrs;
         Dictionary<string, IMethod> methods;
 
+        public int LevelHierachy { get; set; }
 
         public IEnumerable<IAttribute> Attributes
         {
@@ -79,13 +80,16 @@ namespace COOLLenguage.SemanticCheck
             try { return methods[name]; }
             catch (KeyNotFoundException)
             {
-                return null;
+                var m = GetMethodInherited(name);
+                if (m == null)
+                    return null;
+                else return m;
             }
         }
 
         public bool DefineAttribute(string name, IType type)
         {
-            if (GetAttribute(name) != default(AST.Attribute))
+            if (GetAttribute(name) == null)
             {
                 attrs.Add(name, new AST.Attribute(name, type));
                 return true;
@@ -102,7 +106,7 @@ namespace COOLLenguage.SemanticCheck
                 List<Param> arg = new List<Param>();
                 for (int i = 0; i < arguments.Length; i++)
                     arg.Add(new Param(argumentTypes[i], arguments[i]));
-                methods.Add(name,  new Method(arg, returnType) );
+                methods.Add(name,  new Method(name,arg, returnType) );
                 return true;
 
         }

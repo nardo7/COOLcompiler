@@ -28,11 +28,14 @@ namespace COOLLenguage.SemanticCheck
                 if ((t = Context.GetType(node.typeInherited)) != null)
                 {
                     currentType.TypeInherited = t;
+                    currentType.LevelHierachy = t.LevelHierachy + 1;
                 }
                 else
                     errorLog.LogError(string.Format(TYPEINHERITEDDOESNEXIST, currentType.Name, node.typeInherited));
 
             }
+            else
+                currentType.TypeInherited = Context.GetType("Object");
             foreach (var item in node.Attributes)
             {
                 Visit(item);
@@ -41,6 +44,7 @@ namespace COOLLenguage.SemanticCheck
             {
                 Visit(item);
             }
+            currentType.DefineAttribute("self", currentType);
         }
 
         public void Visit(Program node)
@@ -63,6 +67,7 @@ namespace COOLLenguage.SemanticCheck
                 return;
             }
             currentType.DefineAttribute(node.Name,attrType);
+            
         }
 
         public void Visit(Method node)

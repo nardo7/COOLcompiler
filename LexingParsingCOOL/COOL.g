@@ -47,7 +47,7 @@ using LexingParsingCOOL;
  
 attribute:  DOUBLEP! TYPE (ASSING expr)?  ;
  methodefinition: OP_PARENT (params_list )?  CL_PARENT  DOUBLEP  TYPE  OP_LLAVE  expr  CL_LLAVE->^(METHODEFINITION params_list? TYPE ^(BODY expr)) ;
- params_list: (param->param) (COMA  param->^(PARAMLIST $params_list param))*;
+ params_list: param (COMA  param)*->^(PARAMLIST param param*);
  param: (ID  DOUBLEP  TYPE)->^(PARAM ID TYPE);
 
  expr: assignment

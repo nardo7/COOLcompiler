@@ -31,15 +31,16 @@ namespace COOLLenguage.SemanticCheck.AST
 
         public IType TypeInherited
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
+            get;
 
-            set
-            {
-                throw new NotImplementedException();
-            }
+            set;
+        }
+
+        public int LevelHierachy
+        {
+            get;
+
+            set;
         }
 
         public ClassDef(string type)
@@ -105,7 +106,7 @@ namespace COOLLenguage.SemanticCheck.AST
                 List<Param> arg = new List<Param>();
                 for (int i = 0; i < arguments.Length; i++)
                     arg.Add(new Param(argumentTypes[i], arguments[i]));
-                methods.Add(name, new Method(arg, returnType));
+                methods.Add(name, new Method(name,arg, returnType));
                 return true;
             }
             else return false;

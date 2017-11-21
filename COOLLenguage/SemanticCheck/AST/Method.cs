@@ -45,11 +45,11 @@ namespace COOLLenguage.SemanticCheck.AST
             }
         }
 
-        public Method(List<Param> arguments, IType returnType)
+        public Method(string name, List<Param> arguments, IType returnType)
         {
             this.arguments = arguments;
-            this.body = body;
             this.returnType = returnType;
+            Name = name;
         }
     }
 }
