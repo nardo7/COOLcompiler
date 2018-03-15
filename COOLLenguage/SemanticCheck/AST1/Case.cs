@@ -10,12 +10,14 @@ namespace COOLLenguage.SemanticCheck.AST1
     {
         List<Param> paramlist;
         List<Expression> exprs;
+        public Expression expr { get; protected set; }
         public List<Param> Paramlist { get { return paramlist; } }
         public List<Expression> Exprs { get { return exprs; } }
-        public Case(List<Param> paramlist,List<Expression> exprs)
+        public Case(List<Param> paramlist,List<Expression> exprs,Expression expr0)
         {
             this.exprs = exprs;
             this.paramlist = paramlist;
+            expr = expr0;
         }
        
     }

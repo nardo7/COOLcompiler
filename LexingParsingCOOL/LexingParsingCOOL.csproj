@@ -68,7 +68,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="correct.txt" />
+    <Content Include="log.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\COOLLenguage\COOLLenguage.csproj">

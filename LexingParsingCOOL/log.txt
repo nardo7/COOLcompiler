@@ -1,0 +1,7 @@
+﻿faltan let y case
+-revisar la herencia, la redefinicion de metodos en una herencia
+-preguntar si los atributos son visibles en las clases herederas
+-el arroba, implementar a partir de generar el ast
+-poner aunque sea linea a los errores semanticos
+-preguntar en caso q una instruccion este mal semanticamente, 
+que tipo se lepone al nodo, ejemplo una var no definida que tipo tiene??

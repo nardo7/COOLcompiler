@@ -55,6 +55,8 @@ namespace LexingParsingCOOL
                     else return new Conditional((Expression)((COOLCommonTree)GetChild(0)).GetAST1(), (Expression)(((COOLCommonTree)(GetChild(1)).GetChild(0))).GetAST1());
                 case COOLLexer.NEW:
                     return new New(GetChild(0).Text);
+
+                #region dispatch
                 case COOLLexer.DISPATCH:
                     var disp = new Dispatch();
                     if (GetChild(0).Type != COOLLexer.ID)
@@ -92,9 +94,41 @@ namespace LexingParsingCOOL
                         
                         return disp;
                     }
+                #endregion
+                case COOLLexer.LET:
+                    var initializers = (COOLCommonTree)this.GetChild(0);
+                    var list = new List<Initializer>();
+                    if (initializers.Type == COOLLexer.VAR_DECLARATION_LIST)
+                        foreach (var init in initializers.Children)
+                            list.Add((Initializer)((COOLCommonTree)init).GetAST1());
+                    else
+                        list.Add((Initializer)initializers.GetAST1());
+                    return new Let((Expression)((COOLCommonTree)GetChild(1)).GetAST1(),list);
+              
+                case COOLLexer.CASE:
+                    var expr0 = (Expression)((COOLCommonTree)GetChild(0)).GetAST1();
+                    var branches = ((COOLCommonTree)GetChild(1));
+                    Case @case = new Case(new List<Param>(), new List<Expression>(), expr0);
+                    if (branches.Type == COOLLexer.CASEBRANCHES)
+                    {
+                        foreach (COOLCommonTree branch in branches.Children)
+                        {
+                            var tmp = new Tuple<Param, Expression>((Param)((COOLCommonTree)branch.GetChild(0)).GetAST1(), (Expression)((COOLCommonTree)branch.GetChild(1)).GetAST1());
+                            @case.Paramlist.Add(tmp.Item1);
+                            @case.Exprs.Add(tmp.Item2);
+                        }
+                    }
+                    else
+                    {
+                        var tmp = new Tuple<Param, Expression>((Param)((COOLCommonTree)branches.GetChild(0)).GetAST1(), (Expression)((COOLCommonTree)branches.GetChild(1)).GetAST1());
+                        @case.Exprs.Add(tmp.Item2);
+                        @case.Paramlist.Add(tmp.Item1);
+                    }
+                    return @case;
+
                 case COOLLexer.ID:
                     return new Ident() { name = Text };
-                        
+
                 #endregion
 
                 #region features

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g 2017-11-21 01:56:14
+// $ANTLR 3.4 C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g 2018-03-14 18:53:19
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -36,7 +36,7 @@ using RewriteRuleITokenStream = Antlr.Runtime.Tree.RewriteRuleTokenStream;
 public partial class COOLParser : Antlr.Runtime.Parser
 {
 	internal static readonly string[] tokenNames = new string[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "ARROBA", "ASSIGNMENT_LIST", "ASSING", "ATTRIBUTE", "BLOCK", "BODY", "BOOLEAN", "CASE", "CHAR", "CLASS", "CL_LLAVE", "CL_PARENT", "COMA", "COMMENT", "CONDITION", "DIGIT", "DISPATCH", "DIV", "DOUBLEP", "ELSE", "END", "EQ", "ESAC", "ESC_SEQ", "EXPONENT", "FI", "G", "GEQ", "HEX_DIGIT", "ID", "IF", "IMPLICS", "IN", "INHERITS", "ISVOID", "L", "LEQ", "LET", "LOOP", "LOWERCASE", "METHOD", "METHODEFINITION", "MINUS", "MULT", "NANARITA", "NEW", "NL", "NOT", "NUMBER", "OCTAL_ESC", "OF", "OP_LLAVE", "OP_PARENT", "PARAM", "PARAMLIST", "PLUS", "PNT", "POOL", "PROGRAM", "STRING", "THEN", "TYPE", "UNICODE_ESC", "UPERCASE", "VAR_DECLARATION", "VAR_DECLARATION_LIST", "WHILE", "WS"
+		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "ARROBA", "ASSIGNMENT_LIST", "ASSING", "ATTRIBUTE", "BLOCK", "BODY", "BOOLEAN", "CASE", "CASEBRANCH", "CASEBRANCHES", "CHAR", "CLASS", "CL_LLAVE", "CL_PARENT", "COMA", "COMMENT", "CONDITION", "DIGIT", "DISPATCH", "DIV", "DOUBLEP", "ELSE", "END", "EQ", "ESAC", "ESC_SEQ", "EXPONENT", "FI", "G", "GEQ", "HEX_DIGIT", "ID", "IF", "IMPLICS", "IN", "INHERITS", "ISVOID", "L", "LEQ", "LET", "LOOP", "LOWERCASE", "METHOD", "METHODEFINITION", "MINUS", "MULT", "NANARITA", "NEW", "NL", "NOT", "NUMBER", "OCTAL_ESC", "OF", "OP_LLAVE", "OP_PARENT", "PARAM", "PARAMLIST", "PLUS", "PNT", "POOL", "PROGRAM", "STRING", "THEN", "TYPE", "UNICODE_ESC", "UPERCASE", "VAR_DECLARATION", "VAR_DECLARATION_LIST", "WHILE", "WS"
 	};
 	public const int EOF=-1;
 	public const int ARROBA=4;
@@ -47,66 +47,68 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	public const int BODY=9;
 	public const int BOOLEAN=10;
 	public const int CASE=11;
-	public const int CHAR=12;
-	public const int CLASS=13;
-	public const int CL_LLAVE=14;
-	public const int CL_PARENT=15;
-	public const int COMA=16;
-	public const int COMMENT=17;
-	public const int CONDITION=18;
-	public const int DIGIT=19;
-	public const int DISPATCH=20;
-	public const int DIV=21;
-	public const int DOUBLEP=22;
-	public const int ELSE=23;
-	public const int END=24;
-	public const int EQ=25;
-	public const int ESAC=26;
-	public const int ESC_SEQ=27;
-	public const int EXPONENT=28;
-	public const int FI=29;
-	public const int G=30;
-	public const int GEQ=31;
-	public const int HEX_DIGIT=32;
-	public const int ID=33;
-	public const int IF=34;
-	public const int IMPLICS=35;
-	public const int IN=36;
-	public const int INHERITS=37;
-	public const int ISVOID=38;
-	public const int L=39;
-	public const int LEQ=40;
-	public const int LET=41;
-	public const int LOOP=42;
-	public const int LOWERCASE=43;
-	public const int METHOD=44;
-	public const int METHODEFINITION=45;
-	public const int MINUS=46;
-	public const int MULT=47;
-	public const int NANARITA=48;
-	public const int NEW=49;
-	public const int NL=50;
-	public const int NOT=51;
-	public const int NUMBER=52;
-	public const int OCTAL_ESC=53;
-	public const int OF=54;
-	public const int OP_LLAVE=55;
-	public const int OP_PARENT=56;
-	public const int PARAM=57;
-	public const int PARAMLIST=58;
-	public const int PLUS=59;
-	public const int PNT=60;
-	public const int POOL=61;
-	public const int PROGRAM=62;
-	public const int STRING=63;
-	public const int THEN=64;
-	public const int TYPE=65;
-	public const int UNICODE_ESC=66;
-	public const int UPERCASE=67;
-	public const int VAR_DECLARATION=68;
-	public const int VAR_DECLARATION_LIST=69;
-	public const int WHILE=70;
-	public const int WS=71;
+	public const int CASEBRANCH=12;
+	public const int CASEBRANCHES=13;
+	public const int CHAR=14;
+	public const int CLASS=15;
+	public const int CL_LLAVE=16;
+	public const int CL_PARENT=17;
+	public const int COMA=18;
+	public const int COMMENT=19;
+	public const int CONDITION=20;
+	public const int DIGIT=21;
+	public const int DISPATCH=22;
+	public const int DIV=23;
+	public const int DOUBLEP=24;
+	public const int ELSE=25;
+	public const int END=26;
+	public const int EQ=27;
+	public const int ESAC=28;
+	public const int ESC_SEQ=29;
+	public const int EXPONENT=30;
+	public const int FI=31;
+	public const int G=32;
+	public const int GEQ=33;
+	public const int HEX_DIGIT=34;
+	public const int ID=35;
+	public const int IF=36;
+	public const int IMPLICS=37;
+	public const int IN=38;
+	public const int INHERITS=39;
+	public const int ISVOID=40;
+	public const int L=41;
+	public const int LEQ=42;
+	public const int LET=43;
+	public const int LOOP=44;
+	public const int LOWERCASE=45;
+	public const int METHOD=46;
+	public const int METHODEFINITION=47;
+	public const int MINUS=48;
+	public const int MULT=49;
+	public const int NANARITA=50;
+	public const int NEW=51;
+	public const int NL=52;
+	public const int NOT=53;
+	public const int NUMBER=54;
+	public const int OCTAL_ESC=55;
+	public const int OF=56;
+	public const int OP_LLAVE=57;
+	public const int OP_PARENT=58;
+	public const int PARAM=59;
+	public const int PARAMLIST=60;
+	public const int PLUS=61;
+	public const int PNT=62;
+	public const int POOL=63;
+	public const int PROGRAM=64;
+	public const int STRING=65;
+	public const int THEN=66;
+	public const int TYPE=67;
+	public const int UNICODE_ESC=68;
+	public const int UPERCASE=69;
+	public const int VAR_DECLARATION=70;
+	public const int VAR_DECLARATION_LIST=71;
+	public const int WHILE=72;
+	public const int WS=73;
 
 	public COOLParser(ITokenStream input)
 		: this(input, new RecognizerSharedState())
@@ -151,7 +153,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_program();
 
 	// $ANTLR start "program"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:41:9: public program : ( class )+ EOF -> ^( PROGRAM ( class )+ ) ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:43:9: public program : ( class )+ EOF -> ^( PROGRAM ( class )+ ) ;
 	[GrammarRule("program")]
 	public AstParserRuleReturnScope<COOLCommonTree, IToken> program()
 	{
@@ -170,15 +172,15 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		RewriteRuleITokenStream stream_EOF=new RewriteRuleITokenStream(adaptor,"token EOF");
 		RewriteRuleSubtreeStream stream_class=new RewriteRuleSubtreeStream(adaptor,"rule class");
 		try { DebugEnterRule(GrammarFileName, "program");
-		DebugLocation(41, 51);
+		DebugLocation(43, 51);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:41:16: ( ( class )+ EOF -> ^( PROGRAM ( class )+ ) )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:43:16: ( ( class )+ EOF -> ^( PROGRAM ( class )+ ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:41:18: ( class )+ EOF
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:43:18: ( class )+ EOF
 			{
-			DebugLocation(41, 18);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:41:18: ( class )+
+			DebugLocation(43, 18);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:43:18: ( class )+
 			int cnt1=0;
 			try { DebugEnterSubRule(1);
 			while (true)
@@ -198,10 +200,10 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:41:19: class
+					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:43:19: class
 					{
-					DebugLocation(41, 19);
-					PushFollow(Follow._class_in_program88);
+					DebugLocation(43, 19);
+					PushFollow(Follow._class_in_program94);
 					class1=@class();
 					PopFollow();
 
@@ -225,8 +227,8 @@ public partial class COOLParser : Antlr.Runtime.Parser
 
 			} finally { DebugExitSubRule(1); }
 
-			DebugLocation(41, 27);
-			EOF2=(IToken)Match(input,EOF,Follow._EOF_in_program92);  
+			DebugLocation(43, 27);
+			EOF2=(IToken)Match(input,EOF,Follow._EOF_in_program98);  
 			stream_EOF.Add(EOF2);
 
 
@@ -243,23 +245,23 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (COOLCommonTree)adaptor.Nil();
-			// 41:30: -> ^( PROGRAM ( class )+ )
+			// 43:30: -> ^( PROGRAM ( class )+ )
 			{
-				DebugLocation(41, 32);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:41:32: ^( PROGRAM ( class )+ )
+				DebugLocation(43, 32);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:43:32: ^( PROGRAM ( class )+ )
 				{
 				COOLCommonTree root_1 = (COOLCommonTree)adaptor.Nil();
-				DebugLocation(41, 34);
+				DebugLocation(43, 34);
 				root_1 = (COOLCommonTree)adaptor.BecomeRoot((COOLCommonTree)adaptor.Create(PROGRAM, "PROGRAM"), root_1);
 
-				DebugLocation(41, 42);
+				DebugLocation(43, 42);
 				if (!(stream_class.HasNext))
 				{
 					throw new RewriteEarlyExitException();
 				}
 				while ( stream_class.HasNext )
 				{
-					DebugLocation(41, 43);
+					DebugLocation(43, 43);
 					adaptor.AddChild(root_1, stream_class.NextTree());
 
 				}
@@ -294,7 +296,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			LeaveRule("program", 1);
 			LeaveRule_program();
 		}
-		DebugLocation(41, 51);
+		DebugLocation(43, 51);
 		} finally { DebugExitRule(GrammarFileName, "program"); }
 		return retval;
 
@@ -305,7 +307,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_class();
 
 	// $ANTLR start "class"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:43:2: class : ( CLASS ^ TYPE ( INHERITS TYPE )? OP_LLAVE ! ( feature_list )? CL_LLAVE ! END !) ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:45:2: class : ( CLASS ^ TYPE ( INHERITS TYPE )? OP_LLAVE ! ( feature_list )? CL_LLAVE ! END !) ;
 	[GrammarRule("class")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> @class()
 	{
@@ -334,30 +336,30 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		COOLCommonTree CL_LLAVE9_tree = default(COOLCommonTree);
 		COOLCommonTree END10_tree = default(COOLCommonTree);
 		try { DebugEnterRule(GrammarFileName, "class");
-		DebugLocation(43, 2);
+		DebugLocation(45, 2);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:43:7: ( ( CLASS ^ TYPE ( INHERITS TYPE )? OP_LLAVE ! ( feature_list )? CL_LLAVE ! END !) )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:45:7: ( ( CLASS ^ TYPE ( INHERITS TYPE )? OP_LLAVE ! ( feature_list )? CL_LLAVE ! END !) )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:43:9: ( CLASS ^ TYPE ( INHERITS TYPE )? OP_LLAVE ! ( feature_list )? CL_LLAVE ! END !)
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:45:9: ( CLASS ^ TYPE ( INHERITS TYPE )? OP_LLAVE ! ( feature_list )? CL_LLAVE ! END !)
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(43, 9);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:43:9: ( CLASS ^ TYPE ( INHERITS TYPE )? OP_LLAVE ! ( feature_list )? CL_LLAVE ! END !)
+			DebugLocation(45, 9);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:45:9: ( CLASS ^ TYPE ( INHERITS TYPE )? OP_LLAVE ! ( feature_list )? CL_LLAVE ! END !)
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:43:10: CLASS ^ TYPE ( INHERITS TYPE )? OP_LLAVE ! ( feature_list )? CL_LLAVE ! END !
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:45:10: CLASS ^ TYPE ( INHERITS TYPE )? OP_LLAVE ! ( feature_list )? CL_LLAVE ! END !
 			{
-			DebugLocation(43, 15);
-			CLASS3=(IToken)Match(input,CLASS,Follow._CLASS_in_class111); 
+			DebugLocation(45, 15);
+			CLASS3=(IToken)Match(input,CLASS,Follow._CLASS_in_class117); 
 			CLASS3_tree = (COOLCommonTree)adaptor.Create(CLASS3);
 			root_0 = (COOLCommonTree)adaptor.BecomeRoot(CLASS3_tree, root_0);
-			DebugLocation(43, 17);
-			TYPE4=(IToken)Match(input,TYPE,Follow._TYPE_in_class114); 
+			DebugLocation(45, 17);
+			TYPE4=(IToken)Match(input,TYPE,Follow._TYPE_in_class120); 
 			TYPE4_tree = (COOLCommonTree)adaptor.Create(TYPE4);
 			adaptor.AddChild(root_0, TYPE4_tree);
-			DebugLocation(43, 22);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:43:22: ( INHERITS TYPE )?
+			DebugLocation(45, 22);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:45:22: ( INHERITS TYPE )?
 			int alt2=2;
 			try { DebugEnterSubRule(2);
 			try { DebugEnterDecision(2, false);
@@ -372,14 +374,14 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:43:23: INHERITS TYPE
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:45:23: INHERITS TYPE
 				{
-				DebugLocation(43, 23);
-				INHERITS5=(IToken)Match(input,INHERITS,Follow._INHERITS_in_class117); 
+				DebugLocation(45, 23);
+				INHERITS5=(IToken)Match(input,INHERITS,Follow._INHERITS_in_class123); 
 				INHERITS5_tree = (COOLCommonTree)adaptor.Create(INHERITS5);
 				adaptor.AddChild(root_0, INHERITS5_tree);
-				DebugLocation(43, 32);
-				TYPE6=(IToken)Match(input,TYPE,Follow._TYPE_in_class119); 
+				DebugLocation(45, 32);
+				TYPE6=(IToken)Match(input,TYPE,Follow._TYPE_in_class125); 
 				TYPE6_tree = (COOLCommonTree)adaptor.Create(TYPE6);
 				adaptor.AddChild(root_0, TYPE6_tree);
 
@@ -389,10 +391,10 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			}
 			} finally { DebugExitSubRule(2); }
 
-			DebugLocation(43, 47);
-			OP_LLAVE7=(IToken)Match(input,OP_LLAVE,Follow._OP_LLAVE_in_class123); 
-			DebugLocation(43, 49);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:43:49: ( feature_list )?
+			DebugLocation(45, 47);
+			OP_LLAVE7=(IToken)Match(input,OP_LLAVE,Follow._OP_LLAVE_in_class129); 
+			DebugLocation(45, 49);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:45:49: ( feature_list )?
 			int alt3=2;
 			try { DebugEnterSubRule(3);
 			try { DebugEnterDecision(3, false);
@@ -407,10 +409,10 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:43:51: feature_list
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:45:51: feature_list
 				{
-				DebugLocation(43, 51);
-				PushFollow(Follow._feature_list_in_class128);
+				DebugLocation(45, 51);
+				PushFollow(Follow._feature_list_in_class134);
 				feature_list8=feature_list();
 				PopFollow();
 
@@ -422,10 +424,10 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			}
 			} finally { DebugExitSubRule(3); }
 
-			DebugLocation(43, 74);
-			CL_LLAVE9=(IToken)Match(input,CL_LLAVE,Follow._CL_LLAVE_in_class132); 
-			DebugLocation(43, 79);
-			END10=(IToken)Match(input,END,Follow._END_in_class135); 
+			DebugLocation(45, 74);
+			CL_LLAVE9=(IToken)Match(input,CL_LLAVE,Follow._CL_LLAVE_in_class138); 
+			DebugLocation(45, 79);
+			END10=(IToken)Match(input,END,Follow._END_in_class141); 
 
 			}
 
@@ -451,7 +453,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			LeaveRule("class", 2);
 			LeaveRule_class();
 		}
-		DebugLocation(44, 2);
+		DebugLocation(46, 2);
 		} finally { DebugExitRule(GrammarFileName, "class"); }
 		return retval;
 
@@ -462,7 +464,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_feature_list();
 
 	// $ANTLR start "feature_list"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:45:2: feature_list : ( feature )+ ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:47:2: feature_list : ( feature )+ ;
 	[GrammarRule("feature_list")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> feature_list()
 	{
@@ -477,17 +479,17 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		AstParserRuleReturnScope<COOLCommonTree, IToken> feature11 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 
 		try { DebugEnterRule(GrammarFileName, "feature_list");
-		DebugLocation(45, 23);
+		DebugLocation(47, 23);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:45:14: ( ( feature )+ )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:47:14: ( ( feature )+ )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:45:16: ( feature )+
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:47:16: ( feature )+
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(45, 16);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:45:16: ( feature )+
+			DebugLocation(47, 16);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:47:16: ( feature )+
 			int cnt4=0;
 			try { DebugEnterSubRule(4);
 			while (true)
@@ -507,10 +509,10 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:45:16: feature
+					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:47:16: feature
 					{
-					DebugLocation(45, 16);
-					PushFollow(Follow._feature_in_feature_list147);
+					DebugLocation(47, 16);
+					PushFollow(Follow._feature_in_feature_list153);
 					feature11=feature();
 					PopFollow();
 
@@ -556,7 +558,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			LeaveRule("feature_list", 3);
 			LeaveRule_feature_list();
 		}
-		DebugLocation(45, 23);
+		DebugLocation(47, 23);
 		} finally { DebugExitRule(GrammarFileName, "feature_list"); }
 		return retval;
 
@@ -567,7 +569,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_feature();
 
 	// $ANTLR start "feature"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:46:2: feature : ( ID ( attribute -> ^( ATTRIBUTE ID attribute ) | methodefinition -> ^( METHOD ID methodefinition ) ) END ) ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:48:2: feature : ( ID ( attribute -> ^( ATTRIBUTE ID attribute ) | methodefinition -> ^( METHOD ID methodefinition ) ) END ) ;
 	[GrammarRule("feature")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> feature()
 	{
@@ -591,24 +593,24 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		RewriteRuleSubtreeStream stream_attribute=new RewriteRuleSubtreeStream(adaptor,"rule attribute");
 		RewriteRuleSubtreeStream stream_methodefinition=new RewriteRuleSubtreeStream(adaptor,"rule methodefinition");
 		try { DebugEnterRule(GrammarFileName, "feature");
-		DebugLocation(46, 106);
+		DebugLocation(48, 106);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:46:9: ( ( ID ( attribute -> ^( ATTRIBUTE ID attribute ) | methodefinition -> ^( METHOD ID methodefinition ) ) END ) )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:48:9: ( ( ID ( attribute -> ^( ATTRIBUTE ID attribute ) | methodefinition -> ^( METHOD ID methodefinition ) ) END ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:46:11: ( ID ( attribute -> ^( ATTRIBUTE ID attribute ) | methodefinition -> ^( METHOD ID methodefinition ) ) END )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:48:11: ( ID ( attribute -> ^( ATTRIBUTE ID attribute ) | methodefinition -> ^( METHOD ID methodefinition ) ) END )
 			{
-			DebugLocation(46, 11);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:46:11: ( ID ( attribute -> ^( ATTRIBUTE ID attribute ) | methodefinition -> ^( METHOD ID methodefinition ) ) END )
+			DebugLocation(48, 11);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:48:11: ( ID ( attribute -> ^( ATTRIBUTE ID attribute ) | methodefinition -> ^( METHOD ID methodefinition ) ) END )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:46:12: ID ( attribute -> ^( ATTRIBUTE ID attribute ) | methodefinition -> ^( METHOD ID methodefinition ) ) END
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:48:12: ID ( attribute -> ^( ATTRIBUTE ID attribute ) | methodefinition -> ^( METHOD ID methodefinition ) ) END
 			{
-			DebugLocation(46, 12);
-			ID12=(IToken)Match(input,ID,Follow._ID_in_feature156);  
+			DebugLocation(48, 12);
+			ID12=(IToken)Match(input,ID,Follow._ID_in_feature162);  
 			stream_ID.Add(ID12);
 
-			DebugLocation(46, 15);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:46:15: ( attribute -> ^( ATTRIBUTE ID attribute ) | methodefinition -> ^( METHOD ID methodefinition ) )
+			DebugLocation(48, 15);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:48:15: ( attribute -> ^( ATTRIBUTE ID attribute ) | methodefinition -> ^( METHOD ID methodefinition ) )
 			int alt5=2;
 			try { DebugEnterSubRule(5);
 			try { DebugEnterDecision(5, false);
@@ -633,10 +635,10 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:46:16: attribute
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:48:16: attribute
 				{
-				DebugLocation(46, 16);
-				PushFollow(Follow._attribute_in_feature159);
+				DebugLocation(48, 16);
+				PushFollow(Follow._attribute_in_feature165);
 				attribute13=attribute();
 				PopFollow();
 
@@ -645,7 +647,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 
 				{
 				// AST REWRITE
-				// elements: attribute, ID
+				// elements: ID, attribute
 				// token labels: 
 				// rule labels: retval
 				// token list labels: 
@@ -655,18 +657,18 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (COOLCommonTree)adaptor.Nil();
-				// 46:25: -> ^( ATTRIBUTE ID attribute )
+				// 48:25: -> ^( ATTRIBUTE ID attribute )
 				{
-					DebugLocation(46, 28);
-					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:46:28: ^( ATTRIBUTE ID attribute )
+					DebugLocation(48, 28);
+					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:48:28: ^( ATTRIBUTE ID attribute )
 					{
 					COOLCommonTree root_1 = (COOLCommonTree)adaptor.Nil();
-					DebugLocation(46, 30);
+					DebugLocation(48, 30);
 					root_1 = (COOLCommonTree)adaptor.BecomeRoot((COOLCommonTree)adaptor.Create(ATTRIBUTE, "ATTRIBUTE"), root_1);
 
-					DebugLocation(46, 40);
+					DebugLocation(48, 40);
 					adaptor.AddChild(root_1, stream_ID.NextNode());
-					DebugLocation(46, 43);
+					DebugLocation(48, 43);
 					adaptor.AddChild(root_1, stream_attribute.NextTree());
 
 					adaptor.AddChild(root_0, root_1);
@@ -681,10 +683,10 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:46:54: methodefinition
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:48:54: methodefinition
 				{
-				DebugLocation(46, 54);
-				PushFollow(Follow._methodefinition_in_feature170);
+				DebugLocation(48, 54);
+				PushFollow(Follow._methodefinition_in_feature176);
 				methodefinition14=methodefinition();
 				PopFollow();
 
@@ -693,7 +695,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 
 				{
 				// AST REWRITE
-				// elements: methodefinition, ID
+				// elements: ID, methodefinition
 				// token labels: 
 				// rule labels: retval
 				// token list labels: 
@@ -703,18 +705,18 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (COOLCommonTree)adaptor.Nil();
-				// 46:69: -> ^( METHOD ID methodefinition )
+				// 48:69: -> ^( METHOD ID methodefinition )
 				{
-					DebugLocation(46, 72);
-					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:46:72: ^( METHOD ID methodefinition )
+					DebugLocation(48, 72);
+					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:48:72: ^( METHOD ID methodefinition )
 					{
 					COOLCommonTree root_1 = (COOLCommonTree)adaptor.Nil();
-					DebugLocation(46, 74);
+					DebugLocation(48, 74);
 					root_1 = (COOLCommonTree)adaptor.BecomeRoot((COOLCommonTree)adaptor.Create(METHOD, "METHOD"), root_1);
 
-					DebugLocation(46, 81);
+					DebugLocation(48, 81);
 					adaptor.AddChild(root_1, stream_ID.NextNode());
-					DebugLocation(46, 84);
+					DebugLocation(48, 84);
 					adaptor.AddChild(root_1, stream_methodefinition.NextTree());
 
 					adaptor.AddChild(root_0, root_1);
@@ -731,8 +733,8 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			}
 			} finally { DebugExitSubRule(5); }
 
-			DebugLocation(46, 102);
-			END15=(IToken)Match(input,END,Follow._END_in_feature182);  
+			DebugLocation(48, 102);
+			END15=(IToken)Match(input,END,Follow._END_in_feature188);  
 			stream_END.Add(END15);
 
 
@@ -760,7 +762,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			LeaveRule("feature", 4);
 			LeaveRule_feature();
 		}
-		DebugLocation(46, 106);
+		DebugLocation(48, 106);
 		} finally { DebugExitRule(GrammarFileName, "feature"); }
 		return retval;
 
@@ -771,7 +773,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_attribute();
 
 	// $ANTLR start "attribute"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:48:1: attribute : DOUBLEP ! TYPE ( ASSING expr )? ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:50:1: attribute : DOUBLEP ! TYPE ( ASSING expr )? ;
 	[GrammarRule("attribute")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> attribute()
 	{
@@ -792,23 +794,23 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		COOLCommonTree TYPE17_tree = default(COOLCommonTree);
 		COOLCommonTree ASSING18_tree = default(COOLCommonTree);
 		try { DebugEnterRule(GrammarFileName, "attribute");
-		DebugLocation(48, 42);
+		DebugLocation(50, 42);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:48:10: ( DOUBLEP ! TYPE ( ASSING expr )? )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:50:10: ( DOUBLEP ! TYPE ( ASSING expr )? )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:48:13: DOUBLEP ! TYPE ( ASSING expr )?
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:50:13: DOUBLEP ! TYPE ( ASSING expr )?
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(48, 20);
-			DOUBLEP16=(IToken)Match(input,DOUBLEP,Follow._DOUBLEP_in_attribute193); 
-			DebugLocation(48, 22);
-			TYPE17=(IToken)Match(input,TYPE,Follow._TYPE_in_attribute196); 
+			DebugLocation(50, 20);
+			DOUBLEP16=(IToken)Match(input,DOUBLEP,Follow._DOUBLEP_in_attribute199); 
+			DebugLocation(50, 22);
+			TYPE17=(IToken)Match(input,TYPE,Follow._TYPE_in_attribute202); 
 			TYPE17_tree = (COOLCommonTree)adaptor.Create(TYPE17);
 			adaptor.AddChild(root_0, TYPE17_tree);
-			DebugLocation(48, 27);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:48:27: ( ASSING expr )?
+			DebugLocation(50, 27);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:50:27: ( ASSING expr )?
 			int alt6=2;
 			try { DebugEnterSubRule(6);
 			try { DebugEnterDecision(6, false);
@@ -823,14 +825,14 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:48:28: ASSING expr
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:50:28: ASSING expr
 				{
-				DebugLocation(48, 28);
-				ASSING18=(IToken)Match(input,ASSING,Follow._ASSING_in_attribute199); 
+				DebugLocation(50, 28);
+				ASSING18=(IToken)Match(input,ASSING,Follow._ASSING_in_attribute205); 
 				ASSING18_tree = (COOLCommonTree)adaptor.Create(ASSING18);
 				adaptor.AddChild(root_0, ASSING18_tree);
-				DebugLocation(48, 35);
-				PushFollow(Follow._expr_in_attribute201);
+				DebugLocation(50, 35);
+				PushFollow(Follow._expr_in_attribute207);
 				expr19=expr();
 				PopFollow();
 
@@ -864,7 +866,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			LeaveRule("attribute", 5);
 			LeaveRule_attribute();
 		}
-		DebugLocation(48, 42);
+		DebugLocation(50, 42);
 		} finally { DebugExitRule(GrammarFileName, "attribute"); }
 		return retval;
 
@@ -875,7 +877,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_methodefinition();
 
 	// $ANTLR start "methodefinition"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:49:2: methodefinition : OP_PARENT ( params_list )? CL_PARENT DOUBLEP TYPE OP_LLAVE expr CL_LLAVE -> ^( METHODEFINITION ( params_list )? TYPE ^( BODY expr ) ) ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:51:2: methodefinition : OP_PARENT ( params_list )? CL_PARENT DOUBLEP TYPE OP_LLAVE expr CL_LLAVE -> ^( METHODEFINITION ( params_list )? TYPE ^( BODY expr ) ) ;
 	[GrammarRule("methodefinition")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> methodefinition()
 	{
@@ -911,19 +913,19 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		RewriteRuleSubtreeStream stream_params_list=new RewriteRuleSubtreeStream(adaptor,"rule params_list");
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 		try { DebugEnterRule(GrammarFileName, "methodefinition");
-		DebugLocation(49, 147);
+		DebugLocation(51, 147);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:49:17: ( OP_PARENT ( params_list )? CL_PARENT DOUBLEP TYPE OP_LLAVE expr CL_LLAVE -> ^( METHODEFINITION ( params_list )? TYPE ^( BODY expr ) ) )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:51:17: ( OP_PARENT ( params_list )? CL_PARENT DOUBLEP TYPE OP_LLAVE expr CL_LLAVE -> ^( METHODEFINITION ( params_list )? TYPE ^( BODY expr ) ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:49:19: OP_PARENT ( params_list )? CL_PARENT DOUBLEP TYPE OP_LLAVE expr CL_LLAVE
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:51:19: OP_PARENT ( params_list )? CL_PARENT DOUBLEP TYPE OP_LLAVE expr CL_LLAVE
 			{
-			DebugLocation(49, 19);
-			OP_PARENT20=(IToken)Match(input,OP_PARENT,Follow._OP_PARENT_in_methodefinition212);  
+			DebugLocation(51, 19);
+			OP_PARENT20=(IToken)Match(input,OP_PARENT,Follow._OP_PARENT_in_methodefinition218);  
 			stream_OP_PARENT.Add(OP_PARENT20);
 
-			DebugLocation(49, 29);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:49:29: ( params_list )?
+			DebugLocation(51, 29);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:51:29: ( params_list )?
 			int alt7=2;
 			try { DebugEnterSubRule(7);
 			try { DebugEnterDecision(7, false);
@@ -938,10 +940,10 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:49:30: params_list
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:51:30: params_list
 				{
-				DebugLocation(49, 30);
-				PushFollow(Follow._params_list_in_methodefinition215);
+				DebugLocation(51, 30);
+				PushFollow(Follow._params_list_in_methodefinition221);
 				params_list21=params_list();
 				PopFollow();
 
@@ -953,37 +955,37 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			}
 			} finally { DebugExitSubRule(7); }
 
-			DebugLocation(49, 46);
-			CL_PARENT22=(IToken)Match(input,CL_PARENT,Follow._CL_PARENT_in_methodefinition221);  
+			DebugLocation(51, 46);
+			CL_PARENT22=(IToken)Match(input,CL_PARENT,Follow._CL_PARENT_in_methodefinition227);  
 			stream_CL_PARENT.Add(CL_PARENT22);
 
-			DebugLocation(49, 57);
-			DOUBLEP23=(IToken)Match(input,DOUBLEP,Follow._DOUBLEP_in_methodefinition224);  
+			DebugLocation(51, 57);
+			DOUBLEP23=(IToken)Match(input,DOUBLEP,Follow._DOUBLEP_in_methodefinition230);  
 			stream_DOUBLEP.Add(DOUBLEP23);
 
-			DebugLocation(49, 66);
-			TYPE24=(IToken)Match(input,TYPE,Follow._TYPE_in_methodefinition227);  
+			DebugLocation(51, 66);
+			TYPE24=(IToken)Match(input,TYPE,Follow._TYPE_in_methodefinition233);  
 			stream_TYPE.Add(TYPE24);
 
-			DebugLocation(49, 72);
-			OP_LLAVE25=(IToken)Match(input,OP_LLAVE,Follow._OP_LLAVE_in_methodefinition230);  
+			DebugLocation(51, 72);
+			OP_LLAVE25=(IToken)Match(input,OP_LLAVE,Follow._OP_LLAVE_in_methodefinition236);  
 			stream_OP_LLAVE.Add(OP_LLAVE25);
 
-			DebugLocation(49, 82);
-			PushFollow(Follow._expr_in_methodefinition233);
+			DebugLocation(51, 82);
+			PushFollow(Follow._expr_in_methodefinition239);
 			expr26=expr();
 			PopFollow();
 
 			stream_expr.Add(expr26.Tree);
-			DebugLocation(49, 88);
-			CL_LLAVE27=(IToken)Match(input,CL_LLAVE,Follow._CL_LLAVE_in_methodefinition236);  
+			DebugLocation(51, 88);
+			CL_LLAVE27=(IToken)Match(input,CL_LLAVE,Follow._CL_LLAVE_in_methodefinition242);  
 			stream_CL_LLAVE.Add(CL_LLAVE27);
 
 
 
 			{
 			// AST REWRITE
-			// elements: TYPE, params_list, expr
+			// elements: params_list, expr, TYPE
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -993,34 +995,34 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (COOLCommonTree)adaptor.Nil();
-			// 49:96: -> ^( METHODEFINITION ( params_list )? TYPE ^( BODY expr ) )
+			// 51:96: -> ^( METHODEFINITION ( params_list )? TYPE ^( BODY expr ) )
 			{
-				DebugLocation(49, 98);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:49:98: ^( METHODEFINITION ( params_list )? TYPE ^( BODY expr ) )
+				DebugLocation(51, 98);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:51:98: ^( METHODEFINITION ( params_list )? TYPE ^( BODY expr ) )
 				{
 				COOLCommonTree root_1 = (COOLCommonTree)adaptor.Nil();
-				DebugLocation(49, 100);
+				DebugLocation(51, 100);
 				root_1 = (COOLCommonTree)adaptor.BecomeRoot((COOLCommonTree)adaptor.Create(METHODEFINITION, "METHODEFINITION"), root_1);
 
-				DebugLocation(49, 116);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:49:116: ( params_list )?
+				DebugLocation(51, 116);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:51:116: ( params_list )?
 				if (stream_params_list.HasNext)
 				{
-					DebugLocation(49, 116);
+					DebugLocation(51, 116);
 					adaptor.AddChild(root_1, stream_params_list.NextTree());
 
 				}
 				stream_params_list.Reset();
-				DebugLocation(49, 129);
+				DebugLocation(51, 129);
 				adaptor.AddChild(root_1, stream_TYPE.NextNode());
-				DebugLocation(49, 134);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:49:134: ^( BODY expr )
+				DebugLocation(51, 134);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:51:134: ^( BODY expr )
 				{
 				COOLCommonTree root_2 = (COOLCommonTree)adaptor.Nil();
-				DebugLocation(49, 136);
+				DebugLocation(51, 136);
 				root_2 = (COOLCommonTree)adaptor.BecomeRoot((COOLCommonTree)adaptor.Create(BODY, "BODY"), root_2);
 
-				DebugLocation(49, 141);
+				DebugLocation(51, 141);
 				adaptor.AddChild(root_2, stream_expr.NextTree());
 
 				adaptor.AddChild(root_1, root_2);
@@ -1055,7 +1057,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			LeaveRule("methodefinition", 6);
 			LeaveRule_methodefinition();
 		}
-		DebugLocation(49, 147);
+		DebugLocation(51, 147);
 		} finally { DebugExitRule(GrammarFileName, "methodefinition"); }
 		return retval;
 
@@ -1066,7 +1068,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_params_list();
 
 	// $ANTLR start "params_list"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:50:2: params_list : param ( COMA param )* -> ^( PARAMLIST param ( param )* ) ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:52:2: params_list : param ( COMA param )* -> ^( PARAMLIST param ( param )* ) ;
 	[GrammarRule("params_list")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> params_list()
 	{
@@ -1086,21 +1088,21 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		RewriteRuleITokenStream stream_COMA=new RewriteRuleITokenStream(adaptor,"token COMA");
 		RewriteRuleSubtreeStream stream_param=new RewriteRuleSubtreeStream(adaptor,"rule param");
 		try { DebugEnterRule(GrammarFileName, "params_list");
-		DebugLocation(50, 61);
+		DebugLocation(52, 61);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:50:13: ( param ( COMA param )* -> ^( PARAMLIST param ( param )* ) )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:52:13: ( param ( COMA param )* -> ^( PARAMLIST param ( param )* ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:50:15: param ( COMA param )*
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:52:15: param ( COMA param )*
 			{
-			DebugLocation(50, 15);
-			PushFollow(Follow._param_in_params_list259);
+			DebugLocation(52, 15);
+			PushFollow(Follow._param_in_params_list265);
 			param28=param();
 			PopFollow();
 
 			stream_param.Add(param28.Tree);
-			DebugLocation(50, 21);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:50:21: ( COMA param )*
+			DebugLocation(52, 21);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:52:21: ( COMA param )*
 			try { DebugEnterSubRule(8);
 			while (true)
 			{
@@ -1119,14 +1121,14 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:50:22: COMA param
+					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:52:22: COMA param
 					{
-					DebugLocation(50, 22);
-					COMA29=(IToken)Match(input,COMA,Follow._COMA_in_params_list262);  
+					DebugLocation(52, 22);
+					COMA29=(IToken)Match(input,COMA,Follow._COMA_in_params_list268);  
 					stream_COMA.Add(COMA29);
 
-					DebugLocation(50, 28);
-					PushFollow(Follow._param_in_params_list265);
+					DebugLocation(52, 28);
+					PushFollow(Follow._param_in_params_list271);
 					param30=param();
 					PopFollow();
 
@@ -1159,22 +1161,22 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (COOLCommonTree)adaptor.Nil();
-			// 50:35: -> ^( PARAMLIST param ( param )* )
+			// 52:35: -> ^( PARAMLIST param ( param )* )
 			{
-				DebugLocation(50, 37);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:50:37: ^( PARAMLIST param ( param )* )
+				DebugLocation(52, 37);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:52:37: ^( PARAMLIST param ( param )* )
 				{
 				COOLCommonTree root_1 = (COOLCommonTree)adaptor.Nil();
-				DebugLocation(50, 39);
+				DebugLocation(52, 39);
 				root_1 = (COOLCommonTree)adaptor.BecomeRoot((COOLCommonTree)adaptor.Create(PARAMLIST, "PARAMLIST"), root_1);
 
-				DebugLocation(50, 49);
+				DebugLocation(52, 49);
 				adaptor.AddChild(root_1, stream_param.NextTree());
-				DebugLocation(50, 55);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:50:55: ( param )*
+				DebugLocation(52, 55);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:52:55: ( param )*
 				while ( stream_param.HasNext )
 				{
-					DebugLocation(50, 55);
+					DebugLocation(52, 55);
 					adaptor.AddChild(root_1, stream_param.NextTree());
 
 				}
@@ -1209,7 +1211,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			LeaveRule("params_list", 7);
 			LeaveRule_params_list();
 		}
-		DebugLocation(50, 61);
+		DebugLocation(52, 61);
 		} finally { DebugExitRule(GrammarFileName, "params_list"); }
 		return retval;
 
@@ -1220,7 +1222,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_param();
 
 	// $ANTLR start "param"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:51:2: param : ( ID DOUBLEP TYPE ) -> ^( PARAM ID TYPE ) ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:53:2: param : ( ID DOUBLEP TYPE ) -> ^( PARAM ID TYPE ) ;
 	[GrammarRule("param")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> param()
 	{
@@ -1243,28 +1245,28 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
 		RewriteRuleITokenStream stream_TYPE=new RewriteRuleITokenStream(adaptor,"token TYPE");
 		try { DebugEnterRule(GrammarFileName, "param");
-		DebugLocation(51, 45);
+		DebugLocation(53, 45);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:51:7: ( ( ID DOUBLEP TYPE ) -> ^( PARAM ID TYPE ) )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:53:7: ( ( ID DOUBLEP TYPE ) -> ^( PARAM ID TYPE ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:51:9: ( ID DOUBLEP TYPE )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:53:9: ( ID DOUBLEP TYPE )
 			{
-			DebugLocation(51, 9);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:51:9: ( ID DOUBLEP TYPE )
+			DebugLocation(53, 9);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:53:9: ( ID DOUBLEP TYPE )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:51:10: ID DOUBLEP TYPE
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:53:10: ID DOUBLEP TYPE
 			{
-			DebugLocation(51, 10);
-			ID31=(IToken)Match(input,ID,Follow._ID_in_param284);  
+			DebugLocation(53, 10);
+			ID31=(IToken)Match(input,ID,Follow._ID_in_param290);  
 			stream_ID.Add(ID31);
 
-			DebugLocation(51, 14);
-			DOUBLEP32=(IToken)Match(input,DOUBLEP,Follow._DOUBLEP_in_param287);  
+			DebugLocation(53, 14);
+			DOUBLEP32=(IToken)Match(input,DOUBLEP,Follow._DOUBLEP_in_param293);  
 			stream_DOUBLEP.Add(DOUBLEP32);
 
-			DebugLocation(51, 23);
-			TYPE33=(IToken)Match(input,TYPE,Follow._TYPE_in_param290);  
+			DebugLocation(53, 23);
+			TYPE33=(IToken)Match(input,TYPE,Follow._TYPE_in_param296);  
 			stream_TYPE.Add(TYPE33);
 
 
@@ -1284,18 +1286,18 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (COOLCommonTree)adaptor.Nil();
-			// 51:28: -> ^( PARAM ID TYPE )
+			// 53:28: -> ^( PARAM ID TYPE )
 			{
-				DebugLocation(51, 30);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:51:30: ^( PARAM ID TYPE )
+				DebugLocation(53, 30);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:53:30: ^( PARAM ID TYPE )
 				{
 				COOLCommonTree root_1 = (COOLCommonTree)adaptor.Nil();
-				DebugLocation(51, 32);
+				DebugLocation(53, 32);
 				root_1 = (COOLCommonTree)adaptor.BecomeRoot((COOLCommonTree)adaptor.Create(PARAM, "PARAM"), root_1);
 
-				DebugLocation(51, 38);
+				DebugLocation(53, 38);
 				adaptor.AddChild(root_1, stream_ID.NextNode());
-				DebugLocation(51, 41);
+				DebugLocation(53, 41);
 				adaptor.AddChild(root_1, stream_TYPE.NextNode());
 
 				adaptor.AddChild(root_0, root_1);
@@ -1327,7 +1329,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			LeaveRule("param", 8);
 			LeaveRule_param();
 		}
-		DebugLocation(51, 45);
+		DebugLocation(53, 45);
 		} finally { DebugExitRule(GrammarFileName, "param"); }
 		return retval;
 
@@ -1338,7 +1340,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_expr();
 
 	// $ANTLR start "expr"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:53:2: expr : ( assignment | conditionals | loops | blocks | let | case | new | operations | TYPE ^| ( NOT ^ expr ) | ( ISVOID ^ expr ) | nanarita );
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:55:2: expr : ( assignment | conditionals | loops | blocks | let | case | new | operations | TYPE ^| ( NOT ^ expr ) | ( ISVOID ^ expr ) | nanarita );
 	[GrammarRule("expr")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> expr()
 	{
@@ -1369,10 +1371,10 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		COOLCommonTree NOT43_tree = default(COOLCommonTree);
 		COOLCommonTree ISVOID45_tree = default(COOLCommonTree);
 		try { DebugEnterRule(GrammarFileName, "expr");
-		DebugLocation(53, 13);
+		DebugLocation(55, 13);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:53:6: ( assignment | conditionals | loops | blocks | let | case | new | operations | TYPE ^| ( NOT ^ expr ) | ( ISVOID ^ expr ) | nanarita )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:55:6: ( assignment | conditionals | loops | blocks | let | case | new | operations | TYPE ^| ( NOT ^ expr ) | ( ISVOID ^ expr ) | nanarita )
 			int alt9=12;
 			try { DebugEnterDecision(9, false);
 			switch (input.LA(1))
@@ -1385,7 +1387,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				{
 					alt9 = 1;
 				}
-				else if ((LA9_1==EOF||LA9_1==ARROBA||(LA9_1>=CL_LLAVE && LA9_1<=COMA)||LA9_1==DIV||(LA9_1>=ELSE && LA9_1<=ESAC)||(LA9_1>=FI && LA9_1<=GEQ)||LA9_1==ID||LA9_1==IN||(LA9_1>=L && LA9_1<=LEQ)||LA9_1==LOOP||(LA9_1>=MINUS && LA9_1<=MULT)||LA9_1==OF||LA9_1==OP_PARENT||(LA9_1>=PLUS && LA9_1<=POOL)||LA9_1==THEN))
+				else if ((LA9_1==EOF||LA9_1==ARROBA||(LA9_1>=CL_LLAVE && LA9_1<=COMA)||LA9_1==DIV||(LA9_1>=ELSE && LA9_1<=EQ)||(LA9_1>=FI && LA9_1<=GEQ)||LA9_1==IN||(LA9_1>=L && LA9_1<=LEQ)||LA9_1==LOOP||(LA9_1>=MINUS && LA9_1<=MULT)||LA9_1==OF||LA9_1==OP_PARENT||(LA9_1>=PLUS && LA9_1<=POOL)||LA9_1==THEN))
 				{
 					alt9 = 8;
 				}
@@ -1468,12 +1470,12 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:53:8: assignment
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:55:8: assignment
 				{
 				root_0 = (COOLCommonTree)adaptor.Nil();
 
-				DebugLocation(53, 8);
-				PushFollow(Follow._assignment_in_expr307);
+				DebugLocation(55, 8);
+				PushFollow(Follow._assignment_in_expr313);
 				assignment34=assignment();
 				PopFollow();
 
@@ -1483,12 +1485,12 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:54:6: conditionals
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:56:6: conditionals
 				{
 				root_0 = (COOLCommonTree)adaptor.Nil();
 
-				DebugLocation(54, 6);
-				PushFollow(Follow._conditionals_in_expr314);
+				DebugLocation(56, 6);
+				PushFollow(Follow._conditionals_in_expr320);
 				conditionals35=conditionals();
 				PopFollow();
 
@@ -1498,12 +1500,12 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:55:6: loops
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:57:6: loops
 				{
 				root_0 = (COOLCommonTree)adaptor.Nil();
 
-				DebugLocation(55, 6);
-				PushFollow(Follow._loops_in_expr321);
+				DebugLocation(57, 6);
+				PushFollow(Follow._loops_in_expr327);
 				loops36=loops();
 				PopFollow();
 
@@ -1513,12 +1515,12 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:56:6: blocks
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:58:6: blocks
 				{
 				root_0 = (COOLCommonTree)adaptor.Nil();
 
-				DebugLocation(56, 6);
-				PushFollow(Follow._blocks_in_expr328);
+				DebugLocation(58, 6);
+				PushFollow(Follow._blocks_in_expr334);
 				blocks37=blocks();
 				PopFollow();
 
@@ -1528,12 +1530,12 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:57:6: let
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:59:6: let
 				{
 				root_0 = (COOLCommonTree)adaptor.Nil();
 
-				DebugLocation(57, 6);
-				PushFollow(Follow._let_in_expr335);
+				DebugLocation(59, 6);
+				PushFollow(Follow._let_in_expr341);
 				let38=let();
 				PopFollow();
 
@@ -1543,12 +1545,12 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:58:6: case
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:60:6: case
 				{
 				root_0 = (COOLCommonTree)adaptor.Nil();
 
-				DebugLocation(58, 6);
-				PushFollow(Follow._case_in_expr342);
+				DebugLocation(60, 6);
+				PushFollow(Follow._case_in_expr348);
 				case39=@case();
 				PopFollow();
 
@@ -1558,12 +1560,12 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:59:6: new
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:61:6: new
 				{
 				root_0 = (COOLCommonTree)adaptor.Nil();
 
-				DebugLocation(59, 6);
-				PushFollow(Follow._new_in_expr349);
+				DebugLocation(61, 6);
+				PushFollow(Follow._new_in_expr355);
 				new40=@new();
 				PopFollow();
 
@@ -1573,12 +1575,12 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				break;
 			case 8:
 				DebugEnterAlt(8);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:60:6: operations
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:62:6: operations
 				{
 				root_0 = (COOLCommonTree)adaptor.Nil();
 
-				DebugLocation(60, 6);
-				PushFollow(Follow._operations_in_expr356);
+				DebugLocation(62, 6);
+				PushFollow(Follow._operations_in_expr362);
 				operations41=operations();
 				PopFollow();
 
@@ -1588,12 +1590,12 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				break;
 			case 9:
 				DebugEnterAlt(9);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:61:6: TYPE ^
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:63:6: TYPE ^
 				{
 				root_0 = (COOLCommonTree)adaptor.Nil();
 
-				DebugLocation(61, 10);
-				TYPE42=(IToken)Match(input,TYPE,Follow._TYPE_in_expr363); 
+				DebugLocation(63, 10);
+				TYPE42=(IToken)Match(input,TYPE,Follow._TYPE_in_expr369); 
 				TYPE42_tree = (COOLCommonTree)adaptor.Create(TYPE42);
 				root_0 = (COOLCommonTree)adaptor.BecomeRoot(TYPE42_tree, root_0);
 
@@ -1601,21 +1603,21 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				break;
 			case 10:
 				DebugEnterAlt(10);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:62:6: ( NOT ^ expr )
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:64:6: ( NOT ^ expr )
 				{
 				root_0 = (COOLCommonTree)adaptor.Nil();
 
-				DebugLocation(62, 6);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:62:6: ( NOT ^ expr )
+				DebugLocation(64, 6);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:64:6: ( NOT ^ expr )
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:62:7: NOT ^ expr
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:64:7: NOT ^ expr
 				{
-				DebugLocation(62, 10);
-				NOT43=(IToken)Match(input,NOT,Follow._NOT_in_expr372); 
+				DebugLocation(64, 10);
+				NOT43=(IToken)Match(input,NOT,Follow._NOT_in_expr378); 
 				NOT43_tree = (COOLCommonTree)adaptor.Create(NOT43);
 				root_0 = (COOLCommonTree)adaptor.BecomeRoot(NOT43_tree, root_0);
-				DebugLocation(62, 12);
-				PushFollow(Follow._expr_in_expr375);
+				DebugLocation(64, 12);
+				PushFollow(Follow._expr_in_expr381);
 				expr44=expr();
 				PopFollow();
 
@@ -1628,21 +1630,21 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				break;
 			case 11:
 				DebugEnterAlt(11);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:63:6: ( ISVOID ^ expr )
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:65:6: ( ISVOID ^ expr )
 				{
 				root_0 = (COOLCommonTree)adaptor.Nil();
 
-				DebugLocation(63, 6);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:63:6: ( ISVOID ^ expr )
+				DebugLocation(65, 6);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:65:6: ( ISVOID ^ expr )
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:63:7: ISVOID ^ expr
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:65:7: ISVOID ^ expr
 				{
-				DebugLocation(63, 13);
-				ISVOID45=(IToken)Match(input,ISVOID,Follow._ISVOID_in_expr384); 
+				DebugLocation(65, 13);
+				ISVOID45=(IToken)Match(input,ISVOID,Follow._ISVOID_in_expr390); 
 				ISVOID45_tree = (COOLCommonTree)adaptor.Create(ISVOID45);
 				root_0 = (COOLCommonTree)adaptor.BecomeRoot(ISVOID45_tree, root_0);
-				DebugLocation(63, 16);
-				PushFollow(Follow._expr_in_expr388);
+				DebugLocation(65, 16);
+				PushFollow(Follow._expr_in_expr394);
 				expr46=expr();
 				PopFollow();
 
@@ -1655,12 +1657,12 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				break;
 			case 12:
 				DebugEnterAlt(12);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:64:6: nanarita
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:66:6: nanarita
 				{
 				root_0 = (COOLCommonTree)adaptor.Nil();
 
-				DebugLocation(64, 6);
-				PushFollow(Follow._nanarita_in_expr396);
+				DebugLocation(66, 6);
+				PushFollow(Follow._nanarita_in_expr402);
 				nanarita47=nanarita();
 				PopFollow();
 
@@ -1689,7 +1691,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			LeaveRule("expr", 9);
 			LeaveRule_expr();
 		}
-		DebugLocation(64, 13);
+		DebugLocation(66, 13);
 		} finally { DebugExitRule(GrammarFileName, "expr"); }
 		return retval;
 
@@ -1700,7 +1702,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_exprList();
 
 	// $ANTLR start "exprList"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:67:1: exprList : expr END ! ( expr END !)* ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:69:1: exprList : expr END ! ( expr END !)* ;
 	[GrammarRule("exprList")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> exprList()
 	{
@@ -1720,25 +1722,25 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		COOLCommonTree END49_tree = default(COOLCommonTree);
 		COOLCommonTree END51_tree = default(COOLCommonTree);
 		try { DebugEnterRule(GrammarFileName, "exprList");
-		DebugLocation(67, 32);
+		DebugLocation(69, 32);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:67:9: ( expr END ! ( expr END !)* )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:69:9: ( expr END ! ( expr END !)* )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:67:11: expr END ! ( expr END !)*
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:69:11: expr END ! ( expr END !)*
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(67, 11);
-			PushFollow(Follow._expr_in_exprList406);
+			DebugLocation(69, 11);
+			PushFollow(Follow._expr_in_exprList412);
 			expr48=expr();
 			PopFollow();
 
 			adaptor.AddChild(root_0, expr48.Tree);
-			DebugLocation(67, 19);
-			END49=(IToken)Match(input,END,Follow._END_in_exprList408); 
-			DebugLocation(67, 21);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:67:21: ( expr END !)*
+			DebugLocation(69, 19);
+			END49=(IToken)Match(input,END,Follow._END_in_exprList414); 
+			DebugLocation(69, 21);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:69:21: ( expr END !)*
 			try { DebugEnterSubRule(10);
 			while (true)
 			{
@@ -1757,16 +1759,16 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:67:22: expr END !
+					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:69:22: expr END !
 					{
-					DebugLocation(67, 22);
-					PushFollow(Follow._expr_in_exprList412);
+					DebugLocation(69, 22);
+					PushFollow(Follow._expr_in_exprList418);
 					expr50=expr();
 					PopFollow();
 
 					adaptor.AddChild(root_0, expr50.Tree);
-					DebugLocation(67, 30);
-					END51=(IToken)Match(input,END,Follow._END_in_exprList414); 
+					DebugLocation(69, 30);
+					END51=(IToken)Match(input,END,Follow._END_in_exprList420); 
 
 					}
 					break;
@@ -1803,7 +1805,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			LeaveRule("exprList", 10);
 			LeaveRule_exprList();
 		}
-		DebugLocation(67, 32);
+		DebugLocation(69, 32);
 		} finally { DebugExitRule(GrammarFileName, "exprList"); }
 		return retval;
 
@@ -1814,7 +1816,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_assignment();
 
 	// $ANTLR start "assignment"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:68:2: assignment : ( ID ASSING ^ expr ) ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:70:2: assignment : ( ID ASSING ^ expr ) ;
 	[GrammarRule("assignment")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> assignment()
 	{
@@ -1833,30 +1835,30 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		COOLCommonTree ID52_tree = default(COOLCommonTree);
 		COOLCommonTree ASSING53_tree = default(COOLCommonTree);
 		try { DebugEnterRule(GrammarFileName, "assignment");
-		DebugLocation(68, 32);
+		DebugLocation(70, 32);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:68:12: ( ( ID ASSING ^ expr ) )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:70:12: ( ( ID ASSING ^ expr ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:68:14: ( ID ASSING ^ expr )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:70:14: ( ID ASSING ^ expr )
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(68, 14);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:68:14: ( ID ASSING ^ expr )
+			DebugLocation(70, 14);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:70:14: ( ID ASSING ^ expr )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:68:15: ID ASSING ^ expr
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:70:15: ID ASSING ^ expr
 			{
-			DebugLocation(68, 15);
-			ID52=(IToken)Match(input,ID,Follow._ID_in_assignment425); 
+			DebugLocation(70, 15);
+			ID52=(IToken)Match(input,ID,Follow._ID_in_assignment431); 
 			ID52_tree = (COOLCommonTree)adaptor.Create(ID52);
 			adaptor.AddChild(root_0, ID52_tree);
-			DebugLocation(68, 24);
-			ASSING53=(IToken)Match(input,ASSING,Follow._ASSING_in_assignment427); 
+			DebugLocation(70, 24);
+			ASSING53=(IToken)Match(input,ASSING,Follow._ASSING_in_assignment433); 
 			ASSING53_tree = (COOLCommonTree)adaptor.Create(ASSING53);
 			root_0 = (COOLCommonTree)adaptor.BecomeRoot(ASSING53_tree, root_0);
-			DebugLocation(68, 27);
-			PushFollow(Follow._expr_in_assignment431);
+			DebugLocation(70, 27);
+			PushFollow(Follow._expr_in_assignment437);
 			expr54=expr();
 			PopFollow();
 
@@ -1886,7 +1888,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			LeaveRule("assignment", 11);
 			LeaveRule_assignment();
 		}
-		DebugLocation(68, 32);
+		DebugLocation(70, 32);
 		} finally { DebugExitRule(GrammarFileName, "assignment"); }
 		return retval;
 
@@ -1897,7 +1899,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_conditionals();
 
 	// $ANTLR start "conditionals"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:69:2: conditionals : ( IF expr ( THEN expr ) ( ELSE expr )? FI ) -> ^( IF expr ^( THEN expr ) ( ^( ELSE expr ) )? ) ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:71:2: conditionals : ( IF expr ( THEN expr ) ( ELSE expr )? FI ) -> ^( IF expr ^( THEN expr ) ( ^( ELSE expr ) )? ) ;
 	[GrammarRule("conditionals")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> conditionals()
 	{
@@ -1927,39 +1929,39 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		RewriteRuleITokenStream stream_FI=new RewriteRuleITokenStream(adaptor,"token FI");
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 		try { DebugEnterRule(GrammarFileName, "conditionals");
-		DebugLocation(69, 92);
+		DebugLocation(71, 92);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:69:14: ( ( IF expr ( THEN expr ) ( ELSE expr )? FI ) -> ^( IF expr ^( THEN expr ) ( ^( ELSE expr ) )? ) )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:71:14: ( ( IF expr ( THEN expr ) ( ELSE expr )? FI ) -> ^( IF expr ^( THEN expr ) ( ^( ELSE expr ) )? ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:69:16: ( IF expr ( THEN expr ) ( ELSE expr )? FI )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:71:16: ( IF expr ( THEN expr ) ( ELSE expr )? FI )
 			{
-			DebugLocation(69, 16);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:69:16: ( IF expr ( THEN expr ) ( ELSE expr )? FI )
+			DebugLocation(71, 16);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:71:16: ( IF expr ( THEN expr ) ( ELSE expr )? FI )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:69:17: IF expr ( THEN expr ) ( ELSE expr )? FI
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:71:17: IF expr ( THEN expr ) ( ELSE expr )? FI
 			{
-			DebugLocation(69, 17);
-			IF55=(IToken)Match(input,IF,Follow._IF_in_conditionals441);  
+			DebugLocation(71, 17);
+			IF55=(IToken)Match(input,IF,Follow._IF_in_conditionals447);  
 			stream_IF.Add(IF55);
 
-			DebugLocation(69, 20);
-			PushFollow(Follow._expr_in_conditionals443);
+			DebugLocation(71, 20);
+			PushFollow(Follow._expr_in_conditionals449);
 			expr56=expr();
 			PopFollow();
 
 			stream_expr.Add(expr56.Tree);
-			DebugLocation(69, 25);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:69:25: ( THEN expr )
+			DebugLocation(71, 25);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:71:25: ( THEN expr )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:69:26: THEN expr
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:71:26: THEN expr
 			{
-			DebugLocation(69, 26);
-			THEN57=(IToken)Match(input,THEN,Follow._THEN_in_conditionals446);  
+			DebugLocation(71, 26);
+			THEN57=(IToken)Match(input,THEN,Follow._THEN_in_conditionals452);  
 			stream_THEN.Add(THEN57);
 
-			DebugLocation(69, 31);
-			PushFollow(Follow._expr_in_conditionals448);
+			DebugLocation(71, 31);
+			PushFollow(Follow._expr_in_conditionals454);
 			expr58=expr();
 			PopFollow();
 
@@ -1967,8 +1969,8 @@ public partial class COOLParser : Antlr.Runtime.Parser
 
 			}
 
-			DebugLocation(69, 37);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:69:37: ( ELSE expr )?
+			DebugLocation(71, 37);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:71:37: ( ELSE expr )?
 			int alt11=2;
 			try { DebugEnterSubRule(11);
 			try { DebugEnterDecision(11, false);
@@ -1983,14 +1985,14 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:69:38: ELSE expr
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:71:38: ELSE expr
 				{
-				DebugLocation(69, 38);
-				ELSE59=(IToken)Match(input,ELSE,Follow._ELSE_in_conditionals452);  
+				DebugLocation(71, 38);
+				ELSE59=(IToken)Match(input,ELSE,Follow._ELSE_in_conditionals458);  
 				stream_ELSE.Add(ELSE59);
 
-				DebugLocation(69, 43);
-				PushFollow(Follow._expr_in_conditionals454);
+				DebugLocation(71, 43);
+				PushFollow(Follow._expr_in_conditionals460);
 				expr60=expr();
 				PopFollow();
 
@@ -2002,8 +2004,8 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			}
 			} finally { DebugExitSubRule(11); }
 
-			DebugLocation(69, 50);
-			FI61=(IToken)Match(input,FI,Follow._FI_in_conditionals458);  
+			DebugLocation(71, 50);
+			FI61=(IToken)Match(input,FI,Follow._FI_in_conditionals464);  
 			stream_FI.Add(FI61);
 
 
@@ -2013,7 +2015,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 
 			{
 			// AST REWRITE
-			// elements: expr, IF, expr, ELSE, expr, THEN
+			// elements: expr, ELSE, expr, THEN, IF, expr
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -2023,41 +2025,41 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (COOLCommonTree)adaptor.Nil();
-			// 69:53: -> ^( IF expr ^( THEN expr ) ( ^( ELSE expr ) )? )
+			// 71:53: -> ^( IF expr ^( THEN expr ) ( ^( ELSE expr ) )? )
 			{
-				DebugLocation(69, 55);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:69:55: ^( IF expr ^( THEN expr ) ( ^( ELSE expr ) )? )
+				DebugLocation(71, 55);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:71:55: ^( IF expr ^( THEN expr ) ( ^( ELSE expr ) )? )
 				{
 				COOLCommonTree root_1 = (COOLCommonTree)adaptor.Nil();
-				DebugLocation(69, 57);
+				DebugLocation(71, 57);
 				root_1 = (COOLCommonTree)adaptor.BecomeRoot(stream_IF.NextNode(), root_1);
 
-				DebugLocation(69, 60);
+				DebugLocation(71, 60);
 				adaptor.AddChild(root_1, stream_expr.NextTree());
-				DebugLocation(69, 65);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:69:65: ^( THEN expr )
+				DebugLocation(71, 65);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:71:65: ^( THEN expr )
 				{
 				COOLCommonTree root_2 = (COOLCommonTree)adaptor.Nil();
-				DebugLocation(69, 67);
+				DebugLocation(71, 67);
 				root_2 = (COOLCommonTree)adaptor.BecomeRoot(stream_THEN.NextNode(), root_2);
 
-				DebugLocation(69, 72);
+				DebugLocation(71, 72);
 				adaptor.AddChild(root_2, stream_expr.NextTree());
 
 				adaptor.AddChild(root_1, root_2);
 				}
-				DebugLocation(69, 78);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:69:78: ( ^( ELSE expr ) )?
+				DebugLocation(71, 78);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:71:78: ( ^( ELSE expr ) )?
 				if (stream_expr.HasNext||stream_ELSE.HasNext)
 				{
-					DebugLocation(69, 78);
-					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:69:78: ^( ELSE expr )
+					DebugLocation(71, 78);
+					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:71:78: ^( ELSE expr )
 					{
 					COOLCommonTree root_2 = (COOLCommonTree)adaptor.Nil();
-					DebugLocation(69, 80);
+					DebugLocation(71, 80);
 					root_2 = (COOLCommonTree)adaptor.BecomeRoot(stream_ELSE.NextNode(), root_2);
 
-					DebugLocation(69, 85);
+					DebugLocation(71, 85);
 					adaptor.AddChild(root_2, stream_expr.NextTree());
 
 					adaptor.AddChild(root_1, root_2);
@@ -2096,7 +2098,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			LeaveRule("conditionals", 12);
 			LeaveRule_conditionals();
 		}
-		DebugLocation(69, 92);
+		DebugLocation(71, 92);
 		} finally { DebugExitRule(GrammarFileName, "conditionals"); }
 		return retval;
 
@@ -2107,7 +2109,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_loops();
 
 	// $ANTLR start "loops"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:70:2: loops : WHILE ^ expr LOOP ! expr POOL !;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:72:2: loops : WHILE ^ expr LOOP ! expr POOL !;
 	[GrammarRule("loops")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> loops()
 	{
@@ -2129,35 +2131,35 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		COOLCommonTree LOOP64_tree = default(COOLCommonTree);
 		COOLCommonTree POOL66_tree = default(COOLCommonTree);
 		try { DebugEnterRule(GrammarFileName, "loops");
-		DebugLocation(70, 38);
+		DebugLocation(72, 38);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:70:7: ( WHILE ^ expr LOOP ! expr POOL !)
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:72:7: ( WHILE ^ expr LOOP ! expr POOL !)
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:70:9: WHILE ^ expr LOOP ! expr POOL !
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:72:9: WHILE ^ expr LOOP ! expr POOL !
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(70, 14);
-			WHILE62=(IToken)Match(input,WHILE,Follow._WHILE_in_loops486); 
+			DebugLocation(72, 14);
+			WHILE62=(IToken)Match(input,WHILE,Follow._WHILE_in_loops492); 
 			WHILE62_tree = (COOLCommonTree)adaptor.Create(WHILE62);
 			root_0 = (COOLCommonTree)adaptor.BecomeRoot(WHILE62_tree, root_0);
-			DebugLocation(70, 17);
-			PushFollow(Follow._expr_in_loops490);
+			DebugLocation(72, 17);
+			PushFollow(Follow._expr_in_loops496);
 			expr63=expr();
 			PopFollow();
 
 			adaptor.AddChild(root_0, expr63.Tree);
-			DebugLocation(70, 26);
-			LOOP64=(IToken)Match(input,LOOP,Follow._LOOP_in_loops492); 
-			DebugLocation(70, 28);
-			PushFollow(Follow._expr_in_loops495);
+			DebugLocation(72, 26);
+			LOOP64=(IToken)Match(input,LOOP,Follow._LOOP_in_loops498); 
+			DebugLocation(72, 28);
+			PushFollow(Follow._expr_in_loops501);
 			expr65=expr();
 			PopFollow();
 
 			adaptor.AddChild(root_0, expr65.Tree);
-			DebugLocation(70, 37);
-			POOL66=(IToken)Match(input,POOL,Follow._POOL_in_loops497); 
+			DebugLocation(72, 37);
+			POOL66=(IToken)Match(input,POOL,Follow._POOL_in_loops503); 
 
 			}
 
@@ -2180,7 +2182,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			LeaveRule("loops", 13);
 			LeaveRule_loops();
 		}
-		DebugLocation(70, 38);
+		DebugLocation(72, 38);
 		} finally { DebugExitRule(GrammarFileName, "loops"); }
 		return retval;
 
@@ -2191,7 +2193,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_blocks();
 
 	// $ANTLR start "blocks"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:71:2: blocks : OP_LLAVE exprList CL_LLAVE -> ^( BLOCK exprList ) ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:73:2: blocks : OP_LLAVE exprList CL_LLAVE -> ^( BLOCK exprList ) ;
 	[GrammarRule("blocks")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> blocks()
 	{
@@ -2213,25 +2215,25 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		RewriteRuleITokenStream stream_CL_LLAVE=new RewriteRuleITokenStream(adaptor,"token CL_LLAVE");
 		RewriteRuleSubtreeStream stream_exprList=new RewriteRuleSubtreeStream(adaptor,"rule exprList");
 		try { DebugEnterRule(GrammarFileName, "blocks");
-		DebugLocation(71, 56);
+		DebugLocation(73, 56);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:71:8: ( OP_LLAVE exprList CL_LLAVE -> ^( BLOCK exprList ) )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:73:8: ( OP_LLAVE exprList CL_LLAVE -> ^( BLOCK exprList ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:71:10: OP_LLAVE exprList CL_LLAVE
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:73:10: OP_LLAVE exprList CL_LLAVE
 			{
-			DebugLocation(71, 10);
-			OP_LLAVE67=(IToken)Match(input,OP_LLAVE,Follow._OP_LLAVE_in_blocks506);  
+			DebugLocation(73, 10);
+			OP_LLAVE67=(IToken)Match(input,OP_LLAVE,Follow._OP_LLAVE_in_blocks512);  
 			stream_OP_LLAVE.Add(OP_LLAVE67);
 
-			DebugLocation(71, 20);
-			PushFollow(Follow._exprList_in_blocks509);
+			DebugLocation(73, 20);
+			PushFollow(Follow._exprList_in_blocks515);
 			exprList68=exprList();
 			PopFollow();
 
 			stream_exprList.Add(exprList68.Tree);
-			DebugLocation(71, 29);
-			CL_LLAVE69=(IToken)Match(input,CL_LLAVE,Follow._CL_LLAVE_in_blocks511);  
+			DebugLocation(73, 29);
+			CL_LLAVE69=(IToken)Match(input,CL_LLAVE,Follow._CL_LLAVE_in_blocks517);  
 			stream_CL_LLAVE.Add(CL_LLAVE69);
 
 
@@ -2248,16 +2250,16 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (COOLCommonTree)adaptor.Nil();
-			// 71:37: -> ^( BLOCK exprList )
+			// 73:37: -> ^( BLOCK exprList )
 			{
-				DebugLocation(71, 39);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:71:39: ^( BLOCK exprList )
+				DebugLocation(73, 39);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:73:39: ^( BLOCK exprList )
 				{
 				COOLCommonTree root_1 = (COOLCommonTree)adaptor.Nil();
-				DebugLocation(71, 41);
+				DebugLocation(73, 41);
 				root_1 = (COOLCommonTree)adaptor.BecomeRoot((COOLCommonTree)adaptor.Create(BLOCK, "BLOCK"), root_1);
 
-				DebugLocation(71, 47);
+				DebugLocation(73, 47);
 				adaptor.AddChild(root_1, stream_exprList.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -2289,7 +2291,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			LeaveRule("blocks", 14);
 			LeaveRule_blocks();
 		}
-		DebugLocation(71, 56);
+		DebugLocation(73, 56);
 		} finally { DebugExitRule(GrammarFileName, "blocks"); }
 		return retval;
 
@@ -2300,7 +2302,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_let();
 
 	// $ANTLR start "let"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:72:2: let : ( LET var_list_declaration IN expr ) -> ^( LET var_list_declaration ^( BODY expr ) ) ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:74:2: let : ( LET var_list_declaration IN expr ) -> ^( LET var_list_declaration ^( BODY expr ) ) ;
 	[GrammarRule("let")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> let()
 	{
@@ -2324,34 +2326,34 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 		RewriteRuleSubtreeStream stream_var_list_declaration=new RewriteRuleSubtreeStream(adaptor,"rule var_list_declaration");
 		try { DebugEnterRule(GrammarFileName, "let");
-		DebugLocation(72, 84);
+		DebugLocation(74, 84);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:72:5: ( ( LET var_list_declaration IN expr ) -> ^( LET var_list_declaration ^( BODY expr ) ) )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:74:5: ( ( LET var_list_declaration IN expr ) -> ^( LET var_list_declaration ^( BODY expr ) ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:72:7: ( LET var_list_declaration IN expr )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:74:7: ( LET var_list_declaration IN expr )
 			{
-			DebugLocation(72, 7);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:72:7: ( LET var_list_declaration IN expr )
+			DebugLocation(74, 7);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:74:7: ( LET var_list_declaration IN expr )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:72:8: LET var_list_declaration IN expr
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:74:8: LET var_list_declaration IN expr
 			{
-			DebugLocation(72, 8);
-			LET70=(IToken)Match(input,LET,Follow._LET_in_let526);  
+			DebugLocation(74, 8);
+			LET70=(IToken)Match(input,LET,Follow._LET_in_let532);  
 			stream_LET.Add(LET70);
 
-			DebugLocation(72, 13);
-			PushFollow(Follow._var_list_declaration_in_let529);
+			DebugLocation(74, 13);
+			PushFollow(Follow._var_list_declaration_in_let535);
 			var_list_declaration71=var_list_declaration();
 			PopFollow();
 
 			stream_var_list_declaration.Add(var_list_declaration71.Tree);
-			DebugLocation(72, 34);
-			IN72=(IToken)Match(input,IN,Follow._IN_in_let531);  
+			DebugLocation(74, 34);
+			IN72=(IToken)Match(input,IN,Follow._IN_in_let537);  
 			stream_IN.Add(IN72);
 
-			DebugLocation(72, 37);
-			PushFollow(Follow._expr_in_let533);
+			DebugLocation(74, 37);
+			PushFollow(Follow._expr_in_let539);
 			expr73=expr();
 			PopFollow();
 
@@ -2363,7 +2365,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 
 			{
 			// AST REWRITE
-			// elements: expr, var_list_declaration, LET
+			// elements: LET, expr, var_list_declaration
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -2373,25 +2375,25 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (COOLCommonTree)adaptor.Nil();
-			// 72:42: -> ^( LET var_list_declaration ^( BODY expr ) )
+			// 74:42: -> ^( LET var_list_declaration ^( BODY expr ) )
 			{
-				DebugLocation(72, 44);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:72:44: ^( LET var_list_declaration ^( BODY expr ) )
+				DebugLocation(74, 44);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:74:44: ^( LET var_list_declaration ^( BODY expr ) )
 				{
 				COOLCommonTree root_1 = (COOLCommonTree)adaptor.Nil();
-				DebugLocation(72, 46);
+				DebugLocation(74, 46);
 				root_1 = (COOLCommonTree)adaptor.BecomeRoot(stream_LET.NextNode(), root_1);
 
-				DebugLocation(72, 50);
+				DebugLocation(74, 50);
 				adaptor.AddChild(root_1, stream_var_list_declaration.NextTree());
-				DebugLocation(72, 71);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:72:71: ^( BODY expr )
+				DebugLocation(74, 71);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:74:71: ^( BODY expr )
 				{
 				COOLCommonTree root_2 = (COOLCommonTree)adaptor.Nil();
-				DebugLocation(72, 73);
+				DebugLocation(74, 73);
 				root_2 = (COOLCommonTree)adaptor.BecomeRoot((COOLCommonTree)adaptor.Create(BODY, "BODY"), root_2);
 
-				DebugLocation(72, 78);
+				DebugLocation(74, 78);
 				adaptor.AddChild(root_2, stream_expr.NextTree());
 
 				adaptor.AddChild(root_1, root_2);
@@ -2426,7 +2428,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			LeaveRule("let", 15);
 			LeaveRule_let();
 		}
-		DebugLocation(72, 84);
+		DebugLocation(74, 84);
 		} finally { DebugExitRule(GrammarFileName, "let"); }
 		return retval;
 
@@ -2437,7 +2439,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_vardeclaration();
 
 	// $ANTLR start "vardeclaration"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:73:2: vardeclaration : ID attribute -> ^( VAR_DECLARATION ID attribute ) ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:75:2: vardeclaration : ID attribute -> ^( VAR_DECLARATION ID attribute ) ;
 	[GrammarRule("vardeclaration")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> vardeclaration()
 	{
@@ -2456,19 +2458,19 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
 		RewriteRuleSubtreeStream stream_attribute=new RewriteRuleSubtreeStream(adaptor,"rule attribute");
 		try { DebugEnterRule(GrammarFileName, "vardeclaration");
-		DebugLocation(73, 50);
+		DebugLocation(75, 50);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:74:3: ( ID attribute -> ^( VAR_DECLARATION ID attribute ) )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:76:3: ( ID attribute -> ^( VAR_DECLARATION ID attribute ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:74:5: ID attribute
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:76:5: ID attribute
 			{
-			DebugLocation(74, 5);
-			ID74=(IToken)Match(input,ID,Follow._ID_in_vardeclaration557);  
+			DebugLocation(76, 5);
+			ID74=(IToken)Match(input,ID,Follow._ID_in_vardeclaration563);  
 			stream_ID.Add(ID74);
 
-			DebugLocation(74, 8);
-			PushFollow(Follow._attribute_in_vardeclaration559);
+			DebugLocation(76, 8);
+			PushFollow(Follow._attribute_in_vardeclaration565);
 			attribute75=attribute();
 			PopFollow();
 
@@ -2477,7 +2479,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 
 			{
 			// AST REWRITE
-			// elements: ID, attribute
+			// elements: attribute, ID
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -2487,18 +2489,18 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (COOLCommonTree)adaptor.Nil();
-			// 74:17: -> ^( VAR_DECLARATION ID attribute )
+			// 76:17: -> ^( VAR_DECLARATION ID attribute )
 			{
-				DebugLocation(74, 19);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:74:19: ^( VAR_DECLARATION ID attribute )
+				DebugLocation(76, 19);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:76:19: ^( VAR_DECLARATION ID attribute )
 				{
 				COOLCommonTree root_1 = (COOLCommonTree)adaptor.Nil();
-				DebugLocation(74, 21);
+				DebugLocation(76, 21);
 				root_1 = (COOLCommonTree)adaptor.BecomeRoot((COOLCommonTree)adaptor.Create(VAR_DECLARATION, "VAR_DECLARATION"), root_1);
 
-				DebugLocation(74, 37);
+				DebugLocation(76, 37);
 				adaptor.AddChild(root_1, stream_ID.NextNode());
-				DebugLocation(74, 41);
+				DebugLocation(76, 41);
 				adaptor.AddChild(root_1, stream_attribute.NextTree());
 
 				adaptor.AddChild(root_0, root_1);
@@ -2530,7 +2532,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			LeaveRule("vardeclaration", 16);
 			LeaveRule_vardeclaration();
 		}
-		DebugLocation(74, 50);
+		DebugLocation(76, 50);
 		} finally { DebugExitRule(GrammarFileName, "vardeclaration"); }
 		return retval;
 
@@ -2541,7 +2543,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_var_list_declaration();
 
 	// $ANTLR start "var_list_declaration"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:75:2: var_list_declaration : ( vardeclaration -> vardeclaration ) ( COMA vardeclaration -> ^( VAR_DECLARATION_LIST $var_list_declaration vardeclaration ) )* ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:77:2: var_list_declaration : ( vardeclaration -> vardeclaration ) ( COMA vardeclaration -> ^( VAR_DECLARATION_LIST $var_list_declaration vardeclaration ) )* ;
 	[GrammarRule("var_list_declaration")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> var_list_declaration()
 	{
@@ -2561,20 +2563,20 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		RewriteRuleITokenStream stream_COMA=new RewriteRuleITokenStream(adaptor,"token COMA");
 		RewriteRuleSubtreeStream stream_vardeclaration=new RewriteRuleSubtreeStream(adaptor,"rule vardeclaration");
 		try { DebugEnterRule(GrammarFileName, "var_list_declaration");
-		DebugLocation(75, 123);
+		DebugLocation(77, 123);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:76:3: ( ( vardeclaration -> vardeclaration ) ( COMA vardeclaration -> ^( VAR_DECLARATION_LIST $var_list_declaration vardeclaration ) )* )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:78:3: ( ( vardeclaration -> vardeclaration ) ( COMA vardeclaration -> ^( VAR_DECLARATION_LIST $var_list_declaration vardeclaration ) )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:76:6: ( vardeclaration -> vardeclaration ) ( COMA vardeclaration -> ^( VAR_DECLARATION_LIST $var_list_declaration vardeclaration ) )*
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:78:6: ( vardeclaration -> vardeclaration ) ( COMA vardeclaration -> ^( VAR_DECLARATION_LIST $var_list_declaration vardeclaration ) )*
 			{
-			DebugLocation(76, 6);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:76:6: ( vardeclaration -> vardeclaration )
+			DebugLocation(78, 6);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:78:6: ( vardeclaration -> vardeclaration )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:76:7: vardeclaration
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:78:7: vardeclaration
 			{
-			DebugLocation(76, 7);
-			PushFollow(Follow._vardeclaration_in_var_list_declaration580);
+			DebugLocation(78, 7);
+			PushFollow(Follow._vardeclaration_in_var_list_declaration586);
 			vardeclaration76=vardeclaration();
 			PopFollow();
 
@@ -2593,9 +2595,9 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (COOLCommonTree)adaptor.Nil();
-			// 76:21: -> vardeclaration
+			// 78:21: -> vardeclaration
 			{
-				DebugLocation(76, 24);
+				DebugLocation(78, 24);
 				adaptor.AddChild(root_0, stream_vardeclaration.NextTree());
 
 			}
@@ -2605,8 +2607,8 @@ public partial class COOLParser : Antlr.Runtime.Parser
 
 			}
 
-			DebugLocation(76, 40);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:76:40: ( COMA vardeclaration -> ^( VAR_DECLARATION_LIST $var_list_declaration vardeclaration ) )*
+			DebugLocation(78, 40);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:78:40: ( COMA vardeclaration -> ^( VAR_DECLARATION_LIST $var_list_declaration vardeclaration ) )*
 			try { DebugEnterSubRule(12);
 			while (true)
 			{
@@ -2625,14 +2627,14 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:76:41: COMA vardeclaration
+					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:78:41: COMA vardeclaration
 					{
-					DebugLocation(76, 41);
-					COMA77=(IToken)Match(input,COMA,Follow._COMA_in_var_list_declaration587);  
+					DebugLocation(78, 41);
+					COMA77=(IToken)Match(input,COMA,Follow._COMA_in_var_list_declaration593);  
 					stream_COMA.Add(COMA77);
 
-					DebugLocation(76, 46);
-					PushFollow(Follow._vardeclaration_in_var_list_declaration589);
+					DebugLocation(78, 46);
+					PushFollow(Follow._vardeclaration_in_var_list_declaration595);
 					vardeclaration78=vardeclaration();
 					PopFollow();
 
@@ -2651,18 +2653,18 @@ public partial class COOLParser : Antlr.Runtime.Parser
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 					root_0 = (COOLCommonTree)adaptor.Nil();
-					// 76:60: -> ^( VAR_DECLARATION_LIST $var_list_declaration vardeclaration )
+					// 78:60: -> ^( VAR_DECLARATION_LIST $var_list_declaration vardeclaration )
 					{
-						DebugLocation(76, 62);
-						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:76:62: ^( VAR_DECLARATION_LIST $var_list_declaration vardeclaration )
+						DebugLocation(78, 62);
+						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:78:62: ^( VAR_DECLARATION_LIST $var_list_declaration vardeclaration )
 						{
 						COOLCommonTree root_1 = (COOLCommonTree)adaptor.Nil();
-						DebugLocation(76, 64);
+						DebugLocation(78, 64);
 						root_1 = (COOLCommonTree)adaptor.BecomeRoot((COOLCommonTree)adaptor.Create(VAR_DECLARATION_LIST, "VAR_DECLARATION_LIST"), root_1);
 
-						DebugLocation(76, 86);
+						DebugLocation(78, 86);
 						adaptor.AddChild(root_1, stream_retval.NextTree());
-						DebugLocation(76, 107);
+						DebugLocation(78, 107);
 						adaptor.AddChild(root_1, stream_vardeclaration.NextTree());
 
 						adaptor.AddChild(root_0, root_1);
@@ -2708,7 +2710,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			LeaveRule("var_list_declaration", 17);
 			LeaveRule_var_list_declaration();
 		}
-		DebugLocation(76, 123);
+		DebugLocation(78, 123);
 		} finally { DebugExitRule(GrammarFileName, "var_list_declaration"); }
 		return retval;
 
@@ -2719,7 +2721,7 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_case();
 
 	// $ANTLR start "case"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:77:2: case : CASE ^ expr OF ( param IMPLICS expr )+ ESAC !;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:79:2: case : CASE ^ expr OF ! caseBranches ESAC !;
 	[GrammarRule("case")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> @case()
 	{
@@ -2733,100 +2735,43 @@ public partial class COOLParser : Antlr.Runtime.Parser
 
 		IToken CASE79 = default(IToken);
 		IToken OF81 = default(IToken);
-		IToken IMPLICS83 = default(IToken);
-		IToken ESAC85 = default(IToken);
+		IToken ESAC83 = default(IToken);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> expr80 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> param82 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> expr84 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> caseBranches82 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 
 		COOLCommonTree CASE79_tree = default(COOLCommonTree);
 		COOLCommonTree OF81_tree = default(COOLCommonTree);
-		COOLCommonTree IMPLICS83_tree = default(COOLCommonTree);
-		COOLCommonTree ESAC85_tree = default(COOLCommonTree);
+		COOLCommonTree ESAC83_tree = default(COOLCommonTree);
 		try { DebugEnterRule(GrammarFileName, "case");
-		DebugLocation(77, 49);
+		DebugLocation(79, 41);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:77:6: ( CASE ^ expr OF ( param IMPLICS expr )+ ESAC !)
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:79:6: ( CASE ^ expr OF ! caseBranches ESAC !)
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:77:8: CASE ^ expr OF ( param IMPLICS expr )+ ESAC !
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:79:8: CASE ^ expr OF ! caseBranches ESAC !
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(77, 12);
-			CASE79=(IToken)Match(input,CASE,Follow._CASE_in_case607); 
+			DebugLocation(79, 12);
+			CASE79=(IToken)Match(input,CASE,Follow._CASE_in_case613); 
 			CASE79_tree = (COOLCommonTree)adaptor.Create(CASE79);
 			root_0 = (COOLCommonTree)adaptor.BecomeRoot(CASE79_tree, root_0);
-			DebugLocation(77, 14);
-			PushFollow(Follow._expr_in_case610);
+			DebugLocation(79, 14);
+			PushFollow(Follow._expr_in_case616);
 			expr80=expr();
 			PopFollow();
 
 			adaptor.AddChild(root_0, expr80.Tree);
-			DebugLocation(77, 19);
-			OF81=(IToken)Match(input,OF,Follow._OF_in_case612); 
-			OF81_tree = (COOLCommonTree)adaptor.Create(OF81);
-			adaptor.AddChild(root_0, OF81_tree);
-			DebugLocation(77, 22);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:77:22: ( param IMPLICS expr )+
-			int cnt13=0;
-			try { DebugEnterSubRule(13);
-			while (true)
-			{
-				int alt13=2;
-				try { DebugEnterDecision(13, false);
-				int LA13_0 = input.LA(1);
+			DebugLocation(79, 21);
+			OF81=(IToken)Match(input,OF,Follow._OF_in_case618); 
+			DebugLocation(79, 23);
+			PushFollow(Follow._caseBranches_in_case621);
+			caseBranches82=caseBranches();
+			PopFollow();
 
-				if ((LA13_0==ID))
-				{
-					alt13 = 1;
-				}
-
-
-				} finally { DebugExitDecision(13); }
-				switch (alt13)
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:77:23: param IMPLICS expr
-					{
-					DebugLocation(77, 23);
-					PushFollow(Follow._param_in_case615);
-					param82=param();
-					PopFollow();
-
-					adaptor.AddChild(root_0, param82.Tree);
-					DebugLocation(77, 29);
-					IMPLICS83=(IToken)Match(input,IMPLICS,Follow._IMPLICS_in_case617); 
-					IMPLICS83_tree = (COOLCommonTree)adaptor.Create(IMPLICS83);
-					adaptor.AddChild(root_0, IMPLICS83_tree);
-					DebugLocation(77, 37);
-					PushFollow(Follow._expr_in_case619);
-					expr84=expr();
-					PopFollow();
-
-					adaptor.AddChild(root_0, expr84.Tree);
-
-					}
-					break;
-
-				default:
-					if (cnt13 >= 1)
-						goto loop13;
-
-					EarlyExitException eee13 = new EarlyExitException( 13, input );
-					DebugRecognitionException(eee13);
-					throw eee13;
-				}
-				cnt13++;
-			}
-			loop13:
-				;
-
-			} finally { DebugExitSubRule(13); }
-
-			DebugLocation(77, 48);
-			ESAC85=(IToken)Match(input,ESAC,Follow._ESAC_in_case623); 
+			adaptor.AddChild(root_0, caseBranches82.Tree);
+			DebugLocation(79, 40);
+			ESAC83=(IToken)Match(input,ESAC,Follow._ESAC_in_case623); 
 
 			}
 
@@ -2849,57 +2794,347 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			LeaveRule("case", 18);
 			LeaveRule_case();
 		}
-		DebugLocation(77, 49);
+		DebugLocation(79, 41);
 		} finally { DebugExitRule(GrammarFileName, "case"); }
 		return retval;
 
 	}
 	// $ANTLR end "case"
 
-	partial void EnterRule_new();
-	partial void LeaveRule_new();
+	partial void EnterRule_caseBranch();
+	partial void LeaveRule_caseBranch();
 
-	// $ANTLR start "new"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:78:2: new : ( NEW ^ TYPE ) ;
-	[GrammarRule("new")]
-	private AstParserRuleReturnScope<COOLCommonTree, IToken> @new()
+	// $ANTLR start "caseBranch"
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:80:2: caseBranch : param IMPLICS expr END -> ^( CASEBRANCH param expr ) ;
+	[GrammarRule("caseBranch")]
+	private AstParserRuleReturnScope<COOLCommonTree, IToken> caseBranch()
 	{
-		EnterRule_new();
-		EnterRule("new", 19);
-		TraceIn("new", 19);
+		EnterRule_caseBranch();
+		EnterRule("caseBranch", 19);
+		TraceIn("caseBranch", 19);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> retval = new AstParserRuleReturnScope<COOLCommonTree, IToken>();
 		retval.Start = (IToken)input.LT(1);
 
 		COOLCommonTree root_0 = default(COOLCommonTree);
 
-		IToken NEW86 = default(IToken);
-		IToken TYPE87 = default(IToken);
+		IToken IMPLICS85 = default(IToken);
+		IToken END87 = default(IToken);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> param84 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> expr86 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 
-		COOLCommonTree NEW86_tree = default(COOLCommonTree);
-		COOLCommonTree TYPE87_tree = default(COOLCommonTree);
-		try { DebugEnterRule(GrammarFileName, "new");
-		DebugLocation(78, 19);
+		COOLCommonTree IMPLICS85_tree = default(COOLCommonTree);
+		COOLCommonTree END87_tree = default(COOLCommonTree);
+		RewriteRuleITokenStream stream_IMPLICS=new RewriteRuleITokenStream(adaptor,"token IMPLICS");
+		RewriteRuleITokenStream stream_END=new RewriteRuleITokenStream(adaptor,"token END");
+		RewriteRuleSubtreeStream stream_param=new RewriteRuleSubtreeStream(adaptor,"rule param");
+		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
+		try { DebugEnterRule(GrammarFileName, "caseBranch");
+		DebugLocation(80, 53);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:78:6: ( ( NEW ^ TYPE ) )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:81:3: ( param IMPLICS expr END -> ^( CASEBRANCH param expr ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:78:8: ( NEW ^ TYPE )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:81:5: param IMPLICS expr END
+			{
+			DebugLocation(81, 5);
+			PushFollow(Follow._param_in_caseBranch635);
+			param84=param();
+			PopFollow();
+
+			stream_param.Add(param84.Tree);
+			DebugLocation(81, 11);
+			IMPLICS85=(IToken)Match(input,IMPLICS,Follow._IMPLICS_in_caseBranch637);  
+			stream_IMPLICS.Add(IMPLICS85);
+
+			DebugLocation(81, 19);
+			PushFollow(Follow._expr_in_caseBranch639);
+			expr86=expr();
+			PopFollow();
+
+			stream_expr.Add(expr86.Tree);
+			DebugLocation(81, 24);
+			END87=(IToken)Match(input,END,Follow._END_in_caseBranch641);  
+			stream_END.Add(END87);
+
+
+
+			{
+			// AST REWRITE
+			// elements: param, expr
+			// token labels: 
+			// rule labels: retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			retval.Tree = root_0;
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+			root_0 = (COOLCommonTree)adaptor.Nil();
+			// 81:27: -> ^( CASEBRANCH param expr )
+			{
+				DebugLocation(81, 30);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:81:30: ^( CASEBRANCH param expr )
+				{
+				COOLCommonTree root_1 = (COOLCommonTree)adaptor.Nil();
+				DebugLocation(81, 32);
+				root_1 = (COOLCommonTree)adaptor.BecomeRoot((COOLCommonTree)adaptor.Create(CASEBRANCH, "CASEBRANCH"), root_1);
+
+				DebugLocation(81, 43);
+				adaptor.AddChild(root_1, stream_param.NextTree());
+				DebugLocation(81, 49);
+				adaptor.AddChild(root_1, stream_expr.NextTree());
+
+				adaptor.AddChild(root_0, root_1);
+				}
+
+			}
+
+			retval.Tree = root_0;
+			}
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			retval.Tree = (COOLCommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (COOLCommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("caseBranch", 19);
+			LeaveRule("caseBranch", 19);
+			LeaveRule_caseBranch();
+		}
+		DebugLocation(81, 53);
+		} finally { DebugExitRule(GrammarFileName, "caseBranch"); }
+		return retval;
+
+	}
+	// $ANTLR end "caseBranch"
+
+	partial void EnterRule_caseBranches();
+	partial void LeaveRule_caseBranches();
+
+	// $ANTLR start "caseBranches"
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:82:2: caseBranches : ( caseBranch -> caseBranch ) ( caseBranch -> ^( CASEBRANCHES $caseBranches caseBranch ) )* ;
+	[GrammarRule("caseBranches")]
+	private AstParserRuleReturnScope<COOLCommonTree, IToken> caseBranches()
+	{
+		EnterRule_caseBranches();
+		EnterRule("caseBranches", 20);
+		TraceIn("caseBranches", 20);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> retval = new AstParserRuleReturnScope<COOLCommonTree, IToken>();
+		retval.Start = (IToken)input.LT(1);
+
+		COOLCommonTree root_0 = default(COOLCommonTree);
+
+		AstParserRuleReturnScope<COOLCommonTree, IToken> caseBranch88 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> caseBranch89 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+
+		RewriteRuleSubtreeStream stream_caseBranch=new RewriteRuleSubtreeStream(adaptor,"rule caseBranch");
+		try { DebugEnterRule(GrammarFileName, "caseBranches");
+		DebugLocation(82, 85);
+		try
+		{
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:83:3: ( ( caseBranch -> caseBranch ) ( caseBranch -> ^( CASEBRANCHES $caseBranches caseBranch ) )* )
+			DebugEnterAlt(1);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:83:5: ( caseBranch -> caseBranch ) ( caseBranch -> ^( CASEBRANCHES $caseBranches caseBranch ) )*
+			{
+			DebugLocation(83, 5);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:83:5: ( caseBranch -> caseBranch )
+			DebugEnterAlt(1);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:83:6: caseBranch
+			{
+			DebugLocation(83, 6);
+			PushFollow(Follow._caseBranch_in_caseBranches661);
+			caseBranch88=caseBranch();
+			PopFollow();
+
+			stream_caseBranch.Add(caseBranch88.Tree);
+
+
+			{
+			// AST REWRITE
+			// elements: caseBranch
+			// token labels: 
+			// rule labels: retval
+			// token list labels: 
+			// rule list labels: 
+			// wildcard labels: 
+			retval.Tree = root_0;
+			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+			root_0 = (COOLCommonTree)adaptor.Nil();
+			// 83:16: -> caseBranch
+			{
+				DebugLocation(83, 18);
+				adaptor.AddChild(root_0, stream_caseBranch.NextTree());
+
+			}
+
+			retval.Tree = root_0;
+			}
+
+			}
+
+			DebugLocation(83, 30);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:83:30: ( caseBranch -> ^( CASEBRANCHES $caseBranches caseBranch ) )*
+			try { DebugEnterSubRule(13);
+			while (true)
+			{
+				int alt13=2;
+				try { DebugEnterDecision(13, false);
+				int LA13_0 = input.LA(1);
+
+				if ((LA13_0==ID))
+				{
+					alt13 = 1;
+				}
+
+
+				} finally { DebugExitDecision(13); }
+				switch ( alt13 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:83:31: caseBranch
+					{
+					DebugLocation(83, 31);
+					PushFollow(Follow._caseBranch_in_caseBranches667);
+					caseBranch89=caseBranch();
+					PopFollow();
+
+					stream_caseBranch.Add(caseBranch89.Tree);
+
+
+					{
+					// AST REWRITE
+					// elements: caseBranches, caseBranch
+					// token labels: 
+					// rule labels: retval
+					// token list labels: 
+					// rule list labels: 
+					// wildcard labels: 
+					retval.Tree = root_0;
+					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
+
+					root_0 = (COOLCommonTree)adaptor.Nil();
+					// 83:41: -> ^( CASEBRANCHES $caseBranches caseBranch )
+					{
+						DebugLocation(83, 43);
+						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:83:43: ^( CASEBRANCHES $caseBranches caseBranch )
+						{
+						COOLCommonTree root_1 = (COOLCommonTree)adaptor.Nil();
+						DebugLocation(83, 46);
+						root_1 = (COOLCommonTree)adaptor.BecomeRoot((COOLCommonTree)adaptor.Create(CASEBRANCHES, "CASEBRANCHES"), root_1);
+
+						DebugLocation(83, 60);
+						adaptor.AddChild(root_1, stream_retval.NextTree());
+						DebugLocation(83, 73);
+						adaptor.AddChild(root_1, stream_caseBranch.NextTree());
+
+						adaptor.AddChild(root_0, root_1);
+						}
+
+					}
+
+					retval.Tree = root_0;
+					}
+
+					}
+					break;
+
+				default:
+					goto loop13;
+				}
+			}
+
+			loop13:
+				;
+
+			} finally { DebugExitSubRule(13); }
+
+
+			}
+
+			retval.Stop = (IToken)input.LT(-1);
+
+			retval.Tree = (COOLCommonTree)adaptor.RulePostProcessing(root_0);
+			adaptor.SetTokenBoundaries(retval.Tree, retval.Start, retval.Stop);
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		retval.Tree = (COOLCommonTree)adaptor.ErrorNode(input, retval.Start, input.LT(-1), re);
+
+		}
+		finally
+		{
+			TraceOut("caseBranches", 20);
+			LeaveRule("caseBranches", 20);
+			LeaveRule_caseBranches();
+		}
+		DebugLocation(83, 85);
+		} finally { DebugExitRule(GrammarFileName, "caseBranches"); }
+		return retval;
+
+	}
+	// $ANTLR end "caseBranches"
+
+	partial void EnterRule_new();
+	partial void LeaveRule_new();
+
+	// $ANTLR start "new"
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:84:2: new : ( NEW ^ TYPE ) ;
+	[GrammarRule("new")]
+	private AstParserRuleReturnScope<COOLCommonTree, IToken> @new()
+	{
+		EnterRule_new();
+		EnterRule("new", 21);
+		TraceIn("new", 21);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> retval = new AstParserRuleReturnScope<COOLCommonTree, IToken>();
+		retval.Start = (IToken)input.LT(1);
+
+		COOLCommonTree root_0 = default(COOLCommonTree);
+
+		IToken NEW90 = default(IToken);
+		IToken TYPE91 = default(IToken);
+
+		COOLCommonTree NEW90_tree = default(COOLCommonTree);
+		COOLCommonTree TYPE91_tree = default(COOLCommonTree);
+		try { DebugEnterRule(GrammarFileName, "new");
+		DebugLocation(84, 19);
+		try
+		{
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:84:6: ( ( NEW ^ TYPE ) )
+			DebugEnterAlt(1);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:84:8: ( NEW ^ TYPE )
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(78, 8);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:78:8: ( NEW ^ TYPE )
+			DebugLocation(84, 8);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:84:8: ( NEW ^ TYPE )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:78:9: NEW ^ TYPE
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:84:9: NEW ^ TYPE
 			{
-			DebugLocation(78, 12);
-			NEW86=(IToken)Match(input,NEW,Follow._NEW_in_new634); 
-			NEW86_tree = (COOLCommonTree)adaptor.Create(NEW86);
-			root_0 = (COOLCommonTree)adaptor.BecomeRoot(NEW86_tree, root_0);
-			DebugLocation(78, 14);
-			TYPE87=(IToken)Match(input,TYPE,Follow._TYPE_in_new637); 
-			TYPE87_tree = (COOLCommonTree)adaptor.Create(TYPE87);
-			adaptor.AddChild(root_0, TYPE87_tree);
+			DebugLocation(84, 12);
+			NEW90=(IToken)Match(input,NEW,Follow._NEW_in_new688); 
+			NEW90_tree = (COOLCommonTree)adaptor.Create(NEW90);
+			root_0 = (COOLCommonTree)adaptor.BecomeRoot(NEW90_tree, root_0);
+			DebugLocation(84, 14);
+			TYPE91=(IToken)Match(input,TYPE,Follow._TYPE_in_new691); 
+			TYPE91_tree = (COOLCommonTree)adaptor.Create(TYPE91);
+			adaptor.AddChild(root_0, TYPE91_tree);
 
 			}
 
@@ -2921,11 +3156,11 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("new", 19);
-			LeaveRule("new", 19);
+			TraceOut("new", 21);
+			LeaveRule("new", 21);
 			LeaveRule_new();
 		}
-		DebugLocation(78, 19);
+		DebugLocation(84, 19);
 		} finally { DebugExitRule(GrammarFileName, "new"); }
 		return retval;
 
@@ -2936,47 +3171,47 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_dispatch();
 
 	// $ANTLR start "dispatch"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:80:2: dispatch : ( ARROBA ! TYPE | PNT !) ID OP_PARENT ( expr ( COMA ! expr )* )? CL_PARENT !;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:86:2: dispatch : ( ARROBA ! TYPE | PNT !) ID OP_PARENT ( expr ( COMA ! expr )* )? CL_PARENT !;
 	[GrammarRule("dispatch")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> dispatch()
 	{
 		EnterRule_dispatch();
-		EnterRule("dispatch", 20);
-		TraceIn("dispatch", 20);
+		EnterRule("dispatch", 22);
+		TraceIn("dispatch", 22);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> retval = new AstParserRuleReturnScope<COOLCommonTree, IToken>();
 		retval.Start = (IToken)input.LT(1);
 
 		COOLCommonTree root_0 = default(COOLCommonTree);
 
-		IToken ARROBA88 = default(IToken);
-		IToken TYPE89 = default(IToken);
-		IToken PNT90 = default(IToken);
-		IToken ID91 = default(IToken);
-		IToken OP_PARENT92 = default(IToken);
-		IToken COMA94 = default(IToken);
-		IToken CL_PARENT96 = default(IToken);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> expr93 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> expr95 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		IToken ARROBA92 = default(IToken);
+		IToken TYPE93 = default(IToken);
+		IToken PNT94 = default(IToken);
+		IToken ID95 = default(IToken);
+		IToken OP_PARENT96 = default(IToken);
+		IToken COMA98 = default(IToken);
+		IToken CL_PARENT100 = default(IToken);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> expr97 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> expr99 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 
-		COOLCommonTree ARROBA88_tree = default(COOLCommonTree);
-		COOLCommonTree TYPE89_tree = default(COOLCommonTree);
-		COOLCommonTree PNT90_tree = default(COOLCommonTree);
-		COOLCommonTree ID91_tree = default(COOLCommonTree);
-		COOLCommonTree OP_PARENT92_tree = default(COOLCommonTree);
-		COOLCommonTree COMA94_tree = default(COOLCommonTree);
-		COOLCommonTree CL_PARENT96_tree = default(COOLCommonTree);
+		COOLCommonTree ARROBA92_tree = default(COOLCommonTree);
+		COOLCommonTree TYPE93_tree = default(COOLCommonTree);
+		COOLCommonTree PNT94_tree = default(COOLCommonTree);
+		COOLCommonTree ID95_tree = default(COOLCommonTree);
+		COOLCommonTree OP_PARENT96_tree = default(COOLCommonTree);
+		COOLCommonTree COMA98_tree = default(COOLCommonTree);
+		COOLCommonTree CL_PARENT100_tree = default(COOLCommonTree);
 		try { DebugEnterRule(GrammarFileName, "dispatch");
-		DebugLocation(80, 79);
+		DebugLocation(86, 79);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:80:10: ( ( ARROBA ! TYPE | PNT !) ID OP_PARENT ( expr ( COMA ! expr )* )? CL_PARENT !)
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:86:10: ( ( ARROBA ! TYPE | PNT !) ID OP_PARENT ( expr ( COMA ! expr )* )? CL_PARENT !)
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:80:12: ( ARROBA ! TYPE | PNT !) ID OP_PARENT ( expr ( COMA ! expr )* )? CL_PARENT !
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:86:12: ( ARROBA ! TYPE | PNT !) ID OP_PARENT ( expr ( COMA ! expr )* )? CL_PARENT !
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(80, 12);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:80:12: ( ARROBA ! TYPE | PNT !)
+			DebugLocation(86, 12);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:86:12: ( ARROBA ! TYPE | PNT !)
 			int alt14=2;
 			try { DebugEnterSubRule(14);
 			try { DebugEnterDecision(14, false);
@@ -3001,23 +3236,23 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:80:13: ARROBA ! TYPE
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:86:13: ARROBA ! TYPE
 				{
-				DebugLocation(80, 19);
-				ARROBA88=(IToken)Match(input,ARROBA,Follow._ARROBA_in_dispatch649); 
-				DebugLocation(80, 21);
-				TYPE89=(IToken)Match(input,TYPE,Follow._TYPE_in_dispatch652); 
-				TYPE89_tree = (COOLCommonTree)adaptor.Create(TYPE89);
-				adaptor.AddChild(root_0, TYPE89_tree);
+				DebugLocation(86, 19);
+				ARROBA92=(IToken)Match(input,ARROBA,Follow._ARROBA_in_dispatch703); 
+				DebugLocation(86, 21);
+				TYPE93=(IToken)Match(input,TYPE,Follow._TYPE_in_dispatch706); 
+				TYPE93_tree = (COOLCommonTree)adaptor.Create(TYPE93);
+				adaptor.AddChild(root_0, TYPE93_tree);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:80:27: PNT !
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:86:27: PNT !
 				{
-				DebugLocation(80, 30);
-				PNT90=(IToken)Match(input,PNT,Follow._PNT_in_dispatch655); 
+				DebugLocation(86, 30);
+				PNT94=(IToken)Match(input,PNT,Follow._PNT_in_dispatch709); 
 
 				}
 				break;
@@ -3025,16 +3260,16 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			}
 			} finally { DebugExitSubRule(14); }
 
-			DebugLocation(80, 33);
-			ID91=(IToken)Match(input,ID,Follow._ID_in_dispatch659); 
-			ID91_tree = (COOLCommonTree)adaptor.Create(ID91);
-			adaptor.AddChild(root_0, ID91_tree);
-			DebugLocation(80, 36);
-			OP_PARENT92=(IToken)Match(input,OP_PARENT,Follow._OP_PARENT_in_dispatch661); 
-			OP_PARENT92_tree = (COOLCommonTree)adaptor.Create(OP_PARENT92);
-			adaptor.AddChild(root_0, OP_PARENT92_tree);
-			DebugLocation(80, 46);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:80:46: ( expr ( COMA ! expr )* )?
+			DebugLocation(86, 33);
+			ID95=(IToken)Match(input,ID,Follow._ID_in_dispatch713); 
+			ID95_tree = (COOLCommonTree)adaptor.Create(ID95);
+			adaptor.AddChild(root_0, ID95_tree);
+			DebugLocation(86, 36);
+			OP_PARENT96=(IToken)Match(input,OP_PARENT,Follow._OP_PARENT_in_dispatch715); 
+			OP_PARENT96_tree = (COOLCommonTree)adaptor.Create(OP_PARENT96);
+			adaptor.AddChild(root_0, OP_PARENT96_tree);
+			DebugLocation(86, 46);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:86:46: ( expr ( COMA ! expr )* )?
 			int alt16=2;
 			try { DebugEnterSubRule(16);
 			try { DebugEnterDecision(16, false);
@@ -3049,16 +3284,16 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:80:47: expr ( COMA ! expr )*
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:86:47: expr ( COMA ! expr )*
 				{
-				DebugLocation(80, 47);
-				PushFollow(Follow._expr_in_dispatch664);
-				expr93=expr();
+				DebugLocation(86, 47);
+				PushFollow(Follow._expr_in_dispatch718);
+				expr97=expr();
 				PopFollow();
 
-				adaptor.AddChild(root_0, expr93.Tree);
-				DebugLocation(80, 52);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:80:52: ( COMA ! expr )*
+				adaptor.AddChild(root_0, expr97.Tree);
+				DebugLocation(86, 52);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:86:52: ( COMA ! expr )*
 				try { DebugEnterSubRule(15);
 				while (true)
 				{
@@ -3077,16 +3312,16 @@ public partial class COOLParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:80:54: COMA ! expr
+						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:86:54: COMA ! expr
 						{
-						DebugLocation(80, 58);
-						COMA94=(IToken)Match(input,COMA,Follow._COMA_in_dispatch668); 
-						DebugLocation(80, 60);
-						PushFollow(Follow._expr_in_dispatch671);
-						expr95=expr();
+						DebugLocation(86, 58);
+						COMA98=(IToken)Match(input,COMA,Follow._COMA_in_dispatch722); 
+						DebugLocation(86, 60);
+						PushFollow(Follow._expr_in_dispatch725);
+						expr99=expr();
 						PopFollow();
 
-						adaptor.AddChild(root_0, expr95.Tree);
+						adaptor.AddChild(root_0, expr99.Tree);
 
 						}
 						break;
@@ -3108,8 +3343,8 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			}
 			} finally { DebugExitSubRule(16); }
 
-			DebugLocation(80, 78);
-			CL_PARENT96=(IToken)Match(input,CL_PARENT,Follow._CL_PARENT_in_dispatch677); 
+			DebugLocation(86, 78);
+			CL_PARENT100=(IToken)Match(input,CL_PARENT,Follow._CL_PARENT_in_dispatch731); 
 
 			}
 
@@ -3128,11 +3363,11 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("dispatch", 20);
-			LeaveRule("dispatch", 20);
+			TraceOut("dispatch", 22);
+			LeaveRule("dispatch", 22);
 			LeaveRule_dispatch();
 		}
-		DebugLocation(80, 79);
+		DebugLocation(86, 79);
 		} finally { DebugExitRule(GrammarFileName, "dispatch"); }
 		return retval;
 
@@ -3143,35 +3378,35 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_exprlist1();
 
 	// $ANTLR start "exprlist1"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:81:2: exprlist1 : ( expr ( COMA ! expr )* )? ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:87:2: exprlist1 : ( expr ( COMA ! expr )* )? ;
 	[GrammarRule("exprlist1")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> exprlist1()
 	{
 		EnterRule_exprlist1();
-		EnterRule("exprlist1", 21);
-		TraceIn("exprlist1", 21);
+		EnterRule("exprlist1", 23);
+		TraceIn("exprlist1", 23);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> retval = new AstParserRuleReturnScope<COOLCommonTree, IToken>();
 		retval.Start = (IToken)input.LT(1);
 
 		COOLCommonTree root_0 = default(COOLCommonTree);
 
-		IToken COMA98 = default(IToken);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> expr97 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> expr99 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		IToken COMA102 = default(IToken);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> expr101 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> expr103 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 
-		COOLCommonTree COMA98_tree = default(COOLCommonTree);
+		COOLCommonTree COMA102_tree = default(COOLCommonTree);
 		try { DebugEnterRule(GrammarFileName, "exprlist1");
-		DebugLocation(81, 26);
+		DebugLocation(87, 26);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:82:3: ( ( expr ( COMA ! expr )* )? )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:88:3: ( ( expr ( COMA ! expr )* )? )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:82:5: ( expr ( COMA ! expr )* )?
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:88:5: ( expr ( COMA ! expr )* )?
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(82, 5);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:82:5: ( expr ( COMA ! expr )* )?
+			DebugLocation(88, 5);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:88:5: ( expr ( COMA ! expr )* )?
 			int alt18=2;
 			try { DebugEnterSubRule(18);
 			try { DebugEnterDecision(18, false);
@@ -3186,16 +3421,16 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:82:6: expr ( COMA ! expr )*
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:88:6: expr ( COMA ! expr )*
 				{
-				DebugLocation(82, 6);
-				PushFollow(Follow._expr_in_exprlist1690);
-				expr97=expr();
+				DebugLocation(88, 6);
+				PushFollow(Follow._expr_in_exprlist1744);
+				expr101=expr();
 				PopFollow();
 
-				adaptor.AddChild(root_0, expr97.Tree);
-				DebugLocation(82, 11);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:82:11: ( COMA ! expr )*
+				adaptor.AddChild(root_0, expr101.Tree);
+				DebugLocation(88, 11);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:88:11: ( COMA ! expr )*
 				try { DebugEnterSubRule(17);
 				while (true)
 				{
@@ -3214,16 +3449,16 @@ public partial class COOLParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:82:13: COMA ! expr
+						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:88:13: COMA ! expr
 						{
-						DebugLocation(82, 17);
-						COMA98=(IToken)Match(input,COMA,Follow._COMA_in_exprlist1694); 
-						DebugLocation(82, 19);
-						PushFollow(Follow._expr_in_exprlist1697);
-						expr99=expr();
+						DebugLocation(88, 17);
+						COMA102=(IToken)Match(input,COMA,Follow._COMA_in_exprlist1748); 
+						DebugLocation(88, 19);
+						PushFollow(Follow._expr_in_exprlist1751);
+						expr103=expr();
 						PopFollow();
 
-						adaptor.AddChild(root_0, expr99.Tree);
+						adaptor.AddChild(root_0, expr103.Tree);
 
 						}
 						break;
@@ -3263,11 +3498,11 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("exprlist1", 21);
-			LeaveRule("exprlist1", 21);
+			TraceOut("exprlist1", 23);
+			LeaveRule("exprlist1", 23);
 			LeaveRule_exprlist1();
 		}
-		DebugLocation(82, 26);
+		DebugLocation(88, 26);
 		} finally { DebugExitRule(GrammarFileName, "exprlist1"); }
 		return retval;
 
@@ -3278,43 +3513,43 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_dispatch2();
 
 	// $ANTLR start "dispatch2"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:85:2: dispatch2 : OP_PARENT ( expr ( COMA ! expr )* )? CL_PARENT !;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:91:2: dispatch2 : OP_PARENT ( expr ( COMA ! expr )* )? CL_PARENT !;
 	[GrammarRule("dispatch2")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> dispatch2()
 	{
 		EnterRule_dispatch2();
-		EnterRule("dispatch2", 22);
-		TraceIn("dispatch2", 22);
+		EnterRule("dispatch2", 24);
+		TraceIn("dispatch2", 24);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> retval = new AstParserRuleReturnScope<COOLCommonTree, IToken>();
 		retval.Start = (IToken)input.LT(1);
 
 		COOLCommonTree root_0 = default(COOLCommonTree);
 
-		IToken OP_PARENT100 = default(IToken);
-		IToken COMA102 = default(IToken);
-		IToken CL_PARENT104 = default(IToken);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> expr101 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> expr103 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		IToken OP_PARENT104 = default(IToken);
+		IToken COMA106 = default(IToken);
+		IToken CL_PARENT108 = default(IToken);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> expr105 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> expr107 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 
-		COOLCommonTree OP_PARENT100_tree = default(COOLCommonTree);
-		COOLCommonTree COMA102_tree = default(COOLCommonTree);
-		COOLCommonTree CL_PARENT104_tree = default(COOLCommonTree);
+		COOLCommonTree OP_PARENT104_tree = default(COOLCommonTree);
+		COOLCommonTree COMA106_tree = default(COOLCommonTree);
+		COOLCommonTree CL_PARENT108_tree = default(COOLCommonTree);
 		try { DebugEnterRule(GrammarFileName, "dispatch2");
-		DebugLocation(85, 49);
+		DebugLocation(91, 49);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:86:3: ( OP_PARENT ( expr ( COMA ! expr )* )? CL_PARENT !)
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:92:3: ( OP_PARENT ( expr ( COMA ! expr )* )? CL_PARENT !)
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:86:6: OP_PARENT ( expr ( COMA ! expr )* )? CL_PARENT !
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:92:6: OP_PARENT ( expr ( COMA ! expr )* )? CL_PARENT !
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(86, 6);
-			OP_PARENT100=(IToken)Match(input,OP_PARENT,Follow._OP_PARENT_in_dispatch2717); 
-			OP_PARENT100_tree = (COOLCommonTree)adaptor.Create(OP_PARENT100);
-			adaptor.AddChild(root_0, OP_PARENT100_tree);
-			DebugLocation(86, 16);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:86:16: ( expr ( COMA ! expr )* )?
+			DebugLocation(92, 6);
+			OP_PARENT104=(IToken)Match(input,OP_PARENT,Follow._OP_PARENT_in_dispatch2771); 
+			OP_PARENT104_tree = (COOLCommonTree)adaptor.Create(OP_PARENT104);
+			adaptor.AddChild(root_0, OP_PARENT104_tree);
+			DebugLocation(92, 16);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:92:16: ( expr ( COMA ! expr )* )?
 			int alt20=2;
 			try { DebugEnterSubRule(20);
 			try { DebugEnterDecision(20, false);
@@ -3329,16 +3564,16 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:86:17: expr ( COMA ! expr )*
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:92:17: expr ( COMA ! expr )*
 				{
-				DebugLocation(86, 17);
-				PushFollow(Follow._expr_in_dispatch2720);
-				expr101=expr();
+				DebugLocation(92, 17);
+				PushFollow(Follow._expr_in_dispatch2774);
+				expr105=expr();
 				PopFollow();
 
-				adaptor.AddChild(root_0, expr101.Tree);
-				DebugLocation(86, 22);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:86:22: ( COMA ! expr )*
+				adaptor.AddChild(root_0, expr105.Tree);
+				DebugLocation(92, 22);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:92:22: ( COMA ! expr )*
 				try { DebugEnterSubRule(19);
 				while (true)
 				{
@@ -3357,16 +3592,16 @@ public partial class COOLParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:86:24: COMA ! expr
+						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:92:24: COMA ! expr
 						{
-						DebugLocation(86, 28);
-						COMA102=(IToken)Match(input,COMA,Follow._COMA_in_dispatch2724); 
-						DebugLocation(86, 30);
-						PushFollow(Follow._expr_in_dispatch2727);
-						expr103=expr();
+						DebugLocation(92, 28);
+						COMA106=(IToken)Match(input,COMA,Follow._COMA_in_dispatch2778); 
+						DebugLocation(92, 30);
+						PushFollow(Follow._expr_in_dispatch2781);
+						expr107=expr();
 						PopFollow();
 
-						adaptor.AddChild(root_0, expr103.Tree);
+						adaptor.AddChild(root_0, expr107.Tree);
 
 						}
 						break;
@@ -3388,8 +3623,8 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			}
 			} finally { DebugExitSubRule(20); }
 
-			DebugLocation(86, 48);
-			CL_PARENT104=(IToken)Match(input,CL_PARENT,Follow._CL_PARENT_in_dispatch2733); 
+			DebugLocation(92, 48);
+			CL_PARENT108=(IToken)Match(input,CL_PARENT,Follow._CL_PARENT_in_dispatch2787); 
 
 			}
 
@@ -3408,11 +3643,11 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("dispatch2", 22);
-			LeaveRule("dispatch2", 22);
+			TraceOut("dispatch2", 24);
+			LeaveRule("dispatch2", 24);
 			LeaveRule_dispatch2();
 		}
-		DebugLocation(86, 49);
+		DebugLocation(92, 49);
 		} finally { DebugExitRule(GrammarFileName, "dispatch2"); }
 		return retval;
 
@@ -3423,36 +3658,36 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_operations();
 
 	// $ANTLR start "operations"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:87:2: operations : lv1 ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:93:2: operations : lv1 ;
 	[GrammarRule("operations")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> operations()
 	{
 		EnterRule_operations();
-		EnterRule("operations", 23);
-		TraceIn("operations", 23);
+		EnterRule("operations", 25);
+		TraceIn("operations", 25);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> retval = new AstParserRuleReturnScope<COOLCommonTree, IToken>();
 		retval.Start = (IToken)input.LT(1);
 
 		COOLCommonTree root_0 = default(COOLCommonTree);
 
-		AstParserRuleReturnScope<COOLCommonTree, IToken> lv1105 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> lv1109 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 
 		try { DebugEnterRule(GrammarFileName, "operations");
-		DebugLocation(87, 9);
+		DebugLocation(93, 9);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:88:3: ( lv1 )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:94:3: ( lv1 )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:88:6: lv1
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:94:6: lv1
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(88, 6);
-			PushFollow(Follow._lv1_in_operations746);
-			lv1105=lv1();
+			DebugLocation(94, 6);
+			PushFollow(Follow._lv1_in_operations800);
+			lv1109=lv1();
 			PopFollow();
 
-			adaptor.AddChild(root_0, lv1105.Tree);
+			adaptor.AddChild(root_0, lv1109.Tree);
 
 			}
 
@@ -3471,11 +3706,11 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("operations", 23);
-			LeaveRule("operations", 23);
+			TraceOut("operations", 25);
+			LeaveRule("operations", 25);
 			LeaveRule_operations();
 		}
-		DebugLocation(88, 9);
+		DebugLocation(94, 9);
 		} finally { DebugExitRule(GrammarFileName, "operations"); }
 		return retval;
 
@@ -3486,53 +3721,53 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_lv1();
 
 	// $ANTLR start "lv1"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:89:3: lv1 : lv2 ( LEQ ^ lv1 | GEQ ^ lv1 | L ^ lv1 | G ^ lv1 | EQ ^ lv1 )? ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:95:3: lv1 : lv2 ( LEQ ^ lv1 | GEQ ^ lv1 | L ^ lv1 | G ^ lv1 | EQ ^ lv1 )? ;
 	[GrammarRule("lv1")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> lv1()
 	{
 		EnterRule_lv1();
-		EnterRule("lv1", 24);
-		TraceIn("lv1", 24);
+		EnterRule("lv1", 26);
+		TraceIn("lv1", 26);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> retval = new AstParserRuleReturnScope<COOLCommonTree, IToken>();
 		retval.Start = (IToken)input.LT(1);
 
 		COOLCommonTree root_0 = default(COOLCommonTree);
 
-		IToken LEQ107 = default(IToken);
-		IToken GEQ109 = default(IToken);
-		IToken L111 = default(IToken);
-		IToken G113 = default(IToken);
-		IToken EQ115 = default(IToken);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> lv2106 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> lv1108 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> lv1110 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		IToken LEQ111 = default(IToken);
+		IToken GEQ113 = default(IToken);
+		IToken L115 = default(IToken);
+		IToken G117 = default(IToken);
+		IToken EQ119 = default(IToken);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> lv2110 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> lv1112 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> lv1114 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> lv1116 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> lv1118 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> lv1120 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 
-		COOLCommonTree LEQ107_tree = default(COOLCommonTree);
-		COOLCommonTree GEQ109_tree = default(COOLCommonTree);
-		COOLCommonTree L111_tree = default(COOLCommonTree);
-		COOLCommonTree G113_tree = default(COOLCommonTree);
-		COOLCommonTree EQ115_tree = default(COOLCommonTree);
+		COOLCommonTree LEQ111_tree = default(COOLCommonTree);
+		COOLCommonTree GEQ113_tree = default(COOLCommonTree);
+		COOLCommonTree L115_tree = default(COOLCommonTree);
+		COOLCommonTree G117_tree = default(COOLCommonTree);
+		COOLCommonTree EQ119_tree = default(COOLCommonTree);
 		try { DebugEnterRule(GrammarFileName, "lv1");
-		DebugLocation(89, 55);
+		DebugLocation(95, 55);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:89:6: ( lv2 ( LEQ ^ lv1 | GEQ ^ lv1 | L ^ lv1 | G ^ lv1 | EQ ^ lv1 )? )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:95:6: ( lv2 ( LEQ ^ lv1 | GEQ ^ lv1 | L ^ lv1 | G ^ lv1 | EQ ^ lv1 )? )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:89:9: lv2 ( LEQ ^ lv1 | GEQ ^ lv1 | L ^ lv1 | G ^ lv1 | EQ ^ lv1 )?
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:95:9: lv2 ( LEQ ^ lv1 | GEQ ^ lv1 | L ^ lv1 | G ^ lv1 | EQ ^ lv1 )?
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(89, 9);
-			PushFollow(Follow._lv2_in_lv1756);
-			lv2106=lv2();
+			DebugLocation(95, 9);
+			PushFollow(Follow._lv2_in_lv1810);
+			lv2110=lv2();
 			PopFollow();
 
-			adaptor.AddChild(root_0, lv2106.Tree);
-			DebugLocation(89, 13);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:89:13: ( LEQ ^ lv1 | GEQ ^ lv1 | L ^ lv1 | G ^ lv1 | EQ ^ lv1 )?
+			adaptor.AddChild(root_0, lv2110.Tree);
+			DebugLocation(95, 13);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:95:13: ( LEQ ^ lv1 | GEQ ^ lv1 | L ^ lv1 | G ^ lv1 | EQ ^ lv1 )?
 			int alt21=6;
 			try { DebugEnterSubRule(21);
 			try { DebugEnterDecision(21, false);
@@ -3570,48 +3805,14 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:89:15: LEQ ^ lv1
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:95:15: LEQ ^ lv1
 				{
-				DebugLocation(89, 18);
-				LEQ107=(IToken)Match(input,LEQ,Follow._LEQ_in_lv1760); 
-				LEQ107_tree = (COOLCommonTree)adaptor.Create(LEQ107);
-				root_0 = (COOLCommonTree)adaptor.BecomeRoot(LEQ107_tree, root_0);
-				DebugLocation(89, 20);
-				PushFollow(Follow._lv1_in_lv1763);
-				lv1108=lv1();
-				PopFollow();
-
-				adaptor.AddChild(root_0, lv1108.Tree);
-
-				}
-				break;
-			case 2:
-				DebugEnterAlt(2);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:89:24: GEQ ^ lv1
-				{
-				DebugLocation(89, 27);
-				GEQ109=(IToken)Match(input,GEQ,Follow._GEQ_in_lv1765); 
-				GEQ109_tree = (COOLCommonTree)adaptor.Create(GEQ109);
-				root_0 = (COOLCommonTree)adaptor.BecomeRoot(GEQ109_tree, root_0);
-				DebugLocation(89, 29);
-				PushFollow(Follow._lv1_in_lv1768);
-				lv1110=lv1();
-				PopFollow();
-
-				adaptor.AddChild(root_0, lv1110.Tree);
-
-				}
-				break;
-			case 3:
-				DebugEnterAlt(3);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:89:33: L ^ lv1
-				{
-				DebugLocation(89, 34);
-				L111=(IToken)Match(input,L,Follow._L_in_lv1770); 
-				L111_tree = (COOLCommonTree)adaptor.Create(L111);
-				root_0 = (COOLCommonTree)adaptor.BecomeRoot(L111_tree, root_0);
-				DebugLocation(89, 36);
-				PushFollow(Follow._lv1_in_lv1773);
+				DebugLocation(95, 18);
+				LEQ111=(IToken)Match(input,LEQ,Follow._LEQ_in_lv1814); 
+				LEQ111_tree = (COOLCommonTree)adaptor.Create(LEQ111);
+				root_0 = (COOLCommonTree)adaptor.BecomeRoot(LEQ111_tree, root_0);
+				DebugLocation(95, 20);
+				PushFollow(Follow._lv1_in_lv1817);
 				lv1112=lv1();
 				PopFollow();
 
@@ -3619,16 +3820,16 @@ public partial class COOLParser : Antlr.Runtime.Parser
 
 				}
 				break;
-			case 4:
-				DebugEnterAlt(4);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:89:40: G ^ lv1
+			case 2:
+				DebugEnterAlt(2);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:95:24: GEQ ^ lv1
 				{
-				DebugLocation(89, 41);
-				G113=(IToken)Match(input,G,Follow._G_in_lv1775); 
-				G113_tree = (COOLCommonTree)adaptor.Create(G113);
-				root_0 = (COOLCommonTree)adaptor.BecomeRoot(G113_tree, root_0);
-				DebugLocation(89, 43);
-				PushFollow(Follow._lv1_in_lv1778);
+				DebugLocation(95, 27);
+				GEQ113=(IToken)Match(input,GEQ,Follow._GEQ_in_lv1819); 
+				GEQ113_tree = (COOLCommonTree)adaptor.Create(GEQ113);
+				root_0 = (COOLCommonTree)adaptor.BecomeRoot(GEQ113_tree, root_0);
+				DebugLocation(95, 29);
+				PushFollow(Follow._lv1_in_lv1822);
 				lv1114=lv1();
 				PopFollow();
 
@@ -3636,20 +3837,54 @@ public partial class COOLParser : Antlr.Runtime.Parser
 
 				}
 				break;
-			case 5:
-				DebugEnterAlt(5);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:89:47: EQ ^ lv1
+			case 3:
+				DebugEnterAlt(3);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:95:33: L ^ lv1
 				{
-				DebugLocation(89, 49);
-				EQ115=(IToken)Match(input,EQ,Follow._EQ_in_lv1780); 
-				EQ115_tree = (COOLCommonTree)adaptor.Create(EQ115);
-				root_0 = (COOLCommonTree)adaptor.BecomeRoot(EQ115_tree, root_0);
-				DebugLocation(89, 51);
-				PushFollow(Follow._lv1_in_lv1783);
+				DebugLocation(95, 34);
+				L115=(IToken)Match(input,L,Follow._L_in_lv1824); 
+				L115_tree = (COOLCommonTree)adaptor.Create(L115);
+				root_0 = (COOLCommonTree)adaptor.BecomeRoot(L115_tree, root_0);
+				DebugLocation(95, 36);
+				PushFollow(Follow._lv1_in_lv1827);
 				lv1116=lv1();
 				PopFollow();
 
 				adaptor.AddChild(root_0, lv1116.Tree);
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:95:40: G ^ lv1
+				{
+				DebugLocation(95, 41);
+				G117=(IToken)Match(input,G,Follow._G_in_lv1829); 
+				G117_tree = (COOLCommonTree)adaptor.Create(G117);
+				root_0 = (COOLCommonTree)adaptor.BecomeRoot(G117_tree, root_0);
+				DebugLocation(95, 43);
+				PushFollow(Follow._lv1_in_lv1832);
+				lv1118=lv1();
+				PopFollow();
+
+				adaptor.AddChild(root_0, lv1118.Tree);
+
+				}
+				break;
+			case 5:
+				DebugEnterAlt(5);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:95:47: EQ ^ lv1
+				{
+				DebugLocation(95, 49);
+				EQ119=(IToken)Match(input,EQ,Follow._EQ_in_lv1834); 
+				EQ119_tree = (COOLCommonTree)adaptor.Create(EQ119);
+				root_0 = (COOLCommonTree)adaptor.BecomeRoot(EQ119_tree, root_0);
+				DebugLocation(95, 51);
+				PushFollow(Follow._lv1_in_lv1837);
+				lv1120=lv1();
+				PopFollow();
+
+				adaptor.AddChild(root_0, lv1120.Tree);
 
 				}
 				break;
@@ -3675,11 +3910,11 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("lv1", 24);
-			LeaveRule("lv1", 24);
+			TraceOut("lv1", 26);
+			LeaveRule("lv1", 26);
 			LeaveRule_lv1();
 		}
-		DebugLocation(89, 55);
+		DebugLocation(95, 55);
 		} finally { DebugExitRule(GrammarFileName, "lv1"); }
 		return retval;
 
@@ -3690,44 +3925,44 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_lv2();
 
 	// $ANTLR start "lv2"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:90:3: lv2 : lv3 ( PLUS ^ lv2 | MINUS ^ lv2 )? ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:96:3: lv2 : lv3 ( PLUS ^ lv2 | MINUS ^ lv2 )? ;
 	[GrammarRule("lv2")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> lv2()
 	{
 		EnterRule_lv2();
-		EnterRule("lv2", 25);
-		TraceIn("lv2", 25);
+		EnterRule("lv2", 27);
+		TraceIn("lv2", 27);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> retval = new AstParserRuleReturnScope<COOLCommonTree, IToken>();
 		retval.Start = (IToken)input.LT(1);
 
 		COOLCommonTree root_0 = default(COOLCommonTree);
 
-		IToken PLUS118 = default(IToken);
-		IToken MINUS120 = default(IToken);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> lv3117 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> lv2119 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> lv2121 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		IToken PLUS122 = default(IToken);
+		IToken MINUS124 = default(IToken);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> lv3121 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> lv2123 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> lv2125 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 
-		COOLCommonTree PLUS118_tree = default(COOLCommonTree);
-		COOLCommonTree MINUS120_tree = default(COOLCommonTree);
+		COOLCommonTree PLUS122_tree = default(COOLCommonTree);
+		COOLCommonTree MINUS124_tree = default(COOLCommonTree);
 		try { DebugEnterRule(GrammarFileName, "lv2");
-		DebugLocation(90, 38);
+		DebugLocation(96, 38);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:90:6: ( lv3 ( PLUS ^ lv2 | MINUS ^ lv2 )? )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:96:6: ( lv3 ( PLUS ^ lv2 | MINUS ^ lv2 )? )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:90:8: lv3 ( PLUS ^ lv2 | MINUS ^ lv2 )?
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:96:8: lv3 ( PLUS ^ lv2 | MINUS ^ lv2 )?
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(90, 8);
-			PushFollow(Follow._lv3_in_lv2793);
-			lv3117=lv3();
+			DebugLocation(96, 8);
+			PushFollow(Follow._lv3_in_lv2847);
+			lv3121=lv3();
 			PopFollow();
 
-			adaptor.AddChild(root_0, lv3117.Tree);
-			DebugLocation(90, 12);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:90:12: ( PLUS ^ lv2 | MINUS ^ lv2 )?
+			adaptor.AddChild(root_0, lv3121.Tree);
+			DebugLocation(96, 12);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:96:12: ( PLUS ^ lv2 | MINUS ^ lv2 )?
 			int alt22=3;
 			try { DebugEnterSubRule(22);
 			try { DebugEnterDecision(22, false);
@@ -3746,35 +3981,35 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:90:14: PLUS ^ lv2
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:96:14: PLUS ^ lv2
 				{
-				DebugLocation(90, 18);
-				PLUS118=(IToken)Match(input,PLUS,Follow._PLUS_in_lv2797); 
-				PLUS118_tree = (COOLCommonTree)adaptor.Create(PLUS118);
-				root_0 = (COOLCommonTree)adaptor.BecomeRoot(PLUS118_tree, root_0);
-				DebugLocation(90, 21);
-				PushFollow(Follow._lv2_in_lv2801);
-				lv2119=lv2();
+				DebugLocation(96, 18);
+				PLUS122=(IToken)Match(input,PLUS,Follow._PLUS_in_lv2851); 
+				PLUS122_tree = (COOLCommonTree)adaptor.Create(PLUS122);
+				root_0 = (COOLCommonTree)adaptor.BecomeRoot(PLUS122_tree, root_0);
+				DebugLocation(96, 21);
+				PushFollow(Follow._lv2_in_lv2855);
+				lv2123=lv2();
 				PopFollow();
 
-				adaptor.AddChild(root_0, lv2119.Tree);
+				adaptor.AddChild(root_0, lv2123.Tree);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:90:25: MINUS ^ lv2
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:96:25: MINUS ^ lv2
 				{
-				DebugLocation(90, 30);
-				MINUS120=(IToken)Match(input,MINUS,Follow._MINUS_in_lv2803); 
-				MINUS120_tree = (COOLCommonTree)adaptor.Create(MINUS120);
-				root_0 = (COOLCommonTree)adaptor.BecomeRoot(MINUS120_tree, root_0);
-				DebugLocation(90, 33);
-				PushFollow(Follow._lv2_in_lv2807);
-				lv2121=lv2();
+				DebugLocation(96, 30);
+				MINUS124=(IToken)Match(input,MINUS,Follow._MINUS_in_lv2857); 
+				MINUS124_tree = (COOLCommonTree)adaptor.Create(MINUS124);
+				root_0 = (COOLCommonTree)adaptor.BecomeRoot(MINUS124_tree, root_0);
+				DebugLocation(96, 33);
+				PushFollow(Follow._lv2_in_lv2861);
+				lv2125=lv2();
 				PopFollow();
 
-				adaptor.AddChild(root_0, lv2121.Tree);
+				adaptor.AddChild(root_0, lv2125.Tree);
 
 				}
 				break;
@@ -3800,11 +4035,11 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("lv2", 25);
-			LeaveRule("lv2", 25);
+			TraceOut("lv2", 27);
+			LeaveRule("lv2", 27);
 			LeaveRule_lv2();
 		}
-		DebugLocation(90, 38);
+		DebugLocation(96, 38);
 		} finally { DebugExitRule(GrammarFileName, "lv2"); }
 		return retval;
 
@@ -3815,44 +4050,44 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_lv3();
 
 	// $ANTLR start "lv3"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:91:3: lv3 : lv4 ( MULT ^ lv3 | DIV ^ lv3 )? ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:97:3: lv3 : lv4 ( MULT ^ lv3 | DIV ^ lv3 )? ;
 	[GrammarRule("lv3")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> lv3()
 	{
 		EnterRule_lv3();
-		EnterRule("lv3", 26);
-		TraceIn("lv3", 26);
+		EnterRule("lv3", 28);
+		TraceIn("lv3", 28);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> retval = new AstParserRuleReturnScope<COOLCommonTree, IToken>();
 		retval.Start = (IToken)input.LT(1);
 
 		COOLCommonTree root_0 = default(COOLCommonTree);
 
-		IToken MULT123 = default(IToken);
-		IToken DIV125 = default(IToken);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> lv4122 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> lv3124 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> lv3126 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		IToken MULT127 = default(IToken);
+		IToken DIV129 = default(IToken);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> lv4126 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> lv3128 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> lv3130 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 
-		COOLCommonTree MULT123_tree = default(COOLCommonTree);
-		COOLCommonTree DIV125_tree = default(COOLCommonTree);
+		COOLCommonTree MULT127_tree = default(COOLCommonTree);
+		COOLCommonTree DIV129_tree = default(COOLCommonTree);
 		try { DebugEnterRule(GrammarFileName, "lv3");
-		DebugLocation(91, 34);
+		DebugLocation(97, 34);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:91:6: ( lv4 ( MULT ^ lv3 | DIV ^ lv3 )? )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:97:6: ( lv4 ( MULT ^ lv3 | DIV ^ lv3 )? )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:91:8: lv4 ( MULT ^ lv3 | DIV ^ lv3 )?
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:97:8: lv4 ( MULT ^ lv3 | DIV ^ lv3 )?
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(91, 8);
-			PushFollow(Follow._lv4_in_lv3818);
-			lv4122=lv4();
+			DebugLocation(97, 8);
+			PushFollow(Follow._lv4_in_lv3872);
+			lv4126=lv4();
 			PopFollow();
 
-			adaptor.AddChild(root_0, lv4122.Tree);
-			DebugLocation(91, 11);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:91:11: ( MULT ^ lv3 | DIV ^ lv3 )?
+			adaptor.AddChild(root_0, lv4126.Tree);
+			DebugLocation(97, 11);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:97:11: ( MULT ^ lv3 | DIV ^ lv3 )?
 			int alt23=3;
 			try { DebugEnterSubRule(23);
 			try { DebugEnterDecision(23, false);
@@ -3871,35 +4106,35 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:91:13: MULT ^ lv3
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:97:13: MULT ^ lv3
 				{
-				DebugLocation(91, 17);
-				MULT123=(IToken)Match(input,MULT,Follow._MULT_in_lv3821); 
-				MULT123_tree = (COOLCommonTree)adaptor.Create(MULT123);
-				root_0 = (COOLCommonTree)adaptor.BecomeRoot(MULT123_tree, root_0);
-				DebugLocation(91, 20);
-				PushFollow(Follow._lv3_in_lv3825);
-				lv3124=lv3();
+				DebugLocation(97, 17);
+				MULT127=(IToken)Match(input,MULT,Follow._MULT_in_lv3875); 
+				MULT127_tree = (COOLCommonTree)adaptor.Create(MULT127);
+				root_0 = (COOLCommonTree)adaptor.BecomeRoot(MULT127_tree, root_0);
+				DebugLocation(97, 20);
+				PushFollow(Follow._lv3_in_lv3879);
+				lv3128=lv3();
 				PopFollow();
 
-				adaptor.AddChild(root_0, lv3124.Tree);
+				adaptor.AddChild(root_0, lv3128.Tree);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:91:24: DIV ^ lv3
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:97:24: DIV ^ lv3
 				{
-				DebugLocation(91, 27);
-				DIV125=(IToken)Match(input,DIV,Follow._DIV_in_lv3827); 
-				DIV125_tree = (COOLCommonTree)adaptor.Create(DIV125);
-				root_0 = (COOLCommonTree)adaptor.BecomeRoot(DIV125_tree, root_0);
-				DebugLocation(91, 30);
-				PushFollow(Follow._lv3_in_lv3831);
-				lv3126=lv3();
+				DebugLocation(97, 27);
+				DIV129=(IToken)Match(input,DIV,Follow._DIV_in_lv3881); 
+				DIV129_tree = (COOLCommonTree)adaptor.Create(DIV129);
+				root_0 = (COOLCommonTree)adaptor.BecomeRoot(DIV129_tree, root_0);
+				DebugLocation(97, 30);
+				PushFollow(Follow._lv3_in_lv3885);
+				lv3130=lv3();
 				PopFollow();
 
-				adaptor.AddChild(root_0, lv3126.Tree);
+				adaptor.AddChild(root_0, lv3130.Tree);
 
 				}
 				break;
@@ -3925,11 +4160,11 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("lv3", 26);
-			LeaveRule("lv3", 26);
+			TraceOut("lv3", 28);
+			LeaveRule("lv3", 28);
 			LeaveRule_lv3();
 		}
-		DebugLocation(91, 34);
+		DebugLocation(97, 34);
 		} finally { DebugExitRule(GrammarFileName, "lv3"); }
 		return retval;
 
@@ -3940,36 +4175,36 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_lv4();
 
 	// $ANTLR start "lv4"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:92:3: lv4 : lv5 ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:98:3: lv4 : lv5 ;
 	[GrammarRule("lv4")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> lv4()
 	{
 		EnterRule_lv4();
-		EnterRule("lv4", 27);
-		TraceIn("lv4", 27);
+		EnterRule("lv4", 29);
+		TraceIn("lv4", 29);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> retval = new AstParserRuleReturnScope<COOLCommonTree, IToken>();
 		retval.Start = (IToken)input.LT(1);
 
 		COOLCommonTree root_0 = default(COOLCommonTree);
 
-		AstParserRuleReturnScope<COOLCommonTree, IToken> lv5127 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> lv5131 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 
 		try { DebugEnterRule(GrammarFileName, "lv4");
-		DebugLocation(92, 11);
+		DebugLocation(98, 11);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:92:6: ( lv5 )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:98:6: ( lv5 )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:92:8: lv5
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:98:8: lv5
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(92, 8);
-			PushFollow(Follow._lv5_in_lv4841);
-			lv5127=lv5();
+			DebugLocation(98, 8);
+			PushFollow(Follow._lv5_in_lv4895);
+			lv5131=lv5();
 			PopFollow();
 
-			adaptor.AddChild(root_0, lv5127.Tree);
+			adaptor.AddChild(root_0, lv5131.Tree);
 
 			}
 
@@ -3988,11 +4223,11 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("lv4", 27);
-			LeaveRule("lv4", 27);
+			TraceOut("lv4", 29);
+			LeaveRule("lv4", 29);
 			LeaveRule_lv4();
 		}
-		DebugLocation(92, 11);
+		DebugLocation(98, 11);
 		} finally { DebugExitRule(GrammarFileName, "lv4"); }
 		return retval;
 
@@ -4003,36 +4238,36 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_lv5();
 
 	// $ANTLR start "lv5"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:93:3: lv5 : lv6 ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:99:3: lv5 : lv6 ;
 	[GrammarRule("lv5")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> lv5()
 	{
 		EnterRule_lv5();
-		EnterRule("lv5", 28);
-		TraceIn("lv5", 28);
+		EnterRule("lv5", 30);
+		TraceIn("lv5", 30);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> retval = new AstParserRuleReturnScope<COOLCommonTree, IToken>();
 		retval.Start = (IToken)input.LT(1);
 
 		COOLCommonTree root_0 = default(COOLCommonTree);
 
-		AstParserRuleReturnScope<COOLCommonTree, IToken> lv6128 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> lv6132 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 
 		try { DebugEnterRule(GrammarFileName, "lv5");
-		DebugLocation(93, 12);
+		DebugLocation(99, 12);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:93:6: ( lv6 )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:99:6: ( lv6 )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:93:9: lv6
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:99:9: lv6
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(93, 9);
-			PushFollow(Follow._lv6_in_lv5851);
-			lv6128=lv6();
+			DebugLocation(99, 9);
+			PushFollow(Follow._lv6_in_lv5905);
+			lv6132=lv6();
 			PopFollow();
 
-			adaptor.AddChild(root_0, lv6128.Tree);
+			adaptor.AddChild(root_0, lv6132.Tree);
 
 			}
 
@@ -4051,11 +4286,11 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("lv5", 28);
-			LeaveRule("lv5", 28);
+			TraceOut("lv5", 30);
+			LeaveRule("lv5", 30);
 			LeaveRule_lv5();
 		}
-		DebugLocation(93, 12);
+		DebugLocation(99, 12);
 		} finally { DebugExitRule(GrammarFileName, "lv5"); }
 		return retval;
 
@@ -4066,42 +4301,42 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_lv6();
 
 	// $ANTLR start "lv6"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:94:3: lv6 : ( ( ID -> ID ) ( dispatch2 -> ^( DISPATCH $lv6 dispatch2 ) | dispatch -> ^( DISPATCH $lv6 dispatch ) )? | ( tmp2 -> tmp2 ) ( dispatch -> ^( DISPATCH $lv6 dispatch ) )? | ( constant -> constant ) ( dispatch )? ) ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:100:3: lv6 : ( ( ID -> ID ) ( dispatch2 -> ^( DISPATCH $lv6 dispatch2 ) | dispatch -> ^( DISPATCH $lv6 dispatch ) )? | ( tmp2 -> tmp2 ) ( dispatch -> ^( DISPATCH $lv6 dispatch ) )? | ( constant -> constant ) ( dispatch )? ) ;
 	[GrammarRule("lv6")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> lv6()
 	{
 		EnterRule_lv6();
-		EnterRule("lv6", 29);
-		TraceIn("lv6", 29);
+		EnterRule("lv6", 31);
+		TraceIn("lv6", 31);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> retval = new AstParserRuleReturnScope<COOLCommonTree, IToken>();
 		retval.Start = (IToken)input.LT(1);
 
 		COOLCommonTree root_0 = default(COOLCommonTree);
 
-		IToken ID129 = default(IToken);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> dispatch2130 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> dispatch131 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> tmp2132 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> dispatch133 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> constant134 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		IToken ID133 = default(IToken);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> dispatch2134 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> dispatch135 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> tmp2136 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> dispatch137 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> constant138 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> dispatch139 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 
-		COOLCommonTree ID129_tree = default(COOLCommonTree);
+		COOLCommonTree ID133_tree = default(COOLCommonTree);
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
 		RewriteRuleSubtreeStream stream_dispatch2=new RewriteRuleSubtreeStream(adaptor,"rule dispatch2");
 		RewriteRuleSubtreeStream stream_tmp2=new RewriteRuleSubtreeStream(adaptor,"rule tmp2");
 		RewriteRuleSubtreeStream stream_constant=new RewriteRuleSubtreeStream(adaptor,"rule constant");
 		RewriteRuleSubtreeStream stream_dispatch=new RewriteRuleSubtreeStream(adaptor,"rule dispatch");
 		try { DebugEnterRule(GrammarFileName, "lv6");
-		DebugLocation(94, 36);
+		DebugLocation(100, 36);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:94:6: ( ( ( ID -> ID ) ( dispatch2 -> ^( DISPATCH $lv6 dispatch2 ) | dispatch -> ^( DISPATCH $lv6 dispatch ) )? | ( tmp2 -> tmp2 ) ( dispatch -> ^( DISPATCH $lv6 dispatch ) )? | ( constant -> constant ) ( dispatch )? ) )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:100:6: ( ( ( ID -> ID ) ( dispatch2 -> ^( DISPATCH $lv6 dispatch2 ) | dispatch -> ^( DISPATCH $lv6 dispatch ) )? | ( tmp2 -> tmp2 ) ( dispatch -> ^( DISPATCH $lv6 dispatch ) )? | ( constant -> constant ) ( dispatch )? ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:94:8: ( ( ID -> ID ) ( dispatch2 -> ^( DISPATCH $lv6 dispatch2 ) | dispatch -> ^( DISPATCH $lv6 dispatch ) )? | ( tmp2 -> tmp2 ) ( dispatch -> ^( DISPATCH $lv6 dispatch ) )? | ( constant -> constant ) ( dispatch )? )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:100:8: ( ( ID -> ID ) ( dispatch2 -> ^( DISPATCH $lv6 dispatch2 ) | dispatch -> ^( DISPATCH $lv6 dispatch ) )? | ( tmp2 -> tmp2 ) ( dispatch -> ^( DISPATCH $lv6 dispatch ) )? | ( constant -> constant ) ( dispatch )? )
 			{
-			DebugLocation(94, 8);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:94:8: ( ( ID -> ID ) ( dispatch2 -> ^( DISPATCH $lv6 dispatch2 ) | dispatch -> ^( DISPATCH $lv6 dispatch ) )? | ( tmp2 -> tmp2 ) ( dispatch -> ^( DISPATCH $lv6 dispatch ) )? | ( constant -> constant ) ( dispatch )? )
+			DebugLocation(100, 8);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:100:8: ( ( ID -> ID ) ( dispatch2 -> ^( DISPATCH $lv6 dispatch2 ) | dispatch -> ^( DISPATCH $lv6 dispatch ) )? | ( tmp2 -> tmp2 ) ( dispatch -> ^( DISPATCH $lv6 dispatch ) )? | ( constant -> constant ) ( dispatch )? )
 			int alt27=3;
 			try { DebugEnterSubRule(27);
 			try { DebugEnterDecision(27, false);
@@ -4137,16 +4372,16 @@ public partial class COOLParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:94:9: ( ID -> ID ) ( dispatch2 -> ^( DISPATCH $lv6 dispatch2 ) | dispatch -> ^( DISPATCH $lv6 dispatch ) )?
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:100:9: ( ID -> ID ) ( dispatch2 -> ^( DISPATCH $lv6 dispatch2 ) | dispatch -> ^( DISPATCH $lv6 dispatch ) )?
 				{
-				DebugLocation(94, 9);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:94:9: ( ID -> ID )
+				DebugLocation(100, 9);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:100:9: ( ID -> ID )
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:94:10: ID
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:100:10: ID
 				{
-				DebugLocation(94, 10);
-				ID129=(IToken)Match(input,ID,Follow._ID_in_lv6862);  
-				stream_ID.Add(ID129);
+				DebugLocation(100, 10);
+				ID133=(IToken)Match(input,ID,Follow._ID_in_lv6916);  
+				stream_ID.Add(ID133);
 
 
 
@@ -4162,9 +4397,9 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (COOLCommonTree)adaptor.Nil();
-				// 94:12: -> ID
+				// 100:12: -> ID
 				{
-					DebugLocation(94, 14);
+					DebugLocation(100, 14);
 					adaptor.AddChild(root_0, stream_ID.NextNode());
 
 				}
@@ -4174,8 +4409,8 @@ public partial class COOLParser : Antlr.Runtime.Parser
 
 				}
 
-				DebugLocation(94, 18);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:94:18: ( dispatch2 -> ^( DISPATCH $lv6 dispatch2 ) | dispatch -> ^( DISPATCH $lv6 dispatch ) )?
+				DebugLocation(100, 18);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:100:18: ( dispatch2 -> ^( DISPATCH $lv6 dispatch2 ) | dispatch -> ^( DISPATCH $lv6 dispatch ) )?
 				int alt24=3;
 				try { DebugEnterSubRule(24);
 				try { DebugEnterDecision(24, false);
@@ -4194,14 +4429,14 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:94:19: dispatch2
+					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:100:19: dispatch2
 					{
-					DebugLocation(94, 19);
-					PushFollow(Follow._dispatch2_in_lv6868);
-					dispatch2130=dispatch2();
+					DebugLocation(100, 19);
+					PushFollow(Follow._dispatch2_in_lv6922);
+					dispatch2134=dispatch2();
 					PopFollow();
 
-					stream_dispatch2.Add(dispatch2130.Tree);
+					stream_dispatch2.Add(dispatch2134.Tree);
 
 
 					{
@@ -4216,18 +4451,18 @@ public partial class COOLParser : Antlr.Runtime.Parser
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 					root_0 = (COOLCommonTree)adaptor.Nil();
-					// 94:28: -> ^( DISPATCH $lv6 dispatch2 )
+					// 100:28: -> ^( DISPATCH $lv6 dispatch2 )
 					{
-						DebugLocation(94, 30);
-						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:94:30: ^( DISPATCH $lv6 dispatch2 )
+						DebugLocation(100, 30);
+						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:100:30: ^( DISPATCH $lv6 dispatch2 )
 						{
 						COOLCommonTree root_1 = (COOLCommonTree)adaptor.Nil();
-						DebugLocation(94, 32);
+						DebugLocation(100, 32);
 						root_1 = (COOLCommonTree)adaptor.BecomeRoot((COOLCommonTree)adaptor.Create(DISPATCH, "DISPATCH"), root_1);
 
-						DebugLocation(94, 43);
+						DebugLocation(100, 43);
 						adaptor.AddChild(root_1, stream_retval.NextTree());
-						DebugLocation(94, 47);
+						DebugLocation(100, 47);
 						adaptor.AddChild(root_1, stream_dispatch2.NextTree());
 
 						adaptor.AddChild(root_0, root_1);
@@ -4242,19 +4477,19 @@ public partial class COOLParser : Antlr.Runtime.Parser
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:94:59: dispatch
+					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:100:59: dispatch
 					{
-					DebugLocation(94, 59);
-					PushFollow(Follow._dispatch_in_lv6881);
-					dispatch131=dispatch();
+					DebugLocation(100, 59);
+					PushFollow(Follow._dispatch_in_lv6935);
+					dispatch135=dispatch();
 					PopFollow();
 
-					stream_dispatch.Add(dispatch131.Tree);
+					stream_dispatch.Add(dispatch135.Tree);
 
 
 					{
 					// AST REWRITE
-					// elements: lv6, dispatch
+					// elements: dispatch, lv6
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -4264,18 +4499,18 @@ public partial class COOLParser : Antlr.Runtime.Parser
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 					root_0 = (COOLCommonTree)adaptor.Nil();
-					// 94:67: -> ^( DISPATCH $lv6 dispatch )
+					// 100:67: -> ^( DISPATCH $lv6 dispatch )
 					{
-						DebugLocation(94, 69);
-						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:94:69: ^( DISPATCH $lv6 dispatch )
+						DebugLocation(100, 69);
+						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:100:69: ^( DISPATCH $lv6 dispatch )
 						{
 						COOLCommonTree root_1 = (COOLCommonTree)adaptor.Nil();
-						DebugLocation(94, 71);
+						DebugLocation(100, 71);
 						root_1 = (COOLCommonTree)adaptor.BecomeRoot((COOLCommonTree)adaptor.Create(DISPATCH, "DISPATCH"), root_1);
 
-						DebugLocation(94, 81);
+						DebugLocation(100, 81);
 						adaptor.AddChild(root_1, stream_retval.NextTree());
-						DebugLocation(94, 85);
+						DebugLocation(100, 85);
 						adaptor.AddChild(root_1, stream_dispatch.NextTree());
 
 						adaptor.AddChild(root_0, root_1);
@@ -4297,19 +4532,19 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:95:4: ( tmp2 -> tmp2 ) ( dispatch -> ^( DISPATCH $lv6 dispatch ) )?
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:101:4: ( tmp2 -> tmp2 ) ( dispatch -> ^( DISPATCH $lv6 dispatch ) )?
 				{
-				DebugLocation(95, 4);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:95:4: ( tmp2 -> tmp2 )
+				DebugLocation(101, 4);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:101:4: ( tmp2 -> tmp2 )
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:95:5: tmp2
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:101:5: tmp2
 				{
-				DebugLocation(95, 5);
-				PushFollow(Follow._tmp2_in_lv6898);
-				tmp2132=tmp2();
+				DebugLocation(101, 5);
+				PushFollow(Follow._tmp2_in_lv6952);
+				tmp2136=tmp2();
 				PopFollow();
 
-				stream_tmp2.Add(tmp2132.Tree);
+				stream_tmp2.Add(tmp2136.Tree);
 
 
 				{
@@ -4324,9 +4559,9 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (COOLCommonTree)adaptor.Nil();
-				// 95:9: -> tmp2
+				// 101:9: -> tmp2
 				{
-					DebugLocation(95, 11);
+					DebugLocation(101, 11);
 					adaptor.AddChild(root_0, stream_tmp2.NextTree());
 
 				}
@@ -4336,8 +4571,8 @@ public partial class COOLParser : Antlr.Runtime.Parser
 
 				}
 
-				DebugLocation(95, 17);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:95:17: ( dispatch -> ^( DISPATCH $lv6 dispatch ) )?
+				DebugLocation(101, 17);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:101:17: ( dispatch -> ^( DISPATCH $lv6 dispatch ) )?
 				int alt25=2;
 				try { DebugEnterSubRule(25);
 				try { DebugEnterDecision(25, false);
@@ -4352,14 +4587,14 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:95:18: dispatch
+					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:101:18: dispatch
 					{
-					DebugLocation(95, 18);
-					PushFollow(Follow._dispatch_in_lv6904);
-					dispatch133=dispatch();
+					DebugLocation(101, 18);
+					PushFollow(Follow._dispatch_in_lv6958);
+					dispatch137=dispatch();
 					PopFollow();
 
-					stream_dispatch.Add(dispatch133.Tree);
+					stream_dispatch.Add(dispatch137.Tree);
 
 
 					{
@@ -4374,18 +4609,18 @@ public partial class COOLParser : Antlr.Runtime.Parser
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 					root_0 = (COOLCommonTree)adaptor.Nil();
-					// 95:26: -> ^( DISPATCH $lv6 dispatch )
+					// 101:26: -> ^( DISPATCH $lv6 dispatch )
 					{
-						DebugLocation(95, 28);
-						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:95:28: ^( DISPATCH $lv6 dispatch )
+						DebugLocation(101, 28);
+						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:101:28: ^( DISPATCH $lv6 dispatch )
 						{
 						COOLCommonTree root_1 = (COOLCommonTree)adaptor.Nil();
-						DebugLocation(95, 30);
+						DebugLocation(101, 30);
 						root_1 = (COOLCommonTree)adaptor.BecomeRoot((COOLCommonTree)adaptor.Create(DISPATCH, "DISPATCH"), root_1);
 
-						DebugLocation(95, 40);
+						DebugLocation(101, 40);
 						adaptor.AddChild(root_1, stream_retval.NextTree());
-						DebugLocation(95, 44);
+						DebugLocation(101, 44);
 						adaptor.AddChild(root_1, stream_dispatch.NextTree());
 
 						adaptor.AddChild(root_0, root_1);
@@ -4407,19 +4642,19 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:96:4: ( constant -> constant ) ( dispatch )?
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:102:4: ( constant -> constant ) ( dispatch )?
 				{
-				DebugLocation(96, 4);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:96:4: ( constant -> constant )
+				DebugLocation(102, 4);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:102:4: ( constant -> constant )
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:96:5: constant
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:102:5: constant
 				{
-				DebugLocation(96, 5);
-				PushFollow(Follow._constant_in_lv6921);
-				constant134=constant();
+				DebugLocation(102, 5);
+				PushFollow(Follow._constant_in_lv6975);
+				constant138=constant();
 				PopFollow();
 
-				stream_constant.Add(constant134.Tree);
+				stream_constant.Add(constant138.Tree);
 
 
 				{
@@ -4434,9 +4669,9 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (COOLCommonTree)adaptor.Nil();
-				// 96:13: -> constant
+				// 102:13: -> constant
 				{
-					DebugLocation(96, 15);
+					DebugLocation(102, 15);
 					adaptor.AddChild(root_0, stream_constant.NextTree());
 
 				}
@@ -4446,8 +4681,8 @@ public partial class COOLParser : Antlr.Runtime.Parser
 
 				}
 
-				DebugLocation(96, 25);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:96:25: ( dispatch )?
+				DebugLocation(102, 25);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:102:25: ( dispatch )?
 				int alt26=2;
 				try { DebugEnterSubRule(26);
 				try { DebugEnterDecision(26, false);
@@ -4462,14 +4697,14 @@ public partial class COOLParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:96:25: dispatch
+					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:102:25: dispatch
 					{
-					DebugLocation(96, 25);
-					PushFollow(Follow._dispatch_in_lv6926);
-					dispatch135=dispatch();
+					DebugLocation(102, 25);
+					PushFollow(Follow._dispatch_in_lv6980);
+					dispatch139=dispatch();
 					PopFollow();
 
-					stream_dispatch.Add(dispatch135.Tree);
+					stream_dispatch.Add(dispatch139.Tree);
 
 					}
 					break;
@@ -4502,11 +4737,11 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("lv6", 29);
-			LeaveRule("lv6", 29);
+			TraceOut("lv6", 31);
+			LeaveRule("lv6", 31);
 			LeaveRule_lv6();
 		}
-		DebugLocation(96, 36);
+		DebugLocation(102, 36);
 		} finally { DebugExitRule(GrammarFileName, "lv6"); }
 		return retval;
 
@@ -4517,42 +4752,42 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_tmp1();
 
 	// $ANTLR start "tmp1"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:97:3: tmp1 : ID tmp ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:103:3: tmp1 : ID tmp ;
 	[GrammarRule("tmp1")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> tmp1()
 	{
 		EnterRule_tmp1();
-		EnterRule("tmp1", 30);
-		TraceIn("tmp1", 30);
+		EnterRule("tmp1", 32);
+		TraceIn("tmp1", 32);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> retval = new AstParserRuleReturnScope<COOLCommonTree, IToken>();
 		retval.Start = (IToken)input.LT(1);
 
 		COOLCommonTree root_0 = default(COOLCommonTree);
 
-		IToken ID136 = default(IToken);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> tmp137 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		IToken ID140 = default(IToken);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> tmp141 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 
-		COOLCommonTree ID136_tree = default(COOLCommonTree);
+		COOLCommonTree ID140_tree = default(COOLCommonTree);
 		try { DebugEnterRule(GrammarFileName, "tmp1");
-		DebugLocation(97, 15);
+		DebugLocation(103, 15);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:97:7: ( ID tmp )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:103:7: ( ID tmp )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:97:9: ID tmp
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:103:9: ID tmp
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(97, 9);
-			ID136=(IToken)Match(input,ID,Follow._ID_in_tmp1938); 
-			ID136_tree = (COOLCommonTree)adaptor.Create(ID136);
-			adaptor.AddChild(root_0, ID136_tree);
-			DebugLocation(97, 12);
-			PushFollow(Follow._tmp_in_tmp1940);
-			tmp137=tmp();
+			DebugLocation(103, 9);
+			ID140=(IToken)Match(input,ID,Follow._ID_in_tmp1992); 
+			ID140_tree = (COOLCommonTree)adaptor.Create(ID140);
+			adaptor.AddChild(root_0, ID140_tree);
+			DebugLocation(103, 12);
+			PushFollow(Follow._tmp_in_tmp1994);
+			tmp141=tmp();
 			PopFollow();
 
-			adaptor.AddChild(root_0, tmp137.Tree);
+			adaptor.AddChild(root_0, tmp141.Tree);
 
 			}
 
@@ -4571,11 +4806,11 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("tmp1", 30);
-			LeaveRule("tmp1", 30);
+			TraceOut("tmp1", 32);
+			LeaveRule("tmp1", 32);
 			LeaveRule_tmp1();
 		}
-		DebugLocation(97, 15);
+		DebugLocation(103, 15);
 		} finally { DebugExitRule(GrammarFileName, "tmp1"); }
 		return retval;
 
@@ -4586,44 +4821,44 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_tmp2();
 
 	// $ANTLR start "tmp2"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:98:3: tmp2 : OP_PARENT ! expr CL_PARENT !;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:104:3: tmp2 : OP_PARENT ! expr CL_PARENT !;
 	[GrammarRule("tmp2")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> tmp2()
 	{
 		EnterRule_tmp2();
-		EnterRule("tmp2", 31);
-		TraceIn("tmp2", 31);
+		EnterRule("tmp2", 33);
+		TraceIn("tmp2", 33);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> retval = new AstParserRuleReturnScope<COOLCommonTree, IToken>();
 		retval.Start = (IToken)input.LT(1);
 
 		COOLCommonTree root_0 = default(COOLCommonTree);
 
-		IToken OP_PARENT138 = default(IToken);
-		IToken CL_PARENT140 = default(IToken);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> expr139 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		IToken OP_PARENT142 = default(IToken);
+		IToken CL_PARENT144 = default(IToken);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> expr143 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 
-		COOLCommonTree OP_PARENT138_tree = default(COOLCommonTree);
-		COOLCommonTree CL_PARENT140_tree = default(COOLCommonTree);
+		COOLCommonTree OP_PARENT142_tree = default(COOLCommonTree);
+		COOLCommonTree CL_PARENT144_tree = default(COOLCommonTree);
 		try { DebugEnterRule(GrammarFileName, "tmp2");
-		DebugLocation(98, 34);
+		DebugLocation(104, 34);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:98:7: ( OP_PARENT ! expr CL_PARENT !)
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:104:7: ( OP_PARENT ! expr CL_PARENT !)
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:98:9: OP_PARENT ! expr CL_PARENT !
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:104:9: OP_PARENT ! expr CL_PARENT !
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(98, 18);
-			OP_PARENT138=(IToken)Match(input,OP_PARENT,Follow._OP_PARENT_in_tmp2949); 
-			DebugLocation(98, 20);
-			PushFollow(Follow._expr_in_tmp2952);
-			expr139=expr();
+			DebugLocation(104, 18);
+			OP_PARENT142=(IToken)Match(input,OP_PARENT,Follow._OP_PARENT_in_tmp21003); 
+			DebugLocation(104, 20);
+			PushFollow(Follow._expr_in_tmp21006);
+			expr143=expr();
 			PopFollow();
 
-			adaptor.AddChild(root_0, expr139.Tree);
-			DebugLocation(98, 34);
-			CL_PARENT140=(IToken)Match(input,CL_PARENT,Follow._CL_PARENT_in_tmp2954); 
+			adaptor.AddChild(root_0, expr143.Tree);
+			DebugLocation(104, 34);
+			CL_PARENT144=(IToken)Match(input,CL_PARENT,Follow._CL_PARENT_in_tmp21008); 
 
 			}
 
@@ -4642,11 +4877,11 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("tmp2", 31);
-			LeaveRule("tmp2", 31);
+			TraceOut("tmp2", 33);
+			LeaveRule("tmp2", 33);
 			LeaveRule_tmp2();
 		}
-		DebugLocation(98, 34);
+		DebugLocation(104, 34);
 		} finally { DebugExitRule(GrammarFileName, "tmp2"); }
 		return retval;
 
@@ -4657,41 +4892,41 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_tmp();
 
 	// $ANTLR start "tmp"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:99:3: tmp : ( dispatch2 ) ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:105:3: tmp : ( dispatch2 ) ;
 	[GrammarRule("tmp")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> tmp()
 	{
 		EnterRule_tmp();
-		EnterRule("tmp", 32);
-		TraceIn("tmp", 32);
+		EnterRule("tmp", 34);
+		TraceIn("tmp", 34);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> retval = new AstParserRuleReturnScope<COOLCommonTree, IToken>();
 		retval.Start = (IToken)input.LT(1);
 
 		COOLCommonTree root_0 = default(COOLCommonTree);
 
-		AstParserRuleReturnScope<COOLCommonTree, IToken> dispatch2141 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> dispatch2145 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 
 		try { DebugEnterRule(GrammarFileName, "tmp");
-		DebugLocation(99, 18);
+		DebugLocation(105, 18);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:99:6: ( ( dispatch2 ) )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:105:6: ( ( dispatch2 ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:99:8: ( dispatch2 )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:105:8: ( dispatch2 )
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(99, 8);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:99:8: ( dispatch2 )
+			DebugLocation(105, 8);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:105:8: ( dispatch2 )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:99:9: dispatch2
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:105:9: dispatch2
 			{
-			DebugLocation(99, 9);
-			PushFollow(Follow._dispatch2_in_tmp964);
-			dispatch2141=dispatch2();
+			DebugLocation(105, 9);
+			PushFollow(Follow._dispatch2_in_tmp1018);
+			dispatch2145=dispatch2();
 			PopFollow();
 
-			adaptor.AddChild(root_0, dispatch2141.Tree);
+			adaptor.AddChild(root_0, dispatch2145.Tree);
 
 			}
 
@@ -4713,11 +4948,11 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("tmp", 32);
-			LeaveRule("tmp", 32);
+			TraceOut("tmp", 34);
+			LeaveRule("tmp", 34);
 			LeaveRule_tmp();
 		}
-		DebugLocation(99, 18);
+		DebugLocation(105, 18);
 		} finally { DebugExitRule(GrammarFileName, "tmp"); }
 		return retval;
 
@@ -4728,42 +4963,42 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_nanarita();
 
 	// $ANTLR start "nanarita"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:100:2: nanarita : NANARITA ^ expr ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:106:2: nanarita : NANARITA ^ expr ;
 	[GrammarRule("nanarita")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> nanarita()
 	{
 		EnterRule_nanarita();
-		EnterRule("nanarita", 33);
-		TraceIn("nanarita", 33);
+		EnterRule("nanarita", 35);
+		TraceIn("nanarita", 35);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> retval = new AstParserRuleReturnScope<COOLCommonTree, IToken>();
 		retval.Start = (IToken)input.LT(1);
 
 		COOLCommonTree root_0 = default(COOLCommonTree);
 
-		IToken NANARITA142 = default(IToken);
-		AstParserRuleReturnScope<COOLCommonTree, IToken> expr143 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
+		IToken NANARITA146 = default(IToken);
+		AstParserRuleReturnScope<COOLCommonTree, IToken> expr147 = default(AstParserRuleReturnScope<COOLCommonTree, IToken>);
 
-		COOLCommonTree NANARITA142_tree = default(COOLCommonTree);
+		COOLCommonTree NANARITA146_tree = default(COOLCommonTree);
 		try { DebugEnterRule(GrammarFileName, "nanarita");
-		DebugLocation(100, 26);
+		DebugLocation(106, 26);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:100:10: ( NANARITA ^ expr )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:106:10: ( NANARITA ^ expr )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:100:12: NANARITA ^ expr
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:106:12: NANARITA ^ expr
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(100, 20);
-			NANARITA142=(IToken)Match(input,NANARITA,Follow._NANARITA_in_nanarita972); 
-			NANARITA142_tree = (COOLCommonTree)adaptor.Create(NANARITA142);
-			root_0 = (COOLCommonTree)adaptor.BecomeRoot(NANARITA142_tree, root_0);
-			DebugLocation(100, 22);
-			PushFollow(Follow._expr_in_nanarita975);
-			expr143=expr();
+			DebugLocation(106, 20);
+			NANARITA146=(IToken)Match(input,NANARITA,Follow._NANARITA_in_nanarita1026); 
+			NANARITA146_tree = (COOLCommonTree)adaptor.Create(NANARITA146);
+			root_0 = (COOLCommonTree)adaptor.BecomeRoot(NANARITA146_tree, root_0);
+			DebugLocation(106, 22);
+			PushFollow(Follow._expr_in_nanarita1029);
+			expr147=expr();
 			PopFollow();
 
-			adaptor.AddChild(root_0, expr143.Tree);
+			adaptor.AddChild(root_0, expr147.Tree);
 
 			}
 
@@ -4782,11 +5017,11 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("nanarita", 33);
-			LeaveRule("nanarita", 33);
+			TraceOut("nanarita", 35);
+			LeaveRule("nanarita", 35);
 			LeaveRule_nanarita();
 		}
-		DebugLocation(100, 26);
+		DebugLocation(106, 26);
 		} finally { DebugExitRule(GrammarFileName, "nanarita"); }
 		return retval;
 
@@ -4797,38 +5032,38 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_constant();
 
 	// $ANTLR start "constant"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:101:3: constant : ( STRING | NUMBER | BOOLEAN );
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:107:3: constant : ( STRING | NUMBER | BOOLEAN );
 	[GrammarRule("constant")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> constant()
 	{
 		EnterRule_constant();
-		EnterRule("constant", 34);
-		TraceIn("constant", 34);
+		EnterRule("constant", 36);
+		TraceIn("constant", 36);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> retval = new AstParserRuleReturnScope<COOLCommonTree, IToken>();
 		retval.Start = (IToken)input.LT(1);
 
 		COOLCommonTree root_0 = default(COOLCommonTree);
 
-		IToken set144 = default(IToken);
+		IToken set148 = default(IToken);
 
-		COOLCommonTree set144_tree = default(COOLCommonTree);
+		COOLCommonTree set148_tree = default(COOLCommonTree);
 		try { DebugEnterRule(GrammarFileName, "constant");
-		DebugLocation(101, 33);
+		DebugLocation(107, 33);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:101:11: ( STRING | NUMBER | BOOLEAN )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:107:11: ( STRING | NUMBER | BOOLEAN )
 			DebugEnterAlt(1);
 			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(101, 11);
+			DebugLocation(107, 11);
 
-			set144=(IToken)input.LT(1);
+			set148=(IToken)input.LT(1);
 			if (input.LA(1)==BOOLEAN||input.LA(1)==NUMBER||input.LA(1)==STRING)
 			{
 				input.Consume();
-				adaptor.AddChild(root_0, (COOLCommonTree)adaptor.Create(set144));
+				adaptor.AddChild(root_0, (COOLCommonTree)adaptor.Create(set148));
 				state.errorRecovery=false;
 			}
 			else
@@ -4856,11 +5091,11 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("constant", 34);
-			LeaveRule("constant", 34);
+			TraceOut("constant", 36);
+			LeaveRule("constant", 36);
 			LeaveRule_constant();
 		}
-		DebugLocation(101, 33);
+		DebugLocation(107, 33);
 		} finally { DebugExitRule(GrammarFileName, "constant"); }
 		return retval;
 
@@ -4871,33 +5106,33 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_wsnl();
 
 	// $ANTLR start "wsnl"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:102:2: wsnl : ( WS | NL )+ ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:108:2: wsnl : ( WS | NL )+ ;
 	[GrammarRule("wsnl")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> wsnl()
 	{
 		EnterRule_wsnl();
-		EnterRule("wsnl", 35);
-		TraceIn("wsnl", 35);
+		EnterRule("wsnl", 37);
+		TraceIn("wsnl", 37);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> retval = new AstParserRuleReturnScope<COOLCommonTree, IToken>();
 		retval.Start = (IToken)input.LT(1);
 
 		COOLCommonTree root_0 = default(COOLCommonTree);
 
-		IToken set145 = default(IToken);
+		IToken set149 = default(IToken);
 
-		COOLCommonTree set145_tree = default(COOLCommonTree);
+		COOLCommonTree set149_tree = default(COOLCommonTree);
 		try { DebugEnterRule(GrammarFileName, "wsnl");
-		DebugLocation(102, 17);
+		DebugLocation(108, 17);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:102:7: ( ( WS | NL )+ )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:108:7: ( ( WS | NL )+ )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:102:9: ( WS | NL )+
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:108:9: ( WS | NL )+
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(102, 9);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:102:9: ( WS | NL )+
+			DebugLocation(108, 9);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:108:9: ( WS | NL )+
 			int cnt28=0;
 			try { DebugEnterSubRule(28);
 			while (true)
@@ -4919,13 +5154,13 @@ public partial class COOLParser : Antlr.Runtime.Parser
 					DebugEnterAlt(1);
 					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:
 					{
-					DebugLocation(102, 9);
+					DebugLocation(108, 9);
 
-					set145=(IToken)input.LT(1);
+					set149=(IToken)input.LT(1);
 					if (input.LA(1)==NL||input.LA(1)==WS)
 					{
 						input.Consume();
-						adaptor.AddChild(root_0, (COOLCommonTree)adaptor.Create(set145));
+						adaptor.AddChild(root_0, (COOLCommonTree)adaptor.Create(set149));
 						state.errorRecovery=false;
 					}
 					else
@@ -4972,11 +5207,11 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("wsnl", 35);
-			LeaveRule("wsnl", 35);
+			TraceOut("wsnl", 37);
+			LeaveRule("wsnl", 37);
 			LeaveRule_wsnl();
 		}
-		DebugLocation(102, 17);
+		DebugLocation(108, 17);
 		} finally { DebugExitRule(GrammarFileName, "wsnl"); }
 		return retval;
 
@@ -4987,35 +5222,35 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	partial void LeaveRule_compileUnit();
 
 	// $ANTLR start "compileUnit"
-	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:103:1: compileUnit : EOF ;
+	// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:109:1: compileUnit : EOF ;
 	[GrammarRule("compileUnit")]
 	private AstParserRuleReturnScope<COOLCommonTree, IToken> compileUnit()
 	{
 		EnterRule_compileUnit();
-		EnterRule("compileUnit", 36);
-		TraceIn("compileUnit", 36);
+		EnterRule("compileUnit", 38);
+		TraceIn("compileUnit", 38);
 		AstParserRuleReturnScope<COOLCommonTree, IToken> retval = new AstParserRuleReturnScope<COOLCommonTree, IToken>();
 		retval.Start = (IToken)input.LT(1);
 
 		COOLCommonTree root_0 = default(COOLCommonTree);
 
-		IToken EOF146 = default(IToken);
+		IToken EOF150 = default(IToken);
 
-		COOLCommonTree EOF146_tree = default(COOLCommonTree);
+		COOLCommonTree EOF150_tree = default(COOLCommonTree);
 		try { DebugEnterRule(GrammarFileName, "compileUnit");
-		DebugLocation(103, 1);
+		DebugLocation(109, 1);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:104:2: ( EOF )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:110:2: ( EOF )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:104:4: EOF
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:110:4: EOF
 			{
 			root_0 = (COOLCommonTree)adaptor.Nil();
 
-			DebugLocation(104, 4);
-			EOF146=(IToken)Match(input,EOF,Follow._EOF_in_compileUnit1010); 
-			EOF146_tree = (COOLCommonTree)adaptor.Create(EOF146);
-			adaptor.AddChild(root_0, EOF146_tree);
+			DebugLocation(110, 4);
+			EOF150=(IToken)Match(input,EOF,Follow._EOF_in_compileUnit1064); 
+			EOF150_tree = (COOLCommonTree)adaptor.Create(EOF150);
+			adaptor.AddChild(root_0, EOF150_tree);
 
 			}
 
@@ -5034,11 +5269,11 @@ public partial class COOLParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("compileUnit", 36);
-			LeaveRule("compileUnit", 36);
+			TraceOut("compileUnit", 38);
+			LeaveRule("compileUnit", 38);
 			LeaveRule_compileUnit();
 		}
-		DebugLocation(105, 1);
+		DebugLocation(111, 1);
 		} finally { DebugExitRule(GrammarFileName, "compileUnit"); }
 		return retval;
 
@@ -5050,150 +5285,154 @@ public partial class COOLParser : Antlr.Runtime.Parser
 	#region Follow sets
 	private static class Follow
 	{
-		public static readonly BitSet _class_in_program88 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _EOF_in_program92 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _CLASS_in_class111 = new BitSet(new ulong[]{0x0UL,0x2UL});
-		public static readonly BitSet _TYPE_in_class114 = new BitSet(new ulong[]{0x80002000000000UL});
-		public static readonly BitSet _INHERITS_in_class117 = new BitSet(new ulong[]{0x0UL,0x2UL});
-		public static readonly BitSet _TYPE_in_class119 = new BitSet(new ulong[]{0x80000000000000UL});
-		public static readonly BitSet _OP_LLAVE_in_class123 = new BitSet(new ulong[]{0x200004000UL});
-		public static readonly BitSet _feature_list_in_class128 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _CL_LLAVE_in_class132 = new BitSet(new ulong[]{0x1000000UL});
-		public static readonly BitSet _END_in_class135 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _feature_in_feature_list147 = new BitSet(new ulong[]{0x200000002UL});
-		public static readonly BitSet _ID_in_feature156 = new BitSet(new ulong[]{0x100000000400000UL});
-		public static readonly BitSet _attribute_in_feature159 = new BitSet(new ulong[]{0x1000000UL});
-		public static readonly BitSet _methodefinition_in_feature170 = new BitSet(new ulong[]{0x1000000UL});
-		public static readonly BitSet _END_in_feature182 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DOUBLEP_in_attribute193 = new BitSet(new ulong[]{0x0UL,0x2UL});
-		public static readonly BitSet _TYPE_in_attribute196 = new BitSet(new ulong[]{0x42UL});
-		public static readonly BitSet _ASSING_in_attribute199 = new BitSet(new ulong[]{0x819B024600000C00UL,0x42UL});
-		public static readonly BitSet _expr_in_attribute201 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _OP_PARENT_in_methodefinition212 = new BitSet(new ulong[]{0x200008000UL});
-		public static readonly BitSet _params_list_in_methodefinition215 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _CL_PARENT_in_methodefinition221 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _DOUBLEP_in_methodefinition224 = new BitSet(new ulong[]{0x0UL,0x2UL});
-		public static readonly BitSet _TYPE_in_methodefinition227 = new BitSet(new ulong[]{0x80000000000000UL});
-		public static readonly BitSet _OP_LLAVE_in_methodefinition230 = new BitSet(new ulong[]{0x819B024600000C00UL,0x42UL});
-		public static readonly BitSet _expr_in_methodefinition233 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _CL_LLAVE_in_methodefinition236 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _param_in_params_list259 = new BitSet(new ulong[]{0x10002UL});
-		public static readonly BitSet _COMA_in_params_list262 = new BitSet(new ulong[]{0x200000000UL});
-		public static readonly BitSet _param_in_params_list265 = new BitSet(new ulong[]{0x10002UL});
-		public static readonly BitSet _ID_in_param284 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _DOUBLEP_in_param287 = new BitSet(new ulong[]{0x0UL,0x2UL});
-		public static readonly BitSet _TYPE_in_param290 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _assignment_in_expr307 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _conditionals_in_expr314 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _loops_in_expr321 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _blocks_in_expr328 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _let_in_expr335 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _case_in_expr342 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _new_in_expr349 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _operations_in_expr356 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _TYPE_in_expr363 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NOT_in_expr372 = new BitSet(new ulong[]{0x819B024600000C00UL,0x42UL});
-		public static readonly BitSet _expr_in_expr375 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ISVOID_in_expr384 = new BitSet(new ulong[]{0x819B024600000C00UL,0x42UL});
-		public static readonly BitSet _expr_in_expr388 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _nanarita_in_expr396 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expr_in_exprList406 = new BitSet(new ulong[]{0x1000000UL});
-		public static readonly BitSet _END_in_exprList408 = new BitSet(new ulong[]{0x819B024600000C02UL,0x42UL});
-		public static readonly BitSet _expr_in_exprList412 = new BitSet(new ulong[]{0x1000000UL});
-		public static readonly BitSet _END_in_exprList414 = new BitSet(new ulong[]{0x819B024600000C02UL,0x42UL});
-		public static readonly BitSet _ID_in_assignment425 = new BitSet(new ulong[]{0x40UL});
-		public static readonly BitSet _ASSING_in_assignment427 = new BitSet(new ulong[]{0x819B024600000C00UL,0x42UL});
-		public static readonly BitSet _expr_in_assignment431 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _IF_in_conditionals441 = new BitSet(new ulong[]{0x819B024600000C00UL,0x42UL});
-		public static readonly BitSet _expr_in_conditionals443 = new BitSet(new ulong[]{0x0UL,0x1UL});
-		public static readonly BitSet _THEN_in_conditionals446 = new BitSet(new ulong[]{0x819B024600000C00UL,0x42UL});
-		public static readonly BitSet _expr_in_conditionals448 = new BitSet(new ulong[]{0x20800000UL});
-		public static readonly BitSet _ELSE_in_conditionals452 = new BitSet(new ulong[]{0x819B024600000C00UL,0x42UL});
-		public static readonly BitSet _expr_in_conditionals454 = new BitSet(new ulong[]{0x20000000UL});
-		public static readonly BitSet _FI_in_conditionals458 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _WHILE_in_loops486 = new BitSet(new ulong[]{0x819B024600000C00UL,0x42UL});
-		public static readonly BitSet _expr_in_loops490 = new BitSet(new ulong[]{0x40000000000UL});
-		public static readonly BitSet _LOOP_in_loops492 = new BitSet(new ulong[]{0x819B024600000C00UL,0x42UL});
-		public static readonly BitSet _expr_in_loops495 = new BitSet(new ulong[]{0x2000000000000000UL});
-		public static readonly BitSet _POOL_in_loops497 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _OP_LLAVE_in_blocks506 = new BitSet(new ulong[]{0x819B024600000C00UL,0x42UL});
-		public static readonly BitSet _exprList_in_blocks509 = new BitSet(new ulong[]{0x4000UL});
-		public static readonly BitSet _CL_LLAVE_in_blocks511 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _LET_in_let526 = new BitSet(new ulong[]{0x200000000UL});
-		public static readonly BitSet _var_list_declaration_in_let529 = new BitSet(new ulong[]{0x1000000000UL});
-		public static readonly BitSet _IN_in_let531 = new BitSet(new ulong[]{0x819B024600000C00UL,0x42UL});
-		public static readonly BitSet _expr_in_let533 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_vardeclaration557 = new BitSet(new ulong[]{0x400000UL});
-		public static readonly BitSet _attribute_in_vardeclaration559 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _vardeclaration_in_var_list_declaration580 = new BitSet(new ulong[]{0x10002UL});
-		public static readonly BitSet _COMA_in_var_list_declaration587 = new BitSet(new ulong[]{0x200000000UL});
-		public static readonly BitSet _vardeclaration_in_var_list_declaration589 = new BitSet(new ulong[]{0x10002UL});
-		public static readonly BitSet _CASE_in_case607 = new BitSet(new ulong[]{0x819B024600000C00UL,0x42UL});
-		public static readonly BitSet _expr_in_case610 = new BitSet(new ulong[]{0x40000000000000UL});
-		public static readonly BitSet _OF_in_case612 = new BitSet(new ulong[]{0x200000000UL});
-		public static readonly BitSet _param_in_case615 = new BitSet(new ulong[]{0x800000000UL});
-		public static readonly BitSet _IMPLICS_in_case617 = new BitSet(new ulong[]{0x819B024600000C00UL,0x42UL});
-		public static readonly BitSet _expr_in_case619 = new BitSet(new ulong[]{0x204000000UL});
+		public static readonly BitSet _class_in_program94 = new BitSet(new ulong[]{0x8000UL});
+		public static readonly BitSet _EOF_in_program98 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _CLASS_in_class117 = new BitSet(new ulong[]{0x0UL,0x8UL});
+		public static readonly BitSet _TYPE_in_class120 = new BitSet(new ulong[]{0x200008000000000UL});
+		public static readonly BitSet _INHERITS_in_class123 = new BitSet(new ulong[]{0x0UL,0x8UL});
+		public static readonly BitSet _TYPE_in_class125 = new BitSet(new ulong[]{0x200000000000000UL});
+		public static readonly BitSet _OP_LLAVE_in_class129 = new BitSet(new ulong[]{0x800010000UL});
+		public static readonly BitSet _feature_list_in_class134 = new BitSet(new ulong[]{0x10000UL});
+		public static readonly BitSet _CL_LLAVE_in_class138 = new BitSet(new ulong[]{0x4000000UL});
+		public static readonly BitSet _END_in_class141 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _feature_in_feature_list153 = new BitSet(new ulong[]{0x800000002UL});
+		public static readonly BitSet _ID_in_feature162 = new BitSet(new ulong[]{0x400000001000000UL});
+		public static readonly BitSet _attribute_in_feature165 = new BitSet(new ulong[]{0x4000000UL});
+		public static readonly BitSet _methodefinition_in_feature176 = new BitSet(new ulong[]{0x4000000UL});
+		public static readonly BitSet _END_in_feature188 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DOUBLEP_in_attribute199 = new BitSet(new ulong[]{0x0UL,0x8UL});
+		public static readonly BitSet _TYPE_in_attribute202 = new BitSet(new ulong[]{0x42UL});
+		public static readonly BitSet _ASSING_in_attribute205 = new BitSet(new ulong[]{0x66C091800000C00UL,0x10AUL});
+		public static readonly BitSet _expr_in_attribute207 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _OP_PARENT_in_methodefinition218 = new BitSet(new ulong[]{0x800020000UL});
+		public static readonly BitSet _params_list_in_methodefinition221 = new BitSet(new ulong[]{0x20000UL});
+		public static readonly BitSet _CL_PARENT_in_methodefinition227 = new BitSet(new ulong[]{0x1000000UL});
+		public static readonly BitSet _DOUBLEP_in_methodefinition230 = new BitSet(new ulong[]{0x0UL,0x8UL});
+		public static readonly BitSet _TYPE_in_methodefinition233 = new BitSet(new ulong[]{0x200000000000000UL});
+		public static readonly BitSet _OP_LLAVE_in_methodefinition236 = new BitSet(new ulong[]{0x66C091800000C00UL,0x10AUL});
+		public static readonly BitSet _expr_in_methodefinition239 = new BitSet(new ulong[]{0x10000UL});
+		public static readonly BitSet _CL_LLAVE_in_methodefinition242 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _param_in_params_list265 = new BitSet(new ulong[]{0x40002UL});
+		public static readonly BitSet _COMA_in_params_list268 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _param_in_params_list271 = new BitSet(new ulong[]{0x40002UL});
+		public static readonly BitSet _ID_in_param290 = new BitSet(new ulong[]{0x1000000UL});
+		public static readonly BitSet _DOUBLEP_in_param293 = new BitSet(new ulong[]{0x0UL,0x8UL});
+		public static readonly BitSet _TYPE_in_param296 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _assignment_in_expr313 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _conditionals_in_expr320 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _loops_in_expr327 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _blocks_in_expr334 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _let_in_expr341 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _case_in_expr348 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _new_in_expr355 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _operations_in_expr362 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _TYPE_in_expr369 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NOT_in_expr378 = new BitSet(new ulong[]{0x66C091800000C00UL,0x10AUL});
+		public static readonly BitSet _expr_in_expr381 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ISVOID_in_expr390 = new BitSet(new ulong[]{0x66C091800000C00UL,0x10AUL});
+		public static readonly BitSet _expr_in_expr394 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _nanarita_in_expr402 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expr_in_exprList412 = new BitSet(new ulong[]{0x4000000UL});
+		public static readonly BitSet _END_in_exprList414 = new BitSet(new ulong[]{0x66C091800000C02UL,0x10AUL});
+		public static readonly BitSet _expr_in_exprList418 = new BitSet(new ulong[]{0x4000000UL});
+		public static readonly BitSet _END_in_exprList420 = new BitSet(new ulong[]{0x66C091800000C02UL,0x10AUL});
+		public static readonly BitSet _ID_in_assignment431 = new BitSet(new ulong[]{0x40UL});
+		public static readonly BitSet _ASSING_in_assignment433 = new BitSet(new ulong[]{0x66C091800000C00UL,0x10AUL});
+		public static readonly BitSet _expr_in_assignment437 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _IF_in_conditionals447 = new BitSet(new ulong[]{0x66C091800000C00UL,0x10AUL});
+		public static readonly BitSet _expr_in_conditionals449 = new BitSet(new ulong[]{0x0UL,0x4UL});
+		public static readonly BitSet _THEN_in_conditionals452 = new BitSet(new ulong[]{0x66C091800000C00UL,0x10AUL});
+		public static readonly BitSet _expr_in_conditionals454 = new BitSet(new ulong[]{0x82000000UL});
+		public static readonly BitSet _ELSE_in_conditionals458 = new BitSet(new ulong[]{0x66C091800000C00UL,0x10AUL});
+		public static readonly BitSet _expr_in_conditionals460 = new BitSet(new ulong[]{0x80000000UL});
+		public static readonly BitSet _FI_in_conditionals464 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _WHILE_in_loops492 = new BitSet(new ulong[]{0x66C091800000C00UL,0x10AUL});
+		public static readonly BitSet _expr_in_loops496 = new BitSet(new ulong[]{0x100000000000UL});
+		public static readonly BitSet _LOOP_in_loops498 = new BitSet(new ulong[]{0x66C091800000C00UL,0x10AUL});
+		public static readonly BitSet _expr_in_loops501 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _POOL_in_loops503 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _OP_LLAVE_in_blocks512 = new BitSet(new ulong[]{0x66C091800000C00UL,0x10AUL});
+		public static readonly BitSet _exprList_in_blocks515 = new BitSet(new ulong[]{0x10000UL});
+		public static readonly BitSet _CL_LLAVE_in_blocks517 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _LET_in_let532 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _var_list_declaration_in_let535 = new BitSet(new ulong[]{0x4000000000UL});
+		public static readonly BitSet _IN_in_let537 = new BitSet(new ulong[]{0x66C091800000C00UL,0x10AUL});
+		public static readonly BitSet _expr_in_let539 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_vardeclaration563 = new BitSet(new ulong[]{0x1000000UL});
+		public static readonly BitSet _attribute_in_vardeclaration565 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _vardeclaration_in_var_list_declaration586 = new BitSet(new ulong[]{0x40002UL});
+		public static readonly BitSet _COMA_in_var_list_declaration593 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _vardeclaration_in_var_list_declaration595 = new BitSet(new ulong[]{0x40002UL});
+		public static readonly BitSet _CASE_in_case613 = new BitSet(new ulong[]{0x66C091800000C00UL,0x10AUL});
+		public static readonly BitSet _expr_in_case616 = new BitSet(new ulong[]{0x100000000000000UL});
+		public static readonly BitSet _OF_in_case618 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _caseBranches_in_case621 = new BitSet(new ulong[]{0x10000000UL});
 		public static readonly BitSet _ESAC_in_case623 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEW_in_new634 = new BitSet(new ulong[]{0x0UL,0x2UL});
-		public static readonly BitSet _TYPE_in_new637 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ARROBA_in_dispatch649 = new BitSet(new ulong[]{0x0UL,0x2UL});
-		public static readonly BitSet _TYPE_in_dispatch652 = new BitSet(new ulong[]{0x200000000UL});
-		public static readonly BitSet _PNT_in_dispatch655 = new BitSet(new ulong[]{0x200000000UL});
-		public static readonly BitSet _ID_in_dispatch659 = new BitSet(new ulong[]{0x100000000000000UL});
-		public static readonly BitSet _OP_PARENT_in_dispatch661 = new BitSet(new ulong[]{0x819B024600008C00UL,0x42UL});
-		public static readonly BitSet _expr_in_dispatch664 = new BitSet(new ulong[]{0x18000UL});
-		public static readonly BitSet _COMA_in_dispatch668 = new BitSet(new ulong[]{0x819B024600000C00UL,0x42UL});
-		public static readonly BitSet _expr_in_dispatch671 = new BitSet(new ulong[]{0x18000UL});
-		public static readonly BitSet _CL_PARENT_in_dispatch677 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expr_in_exprlist1690 = new BitSet(new ulong[]{0x10002UL});
-		public static readonly BitSet _COMA_in_exprlist1694 = new BitSet(new ulong[]{0x819B024600000C00UL,0x42UL});
-		public static readonly BitSet _expr_in_exprlist1697 = new BitSet(new ulong[]{0x10002UL});
-		public static readonly BitSet _OP_PARENT_in_dispatch2717 = new BitSet(new ulong[]{0x819B024600008C00UL,0x42UL});
-		public static readonly BitSet _expr_in_dispatch2720 = new BitSet(new ulong[]{0x18000UL});
-		public static readonly BitSet _COMA_in_dispatch2724 = new BitSet(new ulong[]{0x819B024600000C00UL,0x42UL});
-		public static readonly BitSet _expr_in_dispatch2727 = new BitSet(new ulong[]{0x18000UL});
-		public static readonly BitSet _CL_PARENT_in_dispatch2733 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _lv1_in_operations746 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _lv2_in_lv1756 = new BitSet(new ulong[]{0x180C2000002UL});
-		public static readonly BitSet _LEQ_in_lv1760 = new BitSet(new ulong[]{0x8110000200000400UL});
-		public static readonly BitSet _lv1_in_lv1763 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _GEQ_in_lv1765 = new BitSet(new ulong[]{0x8110000200000400UL});
-		public static readonly BitSet _lv1_in_lv1768 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _L_in_lv1770 = new BitSet(new ulong[]{0x8110000200000400UL});
-		public static readonly BitSet _lv1_in_lv1773 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _G_in_lv1775 = new BitSet(new ulong[]{0x8110000200000400UL});
-		public static readonly BitSet _lv1_in_lv1778 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _EQ_in_lv1780 = new BitSet(new ulong[]{0x8110000200000400UL});
-		public static readonly BitSet _lv1_in_lv1783 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _lv3_in_lv2793 = new BitSet(new ulong[]{0x800400000000002UL});
-		public static readonly BitSet _PLUS_in_lv2797 = new BitSet(new ulong[]{0x8110000200000400UL});
-		public static readonly BitSet _lv2_in_lv2801 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _MINUS_in_lv2803 = new BitSet(new ulong[]{0x8110000200000400UL});
-		public static readonly BitSet _lv2_in_lv2807 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _lv4_in_lv3818 = new BitSet(new ulong[]{0x800000200002UL});
-		public static readonly BitSet _MULT_in_lv3821 = new BitSet(new ulong[]{0x8110000200000400UL});
-		public static readonly BitSet _lv3_in_lv3825 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _DIV_in_lv3827 = new BitSet(new ulong[]{0x8110000200000400UL});
-		public static readonly BitSet _lv3_in_lv3831 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _lv5_in_lv4841 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _lv6_in_lv5851 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_lv6862 = new BitSet(new ulong[]{0x1100000000000012UL});
-		public static readonly BitSet _dispatch2_in_lv6868 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _dispatch_in_lv6881 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _tmp2_in_lv6898 = new BitSet(new ulong[]{0x1000000000000012UL});
-		public static readonly BitSet _dispatch_in_lv6904 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _constant_in_lv6921 = new BitSet(new ulong[]{0x1000000000000012UL});
-		public static readonly BitSet _dispatch_in_lv6926 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_tmp1938 = new BitSet(new ulong[]{0x100000000000000UL});
-		public static readonly BitSet _tmp_in_tmp1940 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _OP_PARENT_in_tmp2949 = new BitSet(new ulong[]{0x819B024600000C00UL,0x42UL});
-		public static readonly BitSet _expr_in_tmp2952 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _CL_PARENT_in_tmp2954 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _dispatch2_in_tmp964 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NANARITA_in_nanarita972 = new BitSet(new ulong[]{0x819B024600000C00UL,0x42UL});
-		public static readonly BitSet _expr_in_nanarita975 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _EOF_in_compileUnit1010 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _param_in_caseBranch635 = new BitSet(new ulong[]{0x2000000000UL});
+		public static readonly BitSet _IMPLICS_in_caseBranch637 = new BitSet(new ulong[]{0x66C091800000C00UL,0x10AUL});
+		public static readonly BitSet _expr_in_caseBranch639 = new BitSet(new ulong[]{0x4000000UL});
+		public static readonly BitSet _END_in_caseBranch641 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _caseBranch_in_caseBranches661 = new BitSet(new ulong[]{0x800000002UL});
+		public static readonly BitSet _caseBranch_in_caseBranches667 = new BitSet(new ulong[]{0x800000002UL});
+		public static readonly BitSet _NEW_in_new688 = new BitSet(new ulong[]{0x0UL,0x8UL});
+		public static readonly BitSet _TYPE_in_new691 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ARROBA_in_dispatch703 = new BitSet(new ulong[]{0x0UL,0x8UL});
+		public static readonly BitSet _TYPE_in_dispatch706 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _PNT_in_dispatch709 = new BitSet(new ulong[]{0x800000000UL});
+		public static readonly BitSet _ID_in_dispatch713 = new BitSet(new ulong[]{0x400000000000000UL});
+		public static readonly BitSet _OP_PARENT_in_dispatch715 = new BitSet(new ulong[]{0x66C091800020C00UL,0x10AUL});
+		public static readonly BitSet _expr_in_dispatch718 = new BitSet(new ulong[]{0x60000UL});
+		public static readonly BitSet _COMA_in_dispatch722 = new BitSet(new ulong[]{0x66C091800000C00UL,0x10AUL});
+		public static readonly BitSet _expr_in_dispatch725 = new BitSet(new ulong[]{0x60000UL});
+		public static readonly BitSet _CL_PARENT_in_dispatch731 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _expr_in_exprlist1744 = new BitSet(new ulong[]{0x40002UL});
+		public static readonly BitSet _COMA_in_exprlist1748 = new BitSet(new ulong[]{0x66C091800000C00UL,0x10AUL});
+		public static readonly BitSet _expr_in_exprlist1751 = new BitSet(new ulong[]{0x40002UL});
+		public static readonly BitSet _OP_PARENT_in_dispatch2771 = new BitSet(new ulong[]{0x66C091800020C00UL,0x10AUL});
+		public static readonly BitSet _expr_in_dispatch2774 = new BitSet(new ulong[]{0x60000UL});
+		public static readonly BitSet _COMA_in_dispatch2778 = new BitSet(new ulong[]{0x66C091800000C00UL,0x10AUL});
+		public static readonly BitSet _expr_in_dispatch2781 = new BitSet(new ulong[]{0x60000UL});
+		public static readonly BitSet _CL_PARENT_in_dispatch2787 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _lv1_in_operations800 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _lv2_in_lv1810 = new BitSet(new ulong[]{0x60308000002UL});
+		public static readonly BitSet _LEQ_in_lv1814 = new BitSet(new ulong[]{0x440000800000400UL,0x2UL});
+		public static readonly BitSet _lv1_in_lv1817 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _GEQ_in_lv1819 = new BitSet(new ulong[]{0x440000800000400UL,0x2UL});
+		public static readonly BitSet _lv1_in_lv1822 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _L_in_lv1824 = new BitSet(new ulong[]{0x440000800000400UL,0x2UL});
+		public static readonly BitSet _lv1_in_lv1827 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _G_in_lv1829 = new BitSet(new ulong[]{0x440000800000400UL,0x2UL});
+		public static readonly BitSet _lv1_in_lv1832 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _EQ_in_lv1834 = new BitSet(new ulong[]{0x440000800000400UL,0x2UL});
+		public static readonly BitSet _lv1_in_lv1837 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _lv3_in_lv2847 = new BitSet(new ulong[]{0x2001000000000002UL});
+		public static readonly BitSet _PLUS_in_lv2851 = new BitSet(new ulong[]{0x440000800000400UL,0x2UL});
+		public static readonly BitSet _lv2_in_lv2855 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _MINUS_in_lv2857 = new BitSet(new ulong[]{0x440000800000400UL,0x2UL});
+		public static readonly BitSet _lv2_in_lv2861 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _lv4_in_lv3872 = new BitSet(new ulong[]{0x2000000800002UL});
+		public static readonly BitSet _MULT_in_lv3875 = new BitSet(new ulong[]{0x440000800000400UL,0x2UL});
+		public static readonly BitSet _lv3_in_lv3879 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _DIV_in_lv3881 = new BitSet(new ulong[]{0x440000800000400UL,0x2UL});
+		public static readonly BitSet _lv3_in_lv3885 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _lv5_in_lv4895 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _lv6_in_lv5905 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_lv6916 = new BitSet(new ulong[]{0x4400000000000012UL});
+		public static readonly BitSet _dispatch2_in_lv6922 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _dispatch_in_lv6935 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _tmp2_in_lv6952 = new BitSet(new ulong[]{0x4000000000000012UL});
+		public static readonly BitSet _dispatch_in_lv6958 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _constant_in_lv6975 = new BitSet(new ulong[]{0x4000000000000012UL});
+		public static readonly BitSet _dispatch_in_lv6980 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_tmp1992 = new BitSet(new ulong[]{0x400000000000000UL});
+		public static readonly BitSet _tmp_in_tmp1994 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _OP_PARENT_in_tmp21003 = new BitSet(new ulong[]{0x66C091800000C00UL,0x10AUL});
+		public static readonly BitSet _expr_in_tmp21006 = new BitSet(new ulong[]{0x20000UL});
+		public static readonly BitSet _CL_PARENT_in_tmp21008 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _dispatch2_in_tmp1018 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NANARITA_in_nanarita1026 = new BitSet(new ulong[]{0x66C091800000C00UL,0x10AUL});
+		public static readonly BitSet _expr_in_nanarita1029 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _EOF_in_compileUnit1064 = new BitSet(new ulong[]{0x2UL});
 	}
 	#endregion Follow sets
 }

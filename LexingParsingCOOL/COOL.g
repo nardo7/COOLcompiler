@@ -19,6 +19,8 @@ METHOD;
 BLOCK;
 DISPATCH;
 CONDITION;
+CASEBRANCH;
+CASEBRANCHES;
 }
 @header{
 using LexingParsingCOOL;
@@ -74,7 +76,11 @@ exprList:	expr END! (expr END!)*;
  	:	ID attribute->^(VAR_DECLARATION ID  attribute);
  var_list_declaration
  	:	 (vardeclaration-> vardeclaration) (COMA vardeclaration->^(VAR_DECLARATION_LIST $var_list_declaration vardeclaration))*;
- case: CASE^ expr OF (param IMPLICS expr)+ ESAC! ;
+ case: CASE^ expr OF! caseBranches ESAC! ;
+ caseBranch
+ 	:	param IMPLICS expr END-> ^(CASEBRANCH param expr);
+ caseBranches
+ 	:	(caseBranch->caseBranch) (caseBranch->^( CASEBRANCHES $caseBranches caseBranch))*;
  new : (NEW^ TYPE) ;
  
  dispatch: (ARROBA! TYPE |PNT!) ID OP_PARENT (expr ( COMA! expr)*)? CL_PARENT! ;
@@ -167,8 +173,8 @@ NL : ('\n'|'\v')+ {$channel=HIDDEN;} ;
     ;*/
 
 COMMENT
-    :   '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
-    |   '/*' ( options {greedy=false;} : . )* '*/' {$channel=HIDDEN;}
+    :   '--' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
+    |   '*' ( options {greedy=false;} : . )* '*' {$channel=HIDDEN;}
     ;
 
   WS:   ( ' '
