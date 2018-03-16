@@ -19,27 +19,27 @@ namespace COOLLenguage.SemanticCheck
         public IType currentType;
         public IErrorLogger errorLog;
 
-        const string TypeNotExist = "The Type {0} does not exist in the current context";
-        const string VariableNotExist = "The variable {0} is not defined in the current context";
-        const string CannotAssingDistintTypes = "The type {0} cannot be assigned to a type {1}";
-        const string VariableIsdef = "The variable {0} is already defined in the current context";
-        const string MethodIsNot = "The type {0} does not contain the method {1}";
-        const string ConditionIsBool = "The condition must be type Bool";
-        const string NotIsBool = "The Not expression must be type Bool";
-        const string LeftIsNotInt = "The left expression must be type Int";
-        const string RightIsNotInt = "The right expression must be type Int";
-        const string RightIsNotAtomic = "The right expression must be type Int, String or Bool";
-        const string LeftIsNotAtomic = "The left expression must be type Int, String or Bool";
-        const string LeftIsNotEqualToRight = "The left expression must be type equal to right expression";
-        const string MethodReturnTypeWrong = "The Return Type must be {0}";
-        const string MethodNumArgWrong = "The Method {0} recieves {1} arguments ";
+        const string TypeNotExist = "Line{0}: The Type {1} does not exist in the current context";
+        const string VariableNotExist = "Line{0}: The variable {1} is not defined in the current context";
+        const string CannotAssingDistintTypes = "Line{0}: The type {1} cannot be assigned to a type {2}";
+        const string VariableIsdef = "Line{0}: The variable {1} is already defined in the current context";
+        const string MethodIsNot = "Line{0}: The type {1} does not contain the method {2}";
+        const string ConditionIsBool = "Line{0}: The condition must be type Bool";
+        const string NotIsBool = "Line{0}: The Not expression must be type Bool";
+        const string LeftIsNotInt = "Line{0}: The left expression must be type Int";
+        const string RightIsNotInt = "Line{0}: The right expression must be type Int";
+        const string RightIsNotAtomic = "Line{0}: The right expression must be type Int, String or Bool";
+        const string LeftIsNotAtomic = "Line{0}: The left expression must be type Int, String or Bool";
+        const string LeftIsNotEqualToRight = "Line{0}: The left expression must be type equal to right expression";
+        const string MethodReturnTypeWrong = "Line{0}: The Return Type must be {1}";
+        const string MethodNumArgWrong = "Line{0}: The Method {1} recieves {2} arguments ";
 
         public void Visit(New node)
         {
             var type = Context.GetType(node.Type);
             if (type == null)
             {
-                errorLog.LogError(string.Format(TypeNotExist, node.Type));
+                errorLog.LogError(string.Format(TypeNotExist,node.Line, node.Type));
                 node.computedType = Context.GetType("Void");
             }
             else node.computedType = type;
@@ -68,13 +68,13 @@ namespace COOLLenguage.SemanticCheck
                     type = attr.Type;
                 else
                 {
-                    errorLog.LogError(string.Format(VariableNotExist, node.Name));
+                    errorLog.LogError(string.Format(VariableNotExist,node.Line, node.Name));
                     node.computedType = Context.GetType("Void");
                     return;
                 }
             } 
                 if (!node.Expr.computedType.IsInheritedClass(type.Name))
-                    errorLog.LogError(string.Format(CannotAssingDistintTypes, node.Expr.computedType.Name, type.Name));
+                    errorLog.LogError(string.Format(CannotAssingDistintTypes,node.Line, node.Expr.computedType.Name, type.Name));
             node.computedType = type;
         }
 
@@ -92,7 +92,7 @@ namespace COOLLenguage.SemanticCheck
             Visit(node.Body);
             currentContext = Context;
             if (node.ReturnType!=node.Body.computedType.Name)
-                errorLog.LogError(string.Format(MethodReturnTypeWrong, node.ReturnType));
+                errorLog.LogError(string.Format(MethodReturnTypeWrong,node.Line, node.ReturnType));
         }
 
         public void Visit(ClassDef node)
@@ -205,7 +205,7 @@ namespace COOLLenguage.SemanticCheck
         {
             Visit(node.Condition);
             if (node.Condition.computedType.Name != "Bool")
-                errorLog.LogError(ConditionIsBool);
+                errorLog.LogError(string.Format(ConditionIsBool,node.Line));
             Visit(node.Body);
             if (node.Elsexpression != null)
             {
@@ -241,7 +241,7 @@ namespace COOLLenguage.SemanticCheck
                     }
                     else
                     {
-                        errorLog.LogError(string.Format(VariableNotExist, node.Name));
+                        errorLog.LogError(string.Format(VariableNotExist,node.Line, node.Name));
                         node.computedType = Context.GetType("Void");
                         return;
                     }
@@ -263,7 +263,7 @@ namespace COOLLenguage.SemanticCheck
                     }
                     else
                     {
-                        errorLog.LogError(string.Format(VariableNotExist, node.Name));
+                        errorLog.LogError(string.Format(VariableNotExist,node.Line, node.Name));
                         node.computedType = Context.GetType("Void");
                         return;
                     }
@@ -284,7 +284,7 @@ namespace COOLLenguage.SemanticCheck
             if ((M = type.Methods.FirstOrDefault(m => m.Name == node.MethodName)) == null)
             {
                 node.computedType = Context.GetType("Void");
-                errorLog.LogError(string.Format(MethodIsNot, type.Name, node.MethodName));
+                errorLog.LogError(string.Format(MethodIsNot,node.Line, type.Name, node.MethodName));
             }
             else
             {
@@ -295,11 +295,11 @@ namespace COOLLenguage.SemanticCheck
                     {
                         Visit(node.Arg[i]);
                         if (!node.Arg[i].computedType.IsInheritedClass(argDef[i].Type.Name))
-                            errorLog.LogError(string.Format(CannotAssingDistintTypes, node.Arg[i].computedType.Name, argDef[i].Type.Name));
+                            errorLog.LogError(string.Format(CannotAssingDistintTypes,node.Line, node.Arg[i].computedType.Name, argDef[i].Type.Name));
 
                     }
                 else
-                    errorLog.LogError(string.Format(MethodNumArgWrong, M.Name, argDef.Length));
+                    errorLog.LogError(string.Format(MethodNumArgWrong,node.Line, M.Name, argDef.Length));
                 node.computedType = M.ReturnType;
 
             }
@@ -375,7 +375,7 @@ namespace COOLLenguage.SemanticCheck
                 else
                 {
                     node.computedType = Context.GetType("Void");
-                    errorLog.LogError(string.Format(VariableNotExist, node.name));
+                    errorLog.LogError(string.Format(VariableNotExist,node.Line, node.name));
                 }
             }
             
@@ -390,16 +390,16 @@ namespace COOLLenguage.SemanticCheck
             var type = currentContext.GetType(node.Type);
             if(type==null)
             {
-                errorLog.LogError(string.Format(TypeNotExist, node.Type));
+                errorLog.LogError(string.Format(TypeNotExist,node.Line, node.Type));
                 return;
             }
             if(!node.Expr.computedType.IsInheritedClass(type.Name))
             {
-                errorLog.LogError(string.Format(CannotAssingDistintTypes, node.Expr.computedType.Name, type.Name));
+                errorLog.LogError(string.Format(CannotAssingDistintTypes,node.Line, node.Expr.computedType.Name, type.Name));
                 return;
             }
             if (!currentContext.DefineVariable(node.Name, type))
-                errorLog.LogError(string.Format(VariableIsdef, node.Name));
+                errorLog.LogError(string.Format(VariableIsdef,node.Line, node.Name));
         }
 
         public void Visit(Constant node)

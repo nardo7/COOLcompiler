@@ -14,10 +14,10 @@ namespace COOLLenguage.SemanticCheck
         public IType currentType;
         public IErrorLogger errorLog;
 
-        const string TypeNotExist= "The Type {0} does not exist in the current context";
-        const string AttrRedefined = "The attribute {0} is redefined in {1} definition";
-        const string MethodRedefined = "The method {0} is redefined in {1} class definition";
-        const string TYPEINHERITEDDOESNEXIST = "The type {0} inherits another type that does not exist";
+        const string TypeNotExist= "Line{0}: The Type {1} does not exist in the current context";
+        const string AttrRedefined = "Line{0}: The attribute {1} is redefined in {2} definition";
+        const string MethodRedefined = "Line{0}: The method {1} is redefined in {2} class definition";
+        const string TYPEINHERITEDDOESNEXIST = "Line{0}: The type {1} inherits another type that does not exist";
 
         public void Visit(ClassDef node)
         {
@@ -31,7 +31,7 @@ namespace COOLLenguage.SemanticCheck
                     currentType.LevelHierachy = t.LevelHierachy + 1;
                 }
                 else
-                    errorLog.LogError(string.Format(TYPEINHERITEDDOESNEXIST, currentType.Name, node.typeInherited));
+                    errorLog.LogError(string.Format(TYPEINHERITEDDOESNEXIST,node.Line, currentType.Name, node.typeInherited));
 
             }
             else
@@ -58,12 +58,12 @@ namespace COOLLenguage.SemanticCheck
             var attrType = Context.GetType(node.Type);
             if (attrType == default(Type))
             {
-                errorLog.LogError(string.Format( TypeNotExist,node.Type));
+                errorLog.LogError(string.Format( TypeNotExist,node.Line, node.Type));
                 return;
             }
             if (currentType.GetAttributeInherited(node.Name) != null)
             {
-                errorLog.LogError(string.Format(AttrRedefined, node.Name, currentType.Name));
+                errorLog.LogError(string.Format(AttrRedefined,node.Line, node.Name, currentType.Name));
                 return;
             }
             currentType.DefineAttribute(node.Name,attrType);

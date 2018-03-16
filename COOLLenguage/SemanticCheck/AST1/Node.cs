@@ -8,5 +8,6 @@ namespace COOLLenguage.SemanticCheck.AST1
 {
     public abstract class Node
     {
+        public int Line { get; set; }
     }
 }

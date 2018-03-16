@@ -83,7 +83,7 @@ exprList:	expr END! (expr END!)*;
  	:	(caseBranch->caseBranch) (caseBranch->^( CASEBRANCHES $caseBranches caseBranch))*;
  new : (NEW^ TYPE) ;
  
- dispatch: (ARROBA! TYPE |PNT!) ID OP_PARENT (expr ( COMA! expr)*)? CL_PARENT! ;
+ dispatch: (ARROBA! TYPE PNT!|PNT!) ID OP_PARENT (expr ( COMA! expr)*)? CL_PARENT! ;
  exprlist1
  	:	(expr ( COMA! expr)*)?;
  //dispatch1
@@ -161,7 +161,7 @@ IMPLICS	:	'=>';
 INHERITS:	'inherits';
 
 
-NL : ('\n'|'\v')+ {$channel=HIDDEN;} ;
+NL : ('\n')+ {$channel=HIDDEN;} ;
 
 //INT :	'0'..'9'+
  //   ;
@@ -174,7 +174,7 @@ NL : ('\n'|'\v')+ {$channel=HIDDEN;} ;
 
 COMMENT
     :   '--' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
-    |   '*' ( options {greedy=false;} : . )* '*' {$channel=HIDDEN;}
+    |   '(*' ( options {greedy=false;} : . )* '*)' {$channel=HIDDEN;}
     ;
 
   WS:   ( ' '
