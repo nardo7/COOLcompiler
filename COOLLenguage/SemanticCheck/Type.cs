@@ -61,7 +61,14 @@ namespace COOLLenguage.SemanticCheck
             try { return attrs[name]; }
             catch (KeyNotFoundException)
             {
-                return default(AST.Attribute);
+                var a = GetAttributeInherited(name);
+                if (a != null)
+                {
+                    attrs.Add(a.Name, a);
+                    return a;
+                }
+                else
+                    return null;
             }
 
         }
@@ -83,7 +90,10 @@ namespace COOLLenguage.SemanticCheck
                 var m = GetMethodInherited(name);
                 if (m == null)
                     return null;
-                else return m;
+                else {
+                    methods.Add(m.Name, m);
+                    return m;
+                }
             }
         }
 
@@ -103,18 +113,18 @@ namespace COOLLenguage.SemanticCheck
 
             if (methods.ContainsKey(name))
                 return false;
-                List<Param> arg = new List<Param>();
-                for (int i = 0; i < arguments.Length; i++)
-                    arg.Add(new Param(argumentTypes[i], arguments[i]));
-                methods.Add(name,  new Method(name,arg, returnType) );
-                return true;
+            List<Param> arg = new List<Param>();
+            for (int i = 0; i < arguments.Length; i++)
+                 arg.Add(new Param(argumentTypes[i], arguments[i]));
+            methods.Add(name,  new Method(name,arg, returnType) );
+            return true;
 
         }
 
         public virtual IMethod GetMethodInherited(string name)
         {
             IMethod m;
-            if (methods.TryGetValue(name, out m))
+            if (TypeInherited.methods.TryGetValue(name, out m))
                 return m;
             if (TypeInherited.TypeInherited != null)
                 return TypeInherited.GetMethodInherited(name);
@@ -123,20 +133,12 @@ namespace COOLLenguage.SemanticCheck
 
         public virtual IAttribute GetAttributeInherited(string name)
         {
-            if (TypeInherited == null)
-                return null;
-            try
-            {
-                return TypeInherited.attrs[name];
-            }
-            catch (KeyNotFoundException)
-            {
-                IAttribute attr;
-                if (attrs.TryGetValue(name, out attr))
-                    return attr;
-                else return null;
-
-            }
+            IAttribute a;
+            if (TypeInherited.attrs.TryGetValue(name, out a))
+                return a;
+            if (TypeInherited.TypeInherited != null)
+                return TypeInherited.GetAttributeInherited(name);
+            return null;
         }
 
         public bool IsInheritedClass(string type)

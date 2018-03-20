@@ -8,13 +8,12 @@ namespace COOLLenguage.SemanticCheck.AST1
 {
     public class Param:Node
     {
-        string type;
         string name;
-        public string Type { get { return type; } }
+        public string Type { get; set; }
         public string Name { get { return name; } }
         public Param( string name, string type)
         {
-            this.type = type;
+            this.Type = type;
             this.name = name;
         }
     }

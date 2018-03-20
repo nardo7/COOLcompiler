@@ -26,14 +26,14 @@ namespace LexingParsingCOOL
             parser.TraceDestination = Console.Out;
             var tree = parser.program();
             var t = (COOLCommonTree)tree.Tree;
-            var ast1 = t.GetAST1();
+            //var ast1 = t.GetAST1();
 
-            TypeCollectorVisitor visit1 = new TypeCollectorVisitor() { log = new ErrorLogger(Console.Out) };
-            visit1.Visit((Program)ast1);
-            TypeBuilderVisitor visit2 = new TypeBuilderVisitor() { Context = visit1.Context, errorLog = new ErrorLogger(Console.Out) };
-            visit2.Visit((Program)ast1);
-            TypeChekerVisitor tcv = new TypeChekerVisitor() { Context = visit2.Context, errorLog = new ErrorLogger(Console.Out) };
-            tcv.Visit((Program)ast1);
+            //TypeCollectorVisitor visit1 = new TypeCollectorVisitor() { log = new ErrorLogger(Console.Out) };
+            //visit1.Visit((Program)ast1);
+            //TypeBuilderVisitor visit2 = new TypeBuilderVisitor() { Context = visit1.Context, errorLog = new ErrorLogger(Console.Out) };
+            //visit2.Visit((Program)ast1);
+            //TypeChekerVisitor tcv = new TypeChekerVisitor() { Context = visit2.Context, errorLog = new ErrorLogger(Console.Out) };
+            //tcv.Visit((Program)ast1);
             if (parser.NumberOfSyntaxErrors > 0)
             {
                 Console.WriteLine("error");

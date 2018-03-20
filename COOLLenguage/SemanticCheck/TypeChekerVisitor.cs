@@ -12,7 +12,7 @@ namespace COOLLenguage.SemanticCheck
                                      IVisitor<ClassDef>, IVisitor<AST1.Attribute>, IVisitor<Method>, IVisitor<Block>,
                                      IVisitor<Assignment>, IVisitor<BinaryExpression>, IVisitor<Not>, IVisitor<IsVoid>,
                                      IVisitor<Conditional>, IVisitor<New>, IVisitor<While>, IVisitor<Dispatch>,
-        IVisitor<Ident>,IVisitor<Initializer>,IVisitor<Constant>
+        IVisitor<Ident>,IVisitor<Initializer>,IVisitor<Constant>,IVisitor<Let>,IVisitor<Case>
     {
         public IContext Context;
         IContext currentContext;
@@ -63,7 +63,7 @@ namespace COOLLenguage.SemanticCheck
             var type = currentContext.GetTypeFor(node.Name);
             if (type == null)
             {
-                var attr = currentType.Attributes.FirstOrDefault(x => x.Name == node.Name);
+                var attr = currentType.GetAttribute(node.Name);
                 if (attr != null)
                     type = attr.Type;
                 else
@@ -91,7 +91,7 @@ namespace COOLLenguage.SemanticCheck
             }
             Visit(node.Body);
             currentContext = Context;
-            if (node.ReturnType!=node.Body.computedType.Name)
+            if (node.ReturnType!=node.Body.computedType.Name&& !node.Body.computedType.IsInheritedClass(node.ReturnType))
                 errorLog.LogError(string.Format(MethodReturnTypeWrong,node.Line, node.ReturnType));
         }
 
@@ -233,7 +233,7 @@ namespace COOLLenguage.SemanticCheck
                 var type = currentContext.GetTypeFor(node.Name);
                 if (type == null)
                 {
-                    var attr = currentType.Attributes.FirstOrDefault(x => x.Name == node.Name);
+                    var attr = currentType.GetAttribute(node.Name);
                     if (attr != null)
                     {
                         type = attr.Type;
@@ -255,7 +255,7 @@ namespace COOLLenguage.SemanticCheck
                 var type = node.ExprDispatched.computedType;
                 if (type == null)
                 {
-                    var attr = currentType.Attributes.FirstOrDefault(x => x.Name == node.Name);
+                    var attr = currentType.GetAttribute(node.Name);
                     if (attr != null)
                     {
                         type = attr.Type;
@@ -281,11 +281,17 @@ namespace COOLLenguage.SemanticCheck
         void VerifyTypesInDispatch(IType type, Dispatch node)
         {
             IMethod M;
-            if ((M = type.Methods.FirstOrDefault(m => m.Name == node.MethodName)) == null)
+            if((M=type.GetMethod(node.MethodName))==null)
             {
                 node.computedType = Context.GetType("Void");
-                errorLog.LogError(string.Format(MethodIsNot,node.Line, type.Name, node.MethodName));
+                errorLog.LogError(string.Format(MethodIsNot, node.Line, type.Name, node.MethodName));
+
             }
+            //if ((M = type.Methods.FirstOrDefault(m => m.Name == node.MethodName)) == null)
+            //{
+            //    node.computedType = Context.GetType("Void");
+            //    errorLog.LogError(string.Format(MethodIsNot,node.Line, type.Name, node.MethodName));
+            //}
             else
             {
                 var args = node.Arg;
@@ -348,9 +354,19 @@ namespace COOLLenguage.SemanticCheck
                 Visit((Dispatch)node);
                 return;
             }
+            if(node is Let)
+            {
+                Visit((Let)node);
+                return;
+            }
+            if(node is Case)
+            {
+                Visit((Case)node);
+                return;
+            }
         }
         
-
+        
         public void Visit(IsVoid node)
         {
             Visit(node.Expr);
@@ -369,7 +385,7 @@ namespace COOLLenguage.SemanticCheck
                 return;
             else
             {
-                var attr = currentType.Attributes.FirstOrDefault(x => x.Name == node.name);
+                var attr = currentType.GetAttribute(node.name);
                 if (attr != null)
                     node.computedType = attr.Type;
                 else
@@ -433,6 +449,59 @@ namespace COOLLenguage.SemanticCheck
                 greatest = tmp;
             }
             return lower.TypeInherited;
+        }
+
+        public void Visit(Let node)
+        {
+            var curcontext = currentContext.CreateChildContext();
+            currentContext = curcontext;
+            IType type;
+            foreach (var init in node.Initializers)
+            {
+                if ((type = currentContext.GetType(init.Type)) == null)
+                    errorLog.LogError(string.Format(TypeNotExist, init.Line, init.Type));
+                currentContext.DefineVariable(init.Name, type,true);
+                if (init.Expr != null)
+                {
+                    Visit(init.Expr);
+                    if (!init.Expr.computedType.IsInheritedClass(init.Type))
+                        errorLog.LogError(string.Format(CannotAssingDistintTypes,init.Line, init.Expr.computedType.Name, init.Type));
+                }
+            }
+            Visit(node.Body);
+            node.computedType = node.Body.computedType;
+            currentContext = currentContext.Parent;
+
+        }
+
+        public void Visit(Case node)
+        {
+            var expr0 = node.expr;
+            Visit(expr0);
+            for (int i = 0; i < node.Exprs.Count; i++)
+            {
+                var val = node.Paramlist[i];
+                if (currentContext.GetType(node.Paramlist[i].Type) == null)
+                {
+                    errorLog.LogError(string.Format(TypeNotExist, node.Paramlist[i].Type));
+                    node.Paramlist[i].Type = "Object";
+                }
+                currentContext = currentContext.CreateChildContext();
+                currentContext.DefineVariable(val.Name, currentContext.GetType(val.Type));
+                Visit(node.Exprs[i]);
+                currentContext = currentContext.Parent;
+            }
+            if (node.Paramlist.Count > 1)
+            {
+                for (int i = 0; i < node.Paramlist.Count-1; i++)
+                {
+                    IType t1 = currentContext.GetType(node.Paramlist[i].Type);
+                    IType t2= currentContext.GetType(node.Paramlist[i+1].Type);
+                    node.computedType = LCA(t1, t2);
+                    if (node.computedType.Name == "Object")
+                        break;
+                }
+            }
         }
     }
 }

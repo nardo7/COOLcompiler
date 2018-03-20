@@ -76,6 +76,10 @@ namespace COOLLenguage.SemanticCheck
             if (retType == null)
                 errorLog.LogError(string.Format(TypeNotExist, node.ReturnType));
             var argTypes = node.Arguments.Select(t => Context.GetType(t.Type));
+            foreach (var type in argTypes)
+                if(type==null)
+                    errorLog.LogError(string.Format(TypeNotExist, type));
+
             var argNames = node.Arguments.Select(t => t.Name);
             if (!currentType.DefineMethod(node.Name, retType, argNames.ToArray(), argTypes.ToArray()))
                 errorLog.LogError(string.Format(MethodRedefined, node.Name, currentType.Name));

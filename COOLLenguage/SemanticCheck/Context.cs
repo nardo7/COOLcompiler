@@ -12,7 +12,17 @@ namespace COOLLenguage.SemanticCheck
         List<Context> childs;
         Dictionary<string, IType> types;
         Dictionary<string, IType> vars;
-        Context Parent { get; set; }
+        public Context Parent { get;private set; }
+
+        IContext IContext.Parent
+        {
+            get
+            {
+                return Parent;
+            }
+            
+        }
+
         public Context()
         {
             types = new Dictionary<string, IType>();
@@ -42,10 +52,14 @@ namespace COOLLenguage.SemanticCheck
             }
         }
 
-        public bool DefineVariable(string symbol, IType type)
+        public bool DefineVariable(string symbol, IType type, bool redefine=false)
         {
-            if (vars.ContainsKey(symbol))
+            bool contains = false;
+            if (contains = vars.ContainsKey(symbol) && !redefine)
                 return false;
+            else
+                if (contains)
+                    vars[symbol] = type;
             else
                 vars.Add(symbol, type);
             return true;
@@ -63,7 +77,7 @@ namespace COOLLenguage.SemanticCheck
             }
             else
                 return null;
-         
+
                 
         }
 
