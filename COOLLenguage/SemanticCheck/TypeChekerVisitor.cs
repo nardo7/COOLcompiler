@@ -120,7 +120,7 @@ namespace COOLLenguage.SemanticCheck
                 Visit(node.ExpresionInicializer);
 
                 if (!node.ExpresionInicializer.computedType.IsInheritedClass(node.Type))
-                    errorLog.LogError(string.Format(CannotAssingDistintTypes, node.ExpresionInicializer.computedType.Name, node.Type));
+                    errorLog.LogError(string.Format(CannotAssingDistintTypes,node.Line, node.ExpresionInicializer.computedType.Name, node.Type));
             }
         }
 
@@ -427,6 +427,8 @@ namespace COOLLenguage.SemanticCheck
         {
             IType lower;
             IType greatest;
+            if (A == B)
+                return A;
             if (A.LevelHierachy > B.LevelHierachy)
             {
                 lower = A;
@@ -487,19 +489,21 @@ namespace COOLLenguage.SemanticCheck
                     node.Paramlist[i].Type = "Object";
                 }
                 currentContext = currentContext.CreateChildContext();
-                currentContext.DefineVariable(val.Name, currentContext.GetType(val.Type));
+                currentContext.DefineVariable(val.Name, currentContext.GetType(val.Type),true);
                 Visit(node.Exprs[i]);
                 currentContext = currentContext.Parent;
             }
-            if (node.Paramlist.Count > 1)
+            if (node.Exprs.Count > 1)
             {
-                for (int i = 0; i < node.Paramlist.Count-1; i++)
+                IType t1 = currentContext.GetType(node.Exprs[0].computedType.Name);
+                for (int i = 1; i < node.Exprs.Count; i++)
                 {
-                    IType t1 = currentContext.GetType(node.Paramlist[i].Type);
-                    IType t2= currentContext.GetType(node.Paramlist[i+1].Type);
+                    
+                    IType t2= node.Exprs[i].computedType;
                     node.computedType = LCA(t1, t2);
                     if (node.computedType.Name == "Object")
                         break;
+                    t1 = node.computedType;
                 }
             }
         }

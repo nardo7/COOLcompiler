@@ -64,6 +64,8 @@ attribute:  DOUBLEP! TYPE (ASSING expr)?  ;
 	   |(NOT^ expr)
 	   |(ISVOID^  expr)
 	   |nanarita;
+	 //  | auxid;
+//auxid	:(ID|constant)? lvE	;
 exprList:	expr END! (expr END!)*;
  assignment: (ID ASSING^  expr) ;
  conditionals: (IF expr (THEN expr) (ELSE expr)? FI)->^(IF expr ^(THEN expr) ^(ELSE expr)?) ;
@@ -73,21 +75,21 @@ exprList:	expr END! (expr END!)*;
  vardeclaration
  	:	ID attribute->^(VAR_DECLARATION ID  attribute);
  var_list_declaration
- 	:	 (vardeclaration-> vardeclaration) (COMA vardeclaration->^(VAR_DECLARATION_LIST $var_list_declaration vardeclaration))*;
+ 	:	 (vardeclaration-> vardeclaration) (COMA vardeclaration)*->^(VAR_DECLARATION_LIST $var_list_declaration vardeclaration*);
  case: CASE^ expr OF! caseBranches ESAC! ;
  caseBranch
  	:	param IMPLICS expr END-> ^(CASEBRANCH param expr);
  caseBranches
- 	:	(caseBranch->caseBranch) (caseBranch->^( CASEBRANCHES $caseBranches caseBranch))*;
+ 	:	(caseBranch->caseBranch) (caseBranch)*->^( CASEBRANCHES $caseBranches caseBranch*);
  new : (NEW^ TYPE) ;
  
  dispatch: (ARROBA! TYPE PNT!|PNT!) ID OP_PARENT (expr ( COMA! expr)*)? CL_PARENT! ;
  exprlist1
  	:	(expr ( COMA! expr)*)?;
+ //dispatch1
+ 	//:	(ARROBA! TYPE |PNT!) OP_PARENT! (expr ( COMA! expr)*)? CL_PARENT! ;
  dispatch2
  	:	 OP_PARENT (expr ( COMA! expr)*)? CL_PARENT! ;
- 	dispatch3:
- 	PNT! dispatch2;
  operations
  	:	 lv1 ;
  	lv1:  lv2 ( LEQ^ lv1|GEQ^ lv1|L^ lv1|G^ lv1|EQ^ lv1)?;
@@ -95,10 +97,14 @@ exprList:	expr END! (expr END!)*;
  	lv3: lv4( MULT^  lv3|DIV^  lv3)?;
  	lv4: lv5 ;
  	lv5:  lv6 ;
- 	lv6: ((ID->ID) (dispatchrec->^(DISPATCH $lv6 dispatchrec)|(dispatch2->^(DISPATCH $lv6 dispatch2))?
- 	|(tmp2->tmp2) (dispatch->^(DISPATCH $lv6 dispatch))?
- 	|(constant->constant) (dispatch->^(DISPATCH $lv6 dispatch))?;
+ 	lv6: ((ID->ID) (dispatch2->^(DISPATCH  $lv6 dispatch2) |dispatchrec->^(DISPATCH $lv6 dispatchrec))?
+ 	|(tmp2->tmp2) (dispatchrec->^(DISPATCH $lv6 dispatchrec))?
+ 	|(constant->constant) dispatch?)  ;
  	tmp2: OP_PARENT! expr CL_PARENT!;
+ 	tmp:
+ 	(dispatch)( dispatchrec)?
+ 	;
+ 	dispatchrec:tmp;
  nanarita: NANARITA^ expr ;
   constant: STRING|NUMBER|BOOLEAN;
  wsnl	:	(WS|NL)+ ;
@@ -106,8 +112,7 @@ compileUnit
 	:	EOF
 	;
 
-dispatchrec
-	:	 (dispatch->^(DISPATCH dispatch)) (dispatchrec)?;
+
 CLASS: ('class') ;
 fragment UPERCASE:'A'..'Z';
 fragment LOWERCASE:'a'..'z';

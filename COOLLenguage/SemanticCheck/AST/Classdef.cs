@@ -43,6 +43,14 @@ namespace COOLLenguage.SemanticCheck.AST
             set;
         }
 
+        public List<IType> ChildTypes
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         public ClassDef(string type)
         {
             Name = type;

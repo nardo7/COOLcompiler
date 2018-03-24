@@ -31,32 +31,38 @@ namespace COOLLenguage.SemanticCheck
 
         void defineInt()
         {
-            Context.CreateType("Int");
+            Context.CreateType("Int").LevelHierachy=1;
             Context.GetType("Int").TypeInherited = Context.GetType("Object");
+            Context.GetType("Object").ChildTypes.Add(Context.GetType("Int"));
         }
 
         void defineString()
         {
             var str = Context.CreateType("String");
+            str.LevelHierachy = 1;
             str.DefineMethod("concat", str, new string[] { "value" }, new IType[] { str });
             Context.GetType("String").TypeInherited = Context.GetType("Object");
             defineInt();
             var @int = Context.GetType("Int");
             str.DefineMethod("length", @int, new string[] { }, new IType[] { });
             str.DefineMethod("substr", str, new string[] {"i","l" }, new IType[] {@int,str });
-
+            Context.GetType("Object").ChildTypes.Add(str);
         }
 
         void defineBool()
         {
-            Context.CreateType("Bool");
+            Context.CreateType("Bool").LevelHierachy=1;
             Context.GetType("Bool").TypeInherited = Context.GetType("Object");
+            Context.GetType("Object").ChildTypes.Add(Context.GetType("Bool"));
+
         }
 
         void defineVoid()
         {
-            Context.CreateType("Void");
+            Context.CreateType("Void").LevelHierachy=1;
             Context.GetType("Void").TypeInherited = Context.GetType("Object");
+            Context.GetType("Object").ChildTypes.Add(Context.GetType("Void"));
+
         }
 
         void defineObject()
@@ -71,9 +77,11 @@ namespace COOLLenguage.SemanticCheck
         void defineIO()
         {
             var io = Context.CreateType("IO");
+            io.LevelHierachy = 1;
             io.TypeInherited = Context.GetType("Object");
             io.DefineMethod("out_string", Context.GetType("Void"), new string[] { "string" }, new IType[] { Context.GetType("String") });
             io.DefineMethod("out_int", Context.GetType("Void"), new string[] { "int" }, new IType[] { Context.GetType("Int") });
+            Context.GetType("Object").ChildTypes.Add(io);
 
         }
 

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g 2018-03-19 22:04:40
+// $ANTLR 3.4 C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g 2018-03-21 12:12:53
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -154,16 +154,16 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = CLASS;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:112:6: ( ( 'class' ) )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:116:6: ( ( 'class' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:112:8: ( 'class' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:116:8: ( 'class' )
 			{
-			DebugLocation(112, 8);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:112:8: ( 'class' )
+			DebugLocation(116, 8);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:116:8: ( 'class' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:112:9: 'class'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:116:9: 'class'
 			{
-			DebugLocation(112, 9);
+			DebugLocation(116, 9);
 			Match("class"); 
 
 
@@ -196,11 +196,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		TraceIn("UPERCASE", 2);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:113:18: ( 'A' .. 'Z' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:117:18: ( 'A' .. 'Z' )
 			DebugEnterAlt(1);
 			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:
 			{
-			DebugLocation(113, 18);
+			DebugLocation(117, 18);
 			if ((input.LA(1)>='A' && input.LA(1)<='Z'))
 			{
 				input.Consume();
@@ -238,11 +238,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		TraceIn("LOWERCASE", 3);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:114:19: ( 'a' .. 'z' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:118:19: ( 'a' .. 'z' )
 			DebugEnterAlt(1);
 			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:
 			{
-			DebugLocation(114, 19);
+			DebugLocation(118, 19);
 			if ((input.LA(1)>='a' && input.LA(1)<='z'))
 			{
 				input.Consume();
@@ -280,11 +280,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		TraceIn("DIGIT", 4);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:115:15: ( '0' .. '9' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:119:15: ( '0' .. '9' )
 			DebugEnterAlt(1);
 			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:
 			{
-			DebugLocation(115, 15);
+			DebugLocation(119, 15);
 			if ((input.LA(1)>='0' && input.LA(1)<='9'))
 			{
 				input.Consume();
@@ -324,11 +324,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = OP_LLAVE;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:117:9: ( '{' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:121:9: ( '{' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:117:11: '{'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:121:11: '{'
 			{
-			DebugLocation(117, 11);
+			DebugLocation(121, 11);
 			Match('{'); 
 
 			}
@@ -359,11 +359,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = CL_LLAVE;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:118:9: ( '}' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:122:9: ( '}' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:118:11: '}'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:122:11: '}'
 			{
-			DebugLocation(118, 11);
+			DebugLocation(122, 11);
 			Match('}'); 
 
 			}
@@ -394,11 +394,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = END;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:119:4: ( ';' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:123:4: ( ';' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:119:6: ';'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:123:6: ';'
 			{
-			DebugLocation(119, 6);
+			DebugLocation(123, 6);
 			Match(';'); 
 
 			}
@@ -429,11 +429,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = DOUBLEP;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:124:8: ( ':' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:128:8: ( ':' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:124:10: ':'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:128:10: ':'
 			{
-			DebugLocation(124, 10);
+			DebugLocation(128, 10);
 			Match(':'); 
 
 			}
@@ -464,11 +464,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = ASSING;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:125:7: ( '<-' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:129:7: ( '<-' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:125:9: '<-'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:129:9: '<-'
 			{
-			DebugLocation(125, 9);
+			DebugLocation(129, 9);
 			Match("<-"); 
 
 
@@ -500,11 +500,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = OP_PARENT;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:126:10: ( '(' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:130:10: ( '(' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:126:12: '('
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:130:12: '('
 			{
-			DebugLocation(126, 12);
+			DebugLocation(130, 12);
 			Match('('); 
 
 			}
@@ -535,11 +535,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = CL_PARENT;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:127:10: ( ')' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:131:10: ( ')' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:127:12: ')'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:131:12: ')'
 			{
-			DebugLocation(127, 12);
+			DebugLocation(131, 12);
 			Match(')'); 
 
 			}
@@ -570,11 +570,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = COMA;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:128:5: ( ',' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:132:5: ( ',' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:128:7: ','
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:132:7: ','
 			{
-			DebugLocation(128, 7);
+			DebugLocation(132, 7);
 			Match(','); 
 
 			}
@@ -605,7 +605,7 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = NUMBER;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:129:7: ( ( DIGIT )+ '.' ( DIGIT )+ | ( DIGIT )+ )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:133:7: ( ( DIGIT )+ '.' ( DIGIT )+ | ( DIGIT )+ )
 			int alt4=2;
 			try { DebugEnterDecision(4, false);
 			try
@@ -622,10 +622,10 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:129:9: ( DIGIT )+ '.' ( DIGIT )+
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:133:9: ( DIGIT )+ '.' ( DIGIT )+
 				{
-				DebugLocation(129, 9);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:129:9: ( DIGIT )+
+				DebugLocation(133, 9);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:133:9: ( DIGIT )+
 				int cnt1=0;
 				try { DebugEnterSubRule(1);
 				while (true)
@@ -647,7 +647,7 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:
 						{
-						DebugLocation(129, 9);
+						DebugLocation(133, 9);
 						input.Consume();
 
 
@@ -669,10 +669,10 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(1); }
 
-				DebugLocation(129, 18);
+				DebugLocation(133, 18);
 				Match('.'); 
-				DebugLocation(129, 22);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:129:22: ( DIGIT )+
+				DebugLocation(133, 22);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:133:22: ( DIGIT )+
 				int cnt2=0;
 				try { DebugEnterSubRule(2);
 				while (true)
@@ -694,7 +694,7 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:
 						{
-						DebugLocation(129, 22);
+						DebugLocation(133, 22);
 						input.Consume();
 
 
@@ -721,10 +721,10 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:129:31: ( DIGIT )+
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:133:31: ( DIGIT )+
 				{
-				DebugLocation(129, 31);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:129:31: ( DIGIT )+
+				DebugLocation(133, 31);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:133:31: ( DIGIT )+
 				int cnt3=0;
 				try { DebugEnterSubRule(3);
 				while (true)
@@ -746,7 +746,7 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:
 						{
-						DebugLocation(129, 31);
+						DebugLocation(133, 31);
 						input.Consume();
 
 
@@ -799,7 +799,7 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = BOOLEAN;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:130:8: ( 'true' | 'false' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:134:8: ( 'true' | 'false' )
 			int alt5=2;
 			try { DebugEnterDecision(5, false);
 			int LA5_0 = input.LA(1);
@@ -823,9 +823,9 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:130:10: 'true'
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:134:10: 'true'
 				{
-				DebugLocation(130, 10);
+				DebugLocation(134, 10);
 				Match("true"); 
 
 
@@ -833,9 +833,9 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:130:17: 'false'
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:134:17: 'false'
 				{
-				DebugLocation(130, 17);
+				DebugLocation(134, 17);
 				Match("false"); 
 
 
@@ -869,11 +869,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = IF;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:131:3: ( 'if' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:135:3: ( 'if' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:131:5: 'if'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:135:5: 'if'
 			{
-			DebugLocation(131, 5);
+			DebugLocation(135, 5);
 			Match("if"); 
 
 
@@ -905,11 +905,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = THEN;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:132:5: ( 'then' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:136:5: ( 'then' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:132:7: 'then'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:136:7: 'then'
 			{
-			DebugLocation(132, 7);
+			DebugLocation(136, 7);
 			Match("then"); 
 
 
@@ -941,11 +941,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = ELSE;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:133:5: ( 'else' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:137:5: ( 'else' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:133:7: 'else'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:137:7: 'else'
 			{
-			DebugLocation(133, 7);
+			DebugLocation(137, 7);
 			Match("else"); 
 
 
@@ -977,11 +977,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = FI;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:134:3: ( 'fi' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:138:3: ( 'fi' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:134:5: 'fi'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:138:5: 'fi'
 			{
-			DebugLocation(134, 5);
+			DebugLocation(138, 5);
 			Match("fi"); 
 
 
@@ -1013,11 +1013,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = WHILE;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:135:6: ( 'while' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:139:6: ( 'while' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:135:8: 'while'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:139:8: 'while'
 			{
-			DebugLocation(135, 8);
+			DebugLocation(139, 8);
 			Match("while"); 
 
 
@@ -1049,11 +1049,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = LOOP;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:136:5: ( 'loop' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:140:5: ( 'loop' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:136:7: 'loop'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:140:7: 'loop'
 			{
-			DebugLocation(136, 7);
+			DebugLocation(140, 7);
 			Match("loop"); 
 
 
@@ -1085,11 +1085,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = POOL;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:137:5: ( 'pool' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:141:5: ( 'pool' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:137:7: 'pool'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:141:7: 'pool'
 			{
-			DebugLocation(137, 7);
+			DebugLocation(141, 7);
 			Match("pool"); 
 
 
@@ -1121,11 +1121,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = LET;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:138:5: ( 'let' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:142:5: ( 'let' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:138:8: 'let'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:142:8: 'let'
 			{
-			DebugLocation(138, 8);
+			DebugLocation(142, 8);
 			Match("let"); 
 
 
@@ -1157,11 +1157,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = IN;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:139:3: ( 'in' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:143:3: ( 'in' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:139:5: 'in'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:143:5: 'in'
 			{
-			DebugLocation(139, 5);
+			DebugLocation(143, 5);
 			Match("in"); 
 
 
@@ -1193,11 +1193,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = CASE;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:140:5: ( 'case' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:144:5: ( 'case' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:140:7: 'case'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:144:7: 'case'
 			{
-			DebugLocation(140, 7);
+			DebugLocation(144, 7);
 			Match("case"); 
 
 
@@ -1229,11 +1229,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = OF;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:141:3: ( 'of' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:145:3: ( 'of' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:141:5: 'of'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:145:5: 'of'
 			{
-			DebugLocation(141, 5);
+			DebugLocation(145, 5);
 			Match("of"); 
 
 
@@ -1265,11 +1265,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = ESAC;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:142:5: ( 'esac' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:146:5: ( 'esac' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:142:7: 'esac'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:146:7: 'esac'
 			{
-			DebugLocation(142, 7);
+			DebugLocation(146, 7);
 			Match("esac"); 
 
 
@@ -1301,11 +1301,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = NEW;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:143:4: ( 'new' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:147:4: ( 'new' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:143:6: 'new'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:147:6: 'new'
 			{
-			DebugLocation(143, 6);
+			DebugLocation(147, 6);
 			Match("new"); 
 
 
@@ -1337,11 +1337,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = ISVOID;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:144:7: ( 'isvoid' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:148:7: ( 'isvoid' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:144:9: 'isvoid'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:148:9: 'isvoid'
 			{
-			DebugLocation(144, 9);
+			DebugLocation(148, 9);
 			Match("isvoid"); 
 
 
@@ -1373,11 +1373,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = ARROBA;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:145:7: ( '@' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:149:7: ( '@' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:145:9: '@'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:149:9: '@'
 			{
-			DebugLocation(145, 9);
+			DebugLocation(149, 9);
 			Match('@'); 
 
 			}
@@ -1408,11 +1408,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = PNT;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:146:4: ( '.' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:150:4: ( '.' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:146:6: '.'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:150:6: '.'
 			{
-			DebugLocation(146, 6);
+			DebugLocation(150, 6);
 			Match('.'); 
 
 			}
@@ -1443,11 +1443,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = NOT;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:147:4: ( 'not' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:151:4: ( 'not' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:147:6: 'not'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:151:6: 'not'
 			{
-			DebugLocation(147, 6);
+			DebugLocation(151, 6);
 			Match("not"); 
 
 
@@ -1479,11 +1479,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = LEQ;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:148:4: ( '<=' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:152:4: ( '<=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:148:6: '<='
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:152:6: '<='
 			{
-			DebugLocation(148, 6);
+			DebugLocation(152, 6);
 			Match("<="); 
 
 
@@ -1515,11 +1515,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = GEQ;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:149:4: ( '>=' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:153:4: ( '>=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:149:6: '>='
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:153:6: '>='
 			{
-			DebugLocation(149, 6);
+			DebugLocation(153, 6);
 			Match(">="); 
 
 
@@ -1551,11 +1551,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = L;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:150:2: ( '<' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:154:2: ( '<' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:150:4: '<'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:154:4: '<'
 			{
-			DebugLocation(150, 4);
+			DebugLocation(154, 4);
 			Match('<'); 
 
 			}
@@ -1586,11 +1586,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = G;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:151:2: ( '>' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:155:2: ( '>' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:151:4: '>'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:155:4: '>'
 			{
-			DebugLocation(151, 4);
+			DebugLocation(155, 4);
 			Match('>'); 
 
 			}
@@ -1621,11 +1621,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = EQ;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:152:3: ( '=' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:156:3: ( '=' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:152:5: '='
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:156:5: '='
 			{
-			DebugLocation(152, 5);
+			DebugLocation(156, 5);
 			Match('='); 
 
 			}
@@ -1656,11 +1656,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = PLUS;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:153:5: ( '+' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:157:5: ( '+' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:153:7: '+'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:157:7: '+'
 			{
-			DebugLocation(153, 7);
+			DebugLocation(157, 7);
 			Match('+'); 
 
 			}
@@ -1691,11 +1691,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = MINUS;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:154:6: ( '-' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:158:6: ( '-' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:154:8: '-'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:158:8: '-'
 			{
-			DebugLocation(154, 8);
+			DebugLocation(158, 8);
 			Match('-'); 
 
 			}
@@ -1726,11 +1726,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = MULT;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:155:5: ( '*' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:159:5: ( '*' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:155:7: '*'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:159:7: '*'
 			{
-			DebugLocation(155, 7);
+			DebugLocation(159, 7);
 			Match('*'); 
 
 			}
@@ -1761,11 +1761,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = DIV;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:156:4: ( '/' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:160:4: ( '/' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:156:6: '/'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:160:6: '/'
 			{
-			DebugLocation(156, 6);
+			DebugLocation(160, 6);
 			Match('/'); 
 
 			}
@@ -1796,11 +1796,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = NANARITA;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:157:9: ( '~' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:161:9: ( '~' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:157:11: '~'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:161:11: '~'
 			{
-			DebugLocation(157, 11);
+			DebugLocation(161, 11);
 			Match('~'); 
 
 			}
@@ -1831,11 +1831,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = IMPLICS;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:158:9: ( '=>' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:162:9: ( '=>' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:158:11: '=>'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:162:11: '=>'
 			{
-			DebugLocation(158, 11);
+			DebugLocation(162, 11);
 			Match("=>"); 
 
 
@@ -1867,11 +1867,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = INHERITS;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:159:9: ( 'inherits' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:163:9: ( 'inherits' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:159:11: 'inherits'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:163:11: 'inherits'
 			{
-			DebugLocation(159, 11);
+			DebugLocation(163, 11);
 			Match("inherits"); 
 
 
@@ -1903,12 +1903,12 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = NL;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:162:4: ( ( '\\n' )+ )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:166:4: ( ( '\\n' )+ )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:162:6: ( '\\n' )+
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:166:6: ( '\\n' )+
 			{
-			DebugLocation(162, 6);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:162:6: ( '\\n' )+
+			DebugLocation(166, 6);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:166:6: ( '\\n' )+
 			int cnt6=0;
 			try { DebugEnterSubRule(6);
 			while (true)
@@ -1928,9 +1928,9 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:162:7: '\\n'
+					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:166:7: '\\n'
 					{
-					DebugLocation(162, 7);
+					DebugLocation(166, 7);
 					Match('\n'); 
 
 					}
@@ -1951,7 +1951,7 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(6); }
 
-			DebugLocation(162, 14);
+			DebugLocation(166, 14);
 			_channel=HIDDEN;
 
 			}
@@ -1982,7 +1982,7 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = COMMENT;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:174:5: ( '--' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '(*' ( options {greedy=false; } : . )* '*)' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:178:5: ( '--' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '(*' ( options {greedy=false; } : . )* '*)' )
 			int alt10=2;
 			try { DebugEnterDecision(10, false);
 			int LA10_0 = input.LA(1);
@@ -2006,13 +2006,13 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:174:9: '--' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:178:9: '--' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 				{
-				DebugLocation(174, 9);
+				DebugLocation(178, 9);
 				Match("--"); 
 
-				DebugLocation(174, 14);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:174:14: (~ ( '\\n' | '\\r' ) )*
+				DebugLocation(178, 14);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:178:14: (~ ( '\\n' | '\\r' ) )*
 				try { DebugEnterSubRule(7);
 				while (true)
 				{
@@ -2033,7 +2033,7 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:
 						{
-						DebugLocation(174, 14);
+						DebugLocation(178, 14);
 						input.Consume();
 
 
@@ -2050,8 +2050,8 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(7); }
 
-				DebugLocation(174, 28);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:174:28: ( '\\r' )?
+				DebugLocation(178, 28);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:178:28: ( '\\r' )?
 				int alt8=2;
 				try { DebugEnterSubRule(8);
 				try { DebugEnterDecision(8, false);
@@ -2066,9 +2066,9 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:174:28: '\\r'
+					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:178:28: '\\r'
 					{
-					DebugLocation(174, 28);
+					DebugLocation(178, 28);
 					Match('\r'); 
 
 					}
@@ -2077,22 +2077,22 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 				}
 				} finally { DebugExitSubRule(8); }
 
-				DebugLocation(174, 34);
+				DebugLocation(178, 34);
 				Match('\n'); 
-				DebugLocation(174, 39);
+				DebugLocation(178, 39);
 				_channel=HIDDEN;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:175:9: '(*' ( options {greedy=false; } : . )* '*)'
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:179:9: '(*' ( options {greedy=false; } : . )* '*)'
 				{
-				DebugLocation(175, 9);
+				DebugLocation(179, 9);
 				Match("(*"); 
 
-				DebugLocation(175, 14);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:175:14: ( options {greedy=false; } : . )*
+				DebugLocation(179, 14);
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:179:14: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(9);
 				while (true)
 				{
@@ -2126,9 +2126,9 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:175:42: .
+						// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:179:42: .
 						{
-						DebugLocation(175, 42);
+						DebugLocation(179, 42);
 						MatchAny(); 
 
 						}
@@ -2144,10 +2144,10 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(9); }
 
-				DebugLocation(175, 47);
+				DebugLocation(179, 47);
 				Match("*)"); 
 
-				DebugLocation(175, 52);
+				DebugLocation(179, 52);
 				_channel=HIDDEN;
 
 				}
@@ -2180,11 +2180,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = WS;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:178:3: ( ( ' ' | '\\t' | '\\r' ) )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:182:3: ( ( ' ' | '\\t' | '\\r' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:178:7: ( ' ' | '\\t' | '\\r' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:182:7: ( ' ' | '\\t' | '\\r' )
 			{
-			DebugLocation(178, 7);
+			DebugLocation(182, 7);
 			if (input.LA(1)=='\t'||input.LA(1)=='\r'||input.LA(1)==' ')
 			{
 				input.Consume();
@@ -2197,7 +2197,7 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(181, 11);
+			DebugLocation(185, 11);
 			_channel=HIDDEN;
 
 			}
@@ -2228,14 +2228,14 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = STRING;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:185:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:189:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:185:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:189:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
 			{
-			DebugLocation(185, 8);
+			DebugLocation(189, 8);
 			Match('\"'); 
-			DebugLocation(185, 12);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:185:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
+			DebugLocation(189, 12);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:189:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
 			try { DebugEnterSubRule(11);
 			while (true)
 			{
@@ -2258,18 +2258,18 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:185:14: ESC_SEQ
+					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:189:14: ESC_SEQ
 					{
-					DebugLocation(185, 14);
+					DebugLocation(189, 14);
 					mESC_SEQ(); 
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:185:24: ~ ( '\\\\' | '\"' )
+					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:189:24: ~ ( '\\\\' | '\"' )
 					{
-					DebugLocation(185, 24);
+					DebugLocation(189, 24);
 					input.Consume();
 
 
@@ -2286,7 +2286,7 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(11); }
 
-			DebugLocation(185, 39);
+			DebugLocation(189, 39);
 			Match('\"'); 
 
 			}
@@ -2317,14 +2317,14 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = CHAR;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:188:5: ( '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\'' )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:192:5: ( '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\'' )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:188:8: '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\''
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:192:8: '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\''
 			{
-			DebugLocation(188, 8);
+			DebugLocation(192, 8);
 			Match('\''); 
-			DebugLocation(188, 13);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:188:13: ( ESC_SEQ |~ ( '\\'' | '\\\\' ) )
+			DebugLocation(192, 13);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:192:13: ( ESC_SEQ |~ ( '\\'' | '\\\\' ) )
 			int alt12=2;
 			try { DebugEnterSubRule(12);
 			try { DebugEnterDecision(12, false);
@@ -2349,18 +2349,18 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:188:15: ESC_SEQ
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:192:15: ESC_SEQ
 				{
-				DebugLocation(188, 15);
+				DebugLocation(192, 15);
 				mESC_SEQ(); 
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:188:25: ~ ( '\\'' | '\\\\' )
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:192:25: ~ ( '\\'' | '\\\\' )
 				{
-				DebugLocation(188, 25);
+				DebugLocation(192, 25);
 				input.Consume();
 
 
@@ -2370,7 +2370,7 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(12); }
 
-			DebugLocation(188, 40);
+			DebugLocation(192, 40);
 			Match('\''); 
 
 			}
@@ -2399,11 +2399,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		TraceIn("EXPONENT", 49);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:193:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:197:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:193:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:197:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
 			{
-			DebugLocation(193, 12);
+			DebugLocation(197, 12);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -2416,8 +2416,8 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(193, 22);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:193:22: ( '+' | '-' )?
+			DebugLocation(197, 22);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:197:22: ( '+' | '-' )?
 			int alt13=2;
 			try { DebugEnterSubRule(13);
 			try { DebugEnterDecision(13, false);
@@ -2434,7 +2434,7 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 				DebugEnterAlt(1);
 				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:
 				{
-				DebugLocation(193, 22);
+				DebugLocation(197, 22);
 				input.Consume();
 
 
@@ -2444,8 +2444,8 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(13); }
 
-			DebugLocation(193, 33);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:193:33: ( '0' .. '9' )+
+			DebugLocation(197, 33);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:197:33: ( '0' .. '9' )+
 			int cnt14=0;
 			try { DebugEnterSubRule(14);
 			while (true)
@@ -2467,7 +2467,7 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:
 					{
-					DebugLocation(193, 33);
+					DebugLocation(197, 33);
 					input.Consume();
 
 
@@ -2514,11 +2514,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		TraceIn("HEX_DIGIT", 50);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:196:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:200:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
 			DebugEnterAlt(1);
 			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:
 			{
-			DebugLocation(196, 11);
+			DebugLocation(200, 11);
 			if ((input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f'))
 			{
 				input.Consume();
@@ -2556,7 +2556,7 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		TraceIn("ESC_SEQ", 51);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:200:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:204:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
 			int alt15=3;
 			try { DebugEnterDecision(15, false);
 			int LA15_0 = input.LA(1);
@@ -2614,11 +2614,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:200:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:204:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
 				{
-				DebugLocation(200, 9);
+				DebugLocation(204, 9);
 				Match('\\'); 
-				DebugLocation(200, 14);
+				DebugLocation(204, 14);
 				input.Consume();
 
 
@@ -2626,18 +2626,18 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:201:9: UNICODE_ESC
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:205:9: UNICODE_ESC
 				{
-				DebugLocation(201, 9);
+				DebugLocation(205, 9);
 				mUNICODE_ESC(); 
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:202:9: OCTAL_ESC
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:206:9: OCTAL_ESC
 				{
-				DebugLocation(202, 9);
+				DebugLocation(206, 9);
 				mOCTAL_ESC(); 
 
 				}
@@ -2666,7 +2666,7 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		TraceIn("OCTAL_ESC", 52);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:207:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:211:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
 			int alt16=3;
 			try { DebugEnterDecision(16, false);
 			int LA16_0 = input.LA(1);
@@ -2728,17 +2728,17 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:207:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:211:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
 				{
-				DebugLocation(207, 9);
+				DebugLocation(211, 9);
 				Match('\\'); 
-				DebugLocation(207, 14);
+				DebugLocation(211, 14);
 				input.Consume();
 
-				DebugLocation(207, 25);
+				DebugLocation(211, 25);
 				input.Consume();
 
-				DebugLocation(207, 36);
+				DebugLocation(211, 36);
 				input.Consume();
 
 
@@ -2746,14 +2746,14 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:208:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:212:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
 				{
-				DebugLocation(208, 9);
+				DebugLocation(212, 9);
 				Match('\\'); 
-				DebugLocation(208, 14);
+				DebugLocation(212, 14);
 				input.Consume();
 
-				DebugLocation(208, 25);
+				DebugLocation(212, 25);
 				input.Consume();
 
 
@@ -2761,11 +2761,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:209:9: '\\\\' ( '0' .. '7' )
+				// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:213:9: '\\\\' ( '0' .. '7' )
 				{
-				DebugLocation(209, 9);
+				DebugLocation(213, 9);
 				Match('\\'); 
-				DebugLocation(209, 14);
+				DebugLocation(213, 14);
 				input.Consume();
 
 
@@ -2795,21 +2795,21 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		TraceIn("UNICODE_ESC", 53);
 		try
 		{
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:214:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:218:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:214:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:218:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
 			{
-			DebugLocation(214, 9);
+			DebugLocation(218, 9);
 			Match('\\'); 
-			DebugLocation(214, 14);
+			DebugLocation(218, 14);
 			Match('u'); 
-			DebugLocation(214, 18);
+			DebugLocation(218, 18);
 			mHEX_DIGIT(); 
-			DebugLocation(214, 28);
+			DebugLocation(218, 28);
 			mHEX_DIGIT(); 
-			DebugLocation(214, 38);
+			DebugLocation(218, 38);
 			mHEX_DIGIT(); 
-			DebugLocation(214, 48);
+			DebugLocation(218, 48);
 			mHEX_DIGIT(); 
 
 			}
@@ -2838,11 +2838,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = ID;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:217:2: ( ( LOWERCASE | '_' ) ( LOWERCASE | UPERCASE | DIGIT | '_' )* )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:221:2: ( ( LOWERCASE | '_' ) ( LOWERCASE | UPERCASE | DIGIT | '_' )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:218:2: ( LOWERCASE | '_' ) ( LOWERCASE | UPERCASE | DIGIT | '_' )*
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:222:2: ( LOWERCASE | '_' ) ( LOWERCASE | UPERCASE | DIGIT | '_' )*
 			{
-			DebugLocation(218, 2);
+			DebugLocation(222, 2);
 			if (input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z'))
 			{
 				input.Consume();
@@ -2855,8 +2855,8 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(218, 17);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:218:17: ( LOWERCASE | UPERCASE | DIGIT | '_' )*
+			DebugLocation(222, 17);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:222:17: ( LOWERCASE | UPERCASE | DIGIT | '_' )*
 			try { DebugEnterSubRule(17);
 			while (true)
 			{
@@ -2877,7 +2877,7 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:
 					{
-					DebugLocation(218, 17);
+					DebugLocation(222, 17);
 					input.Consume();
 
 
@@ -2923,11 +2923,11 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 		{
 			int _type = TYPE;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:222:5: ( ( UPERCASE ) ( LOWERCASE | UPERCASE | DIGIT | '_' )* )
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:226:5: ( ( UPERCASE ) ( LOWERCASE | UPERCASE | DIGIT | '_' )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:222:6: ( UPERCASE ) ( LOWERCASE | UPERCASE | DIGIT | '_' )*
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:226:6: ( UPERCASE ) ( LOWERCASE | UPERCASE | DIGIT | '_' )*
 			{
-			DebugLocation(222, 6);
+			DebugLocation(226, 6);
 			if ((input.LA(1)>='A' && input.LA(1)<='Z'))
 			{
 				input.Consume();
@@ -2940,8 +2940,8 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(222, 17);
-			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:222:17: ( LOWERCASE | UPERCASE | DIGIT | '_' )*
+			DebugLocation(226, 17);
+			// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:226:17: ( LOWERCASE | UPERCASE | DIGIT | '_' )*
 			try { DebugEnterSubRule(18);
 			while (true)
 			{
@@ -2962,7 +2962,7 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// C:\\Users\\Nardo\\Documents\\Visual Studio 2015\\Projects\\COOL\\LexingParsingCOOL\\COOL.g:
 					{
-					DebugLocation(222, 17);
+					DebugLocation(226, 17);
 					input.Consume();
 
 
@@ -3504,7 +3504,7 @@ public partial class COOLLexer : Antlr.Runtime.Lexer
 			this.transition = DFA4_transition;
 		}
 
-		public override string Description { get { return "129:1: NUMBER : ( ( DIGIT )+ '.' ( DIGIT )+ | ( DIGIT )+ );"; } }
+		public override string Description { get { return "133:1: NUMBER : ( ( DIGIT )+ '.' ( DIGIT )+ | ( DIGIT )+ );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{

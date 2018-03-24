@@ -12,6 +12,7 @@ namespace COOLLenguage.SemanticCheck
         public string Name { get; }
         Dictionary<string, IAttribute> attrs;
         Dictionary<string, IMethod> methods;
+        public List<IType> ChildTypes { get; }
 
         public int LevelHierachy { get; set; }
 
@@ -54,6 +55,12 @@ namespace COOLLenguage.SemanticCheck
             Name = type;
             attrs = new Dictionary<string, IAttribute>();
             methods = new Dictionary<string, IMethod>();
+            ChildTypes = new List<IType>();
+        }
+
+        public override string ToString()
+        {
+            return "class "+Name;
         }
 
         public IAttribute GetAttribute(string name)

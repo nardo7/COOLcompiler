@@ -28,14 +28,19 @@ namespace COOLLenguage.SemanticCheck
                 if ((t = Context.GetType(node.typeInherited)) != null)
                 {
                     currentType.TypeInherited = t;
-                    currentType.LevelHierachy = t.LevelHierachy + 1;
+                    t.ChildTypes.Add(currentType);
+                    //currentType.LevelHierachy = t.LevelHierachy + 1;
                 }
                 else
-                    errorLog.LogError(string.Format(TYPEINHERITEDDOESNEXIST,node.Line, currentType.Name, node.typeInherited));
+                    errorLog.LogError(string.Format(TYPEINHERITEDDOESNEXIST, node.Line, currentType.Name, node.typeInherited));
 
             }
             else
-                currentType.TypeInherited = Context.GetType("Object");
+            {
+                var obj= currentType.TypeInherited = Context.GetType("Object");
+                obj.ChildTypes.Add(currentType);
+                //currentType.LevelHierachy = 1;
+            }
             foreach (var item in node.Attributes)
             {
                 Visit(item);
@@ -51,6 +56,7 @@ namespace COOLLenguage.SemanticCheck
         {
             foreach (var item in node.Classes)
                 Visit(item);
+            SetLevelHierachy(Context.GetType("Object"));
         }
 
         public void Visit(AST1.Attribute node)
@@ -85,6 +91,16 @@ namespace COOLLenguage.SemanticCheck
                 errorLog.LogError(string.Format(MethodRedefined, node.Name, currentType.Name));
         }
 
+        void SetLevelHierachy(IType type)
+        {
+            
+            foreach (var typ in type.ChildTypes)
+            {
+                typ.LevelHierachy = 1 + type.LevelHierachy;
+                SetLevelHierachy(typ);
+
+            }
+        }
        
     }
 }

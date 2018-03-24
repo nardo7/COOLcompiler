@@ -14,5 +14,6 @@ namespace COOLLenguage.SemanticCheck
         IContext CreateChildContext();
         bool DefineVariable(string symbol, IType type,bool redefine=false);
         IType CreateType(string name);
+        IEnumerable<IType> Types();
     }
 }

@@ -21,5 +21,6 @@ namespace COOLLenguage.SemanticCheck
         IMethod GetMethodInherited(string name);
         bool IsInheritedClass(string type);
         int LevelHierachy { get; set; }
+        List<IType> ChildTypes { get; } 
     }
 }

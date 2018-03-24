@@ -94,5 +94,10 @@ namespace COOLLenguage.SemanticCheck
             else
                 return null;
         }
+
+        public IEnumerable<IType> Types()
+        {
+            return types.Values;
+        }
     }
 }
