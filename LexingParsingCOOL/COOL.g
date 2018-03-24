@@ -53,8 +53,7 @@ attribute:  DOUBLEP! TYPE (ASSING expr)?  ;
  param: (ID  DOUBLEP  TYPE)->^(PARAM ID TYPE);
 
  expr: assignment
-	   |conditionals
-	   |loops
+	   
 	   |blocks
 	   |let
 	   |case
@@ -97,12 +96,15 @@ exprList:	expr END! (expr END!)*;
  	lv3: lv4( MULT^  lv3|DIV^  lv3)?;
  	lv4: lv5 ;
  	lv5:  lv6 ;
- 	lv6: ((ID->ID) (dispatch2->^(DISPATCH  $lv6 dispatch2) |dispatchrec->^(DISPATCH $lv6 dispatchrec))?
+ 	lv6: ((ID->ID) (dispatchrec->^(DISPATCH $lv6 dispatchrec))?
  	|(tmp2->tmp2) (dispatchrec->^(DISPATCH $lv6 dispatchrec))?
- 	|(constant->constant) dispatch?)  ;
+ 	|(constant->constant) dispatchrec?) |conditionals
+	   |loops
+ 	 ;
+ 	
  	tmp2: OP_PARENT! expr CL_PARENT!;
  	tmp:
- 	(dispatch)( dispatchrec)?
+ 	(dispatch|dispatch2)( dispatchrec)?
  	;
  	dispatchrec:tmp;
  nanarita: NANARITA^ expr ;
@@ -113,7 +115,7 @@ compileUnit
 	;
 
 
-CLASS: ('class') ;
+CLASS: (('c'|'C')('l'|'L')('a'|'A')('s'|'S')('s'|'S')) ;
 fragment UPERCASE:'A'..'Z';
 fragment LOWERCASE:'a'..'z';
 fragment DIGIT: '0'..'9' ;
@@ -131,9 +133,9 @@ OP_PARENT: '(' ;
 CL_PARENT: ')' ;
 COMA: ',' ;
 NUMBER: (DIGIT)+ '.' (DIGIT)+|DIGIT+ ;
-BOOLEAN: 'true'|'false' ;
-IF: 'if' ;
-THEN: 'then' ;
+BOOLEAN: ('t')('r'|'R')('u'|'U')('E'|'e')|('f')('a'|'A')('l'|'L')('s'|'S')('e'|'E') ;
+IF: ('i'|'I')('f'|'F') ;
+THEN: ('t'|'T')('hen') ;
 ELSE: 'else' ;
 FI: 'fi' ;
 WHILE: 'while' ;

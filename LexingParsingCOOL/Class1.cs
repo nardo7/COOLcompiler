@@ -20,7 +20,7 @@ namespace LexingParsingCOOL
             var files=d.GetFiles("*.cl");
             foreach (var file in files)
             {
-                
+
 
                 var stringStream = new ANTLRFileStream(file.FullName);
                 COOLLexer lexer = new COOLLexer(stringStream);
@@ -31,8 +31,8 @@ namespace LexingParsingCOOL
                 parser.TraceDestination = Console.Out;
                 var tree = parser.program();
                 var t = (COOLCommonTree)tree.Tree;
-            }
-            //var ast1 = t.GetAST1();
+        }
+       // var ast1 = t.GetAST1();
 
             //TypeCollectorVisitor visit1 = new TypeCollectorVisitor() { log = new ErrorLogger(Console.Out) };
             //visit1.Visit((Program)ast1);
