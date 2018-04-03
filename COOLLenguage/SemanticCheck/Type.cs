@@ -131,6 +131,8 @@ namespace COOLLenguage.SemanticCheck
         public virtual IMethod GetMethodInherited(string name)
         {
             IMethod m;
+            if (TypeInherited == null)
+                return null;
             if (TypeInherited.methods.TryGetValue(name, out m))
                 return m;
             if (TypeInherited.TypeInherited != null)
@@ -141,6 +143,8 @@ namespace COOLLenguage.SemanticCheck
         public virtual IAttribute GetAttributeInherited(string name)
         {
             IAttribute a;
+            if (TypeInherited == null)
+                return null;
             if (TypeInherited.attrs.TryGetValue(name, out a))
                 return a;
             if (TypeInherited.TypeInherited != null)

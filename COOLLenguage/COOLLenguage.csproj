@@ -50,6 +50,7 @@
     <Compile Include="SemanticCheck\AST1\Case.cs" />
     <Compile Include="SemanticCheck\AST1\Class.cs" />
     <Compile Include="SemanticCheck\AST1\Comparison.cs" />
+    <Compile Include="SemanticCheck\AST1\Complement.cs" />
     <Compile Include="SemanticCheck\AST1\Conditional.cs" />
     <Compile Include="SemanticCheck\AST1\Constant.cs" />
     <Compile Include="SemanticCheck\AST1\Dispatch.cs" />

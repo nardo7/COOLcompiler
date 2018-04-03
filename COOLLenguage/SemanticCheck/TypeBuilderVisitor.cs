@@ -80,7 +80,7 @@ namespace COOLLenguage.SemanticCheck
         {
             var retType = Context.GetType(node.ReturnType);
             if (retType == null)
-                errorLog.LogError(string.Format(TypeNotExist, node.ReturnType));
+                errorLog.LogError(string.Format(TypeNotExist,node.Line, node.ReturnType));
             var argTypes = node.Arguments.Select(t => Context.GetType(t.Type));
             foreach (var type in argTypes)
                 if(type==null)

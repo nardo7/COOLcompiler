@@ -61,8 +61,7 @@ attribute:  DOUBLEP! TYPE (ASSING expr)?  ;
 	   |operations
 	   |TYPE^
 	   |(NOT^ expr)
-	   |(ISVOID^  expr)
-	   |nanarita;
+	   |(ISVOID^  expr);
 	 //  | auxid;
 //auxid	:(ID|constant)? lvE	;
 exprList:	expr END! (expr END!)*;
@@ -93,9 +92,9 @@ exprList:	expr END! (expr END!)*;
  	:	 lv1 ;
  	lv1:  lv2 ( LEQ^ lv1|GEQ^ lv1|L^ lv1|G^ lv1|EQ^ lv1)?;
  	lv2: lv3 ( PLUS^  lv2|MINUS^  lv2)? ;
- 	lv3: lv4( MULT^  lv3|DIV^  lv3)?;
+ 	lv3: lv4( MULT^  lv3|DIV^  lv3)? ;
  	lv4: lv5 ;
- 	lv5:  lv6 ;
+ 	lv5: (NANARITA lv6)-> ^(NANARITA lv6 )|lv6  ;
  	lv6: ((ID->ID) (dispatchrec->^(DISPATCH $lv6 dispatchrec))?
  	|(tmp2->tmp2) (dispatchrec->^(DISPATCH $lv6 dispatchrec))?
  	|(constant->constant) dispatchrec?) |conditionals
@@ -107,7 +106,7 @@ exprList:	expr END! (expr END!)*;
  	(dispatch|dispatch2)( dispatchrec)?
  	;
  	dispatchrec:tmp;
- nanarita: NANARITA^ expr ;
+ nanarita: NANARITA^ ;
   constant: STRING|NUMBER|BOOLEAN;
  wsnl	:	(WS|NL)+ ;
 compileUnit

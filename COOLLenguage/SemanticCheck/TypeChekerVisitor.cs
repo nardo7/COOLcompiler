@@ -12,13 +12,13 @@ namespace COOLLenguage.SemanticCheck
                                      IVisitor<ClassDef>, IVisitor<AST1.Attribute>, IVisitor<Method>, IVisitor<Block>,
                                      IVisitor<Assignment>, IVisitor<BinaryExpression>, IVisitor<Not>, IVisitor<IsVoid>,
                                      IVisitor<Conditional>, IVisitor<New>, IVisitor<While>, IVisitor<Dispatch>,
-        IVisitor<Ident>,IVisitor<Initializer>,IVisitor<Constant>,IVisitor<Let>,IVisitor<Case>
+        IVisitor<Ident>,IVisitor<Initializer>,IVisitor<Constant>,IVisitor<Let>,IVisitor<Case>,IVisitor<Complement>
     {
         public IContext Context;
         IContext currentContext;
         public IType currentType;
         public IErrorLogger errorLog;
-
+        IType DefaultType;
         const string TypeNotExist = "Line{0}: The Type {1} does not exist in the current context";
         const string VariableNotExist = "Line{0}: The variable {1} is not defined in the current context";
         const string CannotAssingDistintTypes = "Line{0}: The type {1} cannot be assigned to a type {2}";
@@ -33,6 +33,9 @@ namespace COOLLenguage.SemanticCheck
         const string LeftIsNotEqualToRight = "Line{0}: The left expression must be type equal to right expression";
         const string MethodReturnTypeWrong = "Line{0}: The Return Type must be {1}";
         const string MethodNumArgWrong = "Line{0}: The Method {1} recieves {2} arguments ";
+        const string TypeNotInheritsFrom = "Line{0}: The type {1} does not inherit from {2}";
+        const string ExprIsNotInt = "Line{0}: The expression must be type Int";
+        const string ArgIMustBe = "Line{0}: Method: {1} ; the argument {2} must be type {3}";
 
         public void Visit(New node)
         {
@@ -108,6 +111,7 @@ namespace COOLLenguage.SemanticCheck
         public void Visit(Program node)
         {
             currentContext = Context;
+            DefaultType = Context.GetType("Object");
             foreach (var item in node.Classes)
                 Visit(item);
         }
@@ -140,47 +144,55 @@ namespace COOLLenguage.SemanticCheck
         {
             Visit(node.Left);
             Visit(node.Rigth);
-            Comparison Comp;
-            if (node.Left.computedType.Name != node.Rigth.computedType.Name)
-                errorLog.LogError(LeftIsNotEqualToRight);
+            Comparison Comp = node as Comparison;
 
+            
+
+            if (Comp!=null &&Comp.Op!="="&& node.Left.computedType.Name != node.Rigth.computedType.Name)
+            {
+                errorLog.LogError(string.Format(LeftIsNotEqualToRight, node.Line));
+                node.computedType = DefaultType;
+                return;
+            }  
             #region equals
             if ((Comp = (node as Comparison)) != null)
             {
                 if (Comp.Op == "=")
                 {
-                    switch (node.Left.computedType.Name)
-                    {
-                        case "Int":
-                            break;
-                        case "Bool":
-                            break;
-                        case "String":
-                            break;
-                        default:
-                            errorLog.LogError(LeftIsNotAtomic);
-                            break;
-
-                    }
-                    switch (node.Rigth.computedType.Name)
-                    {
-                        case "Int":
-                            break;
-                        case "Bool":
-                            break;
-                        case "String":
-                            break;
-                        default:
-                            errorLog.LogError(RightIsNotAtomic);
-                            break;
-                    }
-
-
+                    node.computedType = Context.GetType("Bool");
+                    return;
+                   
+                    //switch (node.Left.computedType.Name)
+                    //{
+                    //    case "Int":
+                    //        break;
+                    //    case "Bool":
+                    //        break;
+                    //    case "String":
+                    //        break;
+                    //    default:
+                    //        errorLog.LogError(string.Format(LeftIsNotAtomic,node.Left.Line));
+                    //        break;
+                    
+                    //}
+                    //switch (node.Rigth.computedType.Name)
+                    //{
+                    //    case "Int":
+                    //        break;
+                    //    case "Bool":
+                    //        break;
+                    //    case "String":
+                    //        break;
+                    //    default:
+                    //        errorLog.LogError(RightIsNotAtomic);
+                    //        break;
+                    //}
+                    
                 }
                 else
                 {
                     if (node.Left.computedType.Name != "Int")
-                        errorLog.LogError(LeftIsNotInt);
+                        errorLog.LogError(string.Format(LeftIsNotInt,node.Left.Line));
                     if (node.Rigth.computedType.Name != "Int")
                         errorLog.LogError(RightIsNotInt);
                     if (node is ArithmeticOperation)
@@ -192,7 +204,7 @@ namespace COOLLenguage.SemanticCheck
             #endregion
             
                 if (node.Left.computedType.Name != "Int")
-                    errorLog.LogError(LeftIsNotInt);
+                    errorLog.LogError(string.Format(LeftIsNotInt,node.Left.Line));
                 if (node.Rigth.computedType.Name != "Int")
                     errorLog.LogError(RightIsNotInt);
             
@@ -228,53 +240,98 @@ namespace COOLLenguage.SemanticCheck
         //falta el arroba
         public void Visit(Dispatch node)
         {
-            if (node.Name != null&&node.Name!="")
+            IType type = null;
+            //a.b(...)
+            if (node.Name != null && node.Name != "")
             {
-                var type = currentContext.GetTypeFor(node.Name);
-                if (type == null)
-                {
-                    var attr = currentType.GetAttribute(node.Name);
-                    if (attr != null)
-                    {
-                        type = attr.Type;
-                        VerifyTypesInDispatch(type, node);
-                    }
-                    else
-                    {
-                        errorLog.LogError(string.Format(VariableNotExist,node.Line, node.Name));
-                        node.computedType = Context.GetType("Void");
-                        return;
-                    }
-                }
-                else VerifyTypesInDispatch(type, node);
-
+                type = currentContext.GetTypeFor(node.Name);
             }
+            //(expr).b(...)
             else if (node.ExprDispatched != null)
             {
                 Visit(node.ExprDispatched);
-                var type = node.ExprDispatched.computedType;
-                if (type == null)
-                {
-                    var attr = currentType.GetAttribute(node.Name);
-                    if (attr != null)
-                    {
-                        type = attr.Type;
-                        VerifyTypesInDispatch(type, node);
-                    }
-                    else
-                    {
-                        errorLog.LogError(string.Format(VariableNotExist,node.Line, node.Name));
-                        node.computedType = Context.GetType("Void");
-                        return;
-                    }
-                }
-                else VerifyTypesInDispatch(type, node);
-                    
+                type = node.ExprDispatched.computedType;
             }
             else
             {
                 VerifyTypesInDispatch(currentType, node);
+                return;
             }
+            if (type == null)
+                {
+                if ((type = currentType.GetAttribute(node.Name).Type) == null)
+                {
+                    errorLog.LogError(string.Format(VariableNotExist, node.Line, node.Name));
+                    type = Context.GetType("Object");
+                    return;
+                }
+                } 
+            //(a|expr)@b(..)
+            if (node.Type != null && node.Type != "")
+            {
+
+                IType typeInherited;
+                if ((typeInherited = Context.GetType(node.Type)) == null)
+                {
+                    errorLog.LogError(string.Format(TypeNotExist, node.Line, node.Type));
+                    node.computedType = DefaultType;
+                    return;
+                }
+                else if (!type.IsInheritedClass(typeInherited.Name))
+                {
+                    errorLog.LogError(string.Format(TypeNotInheritsFrom, node.Line,type,typeInherited));
+                    node.computedType = DefaultType;
+                    return;
+                }
+            }
+            VerifyTypesInDispatch(type, node);
+            //if (node.Name != null&&node.Name!="")
+            //{
+            //    var type = currentContext.GetTypeFor(node.Name);
+            //    if (type == null)
+            //    {
+            //        var attr = currentType.GetAttribute(node.Name);
+            //        if (attr != null)
+            //        {
+            //            type = attr.Type;
+            //            VerifyTypesInDispatch(type, node);
+            //        }
+            //        else
+            //        {
+            //            errorLog.LogError(string.Format(VariableNotExist,node.Line, node.Name));
+            //            node.computedType = Context.GetType("Void");
+            //            return;
+            //        }
+            //    }
+            //    else VerifyTypesInDispatch(type, node);
+
+            //}
+            //else if (node.ExprDispatched != null)
+            //{
+            //    Visit(node.ExprDispatched);
+            //    var type = node.ExprDispatched.computedType;
+            //    if (type == null)
+            //    {
+            //        var attr = currentType.GetAttribute(node.Name);
+            //        if (attr != null)
+            //        {
+            //            type = attr.Type;
+            //            VerifyTypesInDispatch(type, node);
+            //        }
+            //        else
+            //        {
+            //            errorLog.LogError(string.Format(VariableNotExist,node.Line, node.Name));
+            //            node.computedType = Context.GetType("Void");
+            //            return;
+            //        }
+            //    }
+            //    else VerifyTypesInDispatch(type, node);
+                    
+            //}
+            //else
+            //{
+            //    VerifyTypesInDispatch(currentType, node);
+            //}
             
         }
 
@@ -301,7 +358,7 @@ namespace COOLLenguage.SemanticCheck
                     {
                         Visit(node.Arg[i]);
                         if (!node.Arg[i].computedType.IsInheritedClass(argDef[i].Type.Name))
-                            errorLog.LogError(string.Format(CannotAssingDistintTypes,node.Line, node.Arg[i].computedType.Name, argDef[i].Type.Name));
+                            errorLog.LogError(string.Format(ArgIMustBe,node.Line,M.Name,i.ToString(), argDef[i].Type.Name));
 
                     }
                 else
@@ -313,7 +370,9 @@ namespace COOLLenguage.SemanticCheck
 
         void Visit(Expression node)
         {
-
+            if (node is Complement)
+                Visit((Complement)node);
+            else
             if (node is New)
                 Visit((New)node);
             else
@@ -498,14 +557,26 @@ namespace COOLLenguage.SemanticCheck
                 IType t1 = currentContext.GetType(node.Exprs[0].computedType.Name);
                 for (int i = 1; i < node.Exprs.Count; i++)
                 {
-                    
-                    IType t2= node.Exprs[i].computedType;
+
+                    IType t2 = node.Exprs[i].computedType;
                     node.computedType = LCA(t1, t2);
                     if (node.computedType.Name == "Object")
                         break;
                     t1 = node.computedType;
                 }
             }
+            else node.computedType = node.Exprs[0].computedType;
+        }
+
+        public void Visit(Complement node)
+        {
+            Visit(node.Expr);
+            var @int = Context.GetType("Int");
+            if (node.Expr.computedType != @int)
+                errorLog.LogError(string.Format(ExprIsNotInt, node.Expr.Line));
+            node.computedType = @int;
+
+
         }
     }
 }

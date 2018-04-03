@@ -56,53 +56,73 @@ namespace LexingParsingCOOL
                 case COOLLexer.NEW:
                     return new New(GetChild(0).Text) { Line = Line };
 
+                case COOLLexer.NANARITA:
+                    return new Complement((Expression)((COOLCommonTree)GetChild(0)).GetAST1()) { Line=Line};
                 #region dispatch
                 case COOLLexer.DISPATCH:
                     var disp = new Dispatch() { Line = Line };
-                    int j = 0;
+                    int j = 2;
                     
+                    if (GetChild(1).Type == COOLLexer.TYPE)
+                    {
+                        disp.Type = GetChild(1).Text;
+                        j = 4;
+                        disp.MethodName = GetChild(2).Text;
+                    }
+                    else if (GetChild(1).Type == COOLLexer.OP_PARENT)
+                    {
+                        disp.MethodName = GetChild(0).Text;
+                        j = 2;
+
+                    }
+                    else//(expr).b(...)
+                    {
+                        j = 3;
+                        disp.MethodName = GetChild(1).Text;
+                    }
                     if (GetChild(0).Type != COOLLexer.ID)
                     {
                         disp.ExprDispatched = (Expression)((COOLCommonTree)GetChild(0)).GetAST1();
                         //(expr)@A.c(...)
-                        if (GetChild(1).Type == COOLLexer.TYPE)
+                        
+                        
+                        for (; j < ChildCount; j++)
                         {
-                            throw new NotImplementedException();
+                            if (j + 1 < ChildCount)
+                                if ((GetChild(j + 1).Type == COOLLexer.OP_PARENT) || GetChild(j).Type == COOLLexer.ARROBA || GetChild(j).Type == COOLLexer.OP_PARENT)
+                                     break;
+                            if (GetChild(j).Type == COOLLexer.TYPE)
+                                break;
+                            disp.Arg.Add((Expression)((COOLCommonTree)GetChild(j)).GetAST1());
                         }
-                        else
-                        {//(expr).b(...)
-                            j = 3;
-                            disp.MethodName = GetChild(1).Text;
-                            for (; j < ChildCount; j++)
-                            {
-                                if (j + 1 < ChildCount)
-                                    if ((GetChild(j + 1).Type == COOLLexer.OP_PARENT) || GetChild(j).Type == COOLLexer.ARROBA || GetChild(j).Type == COOLLexer.OP_PARENT)
-                                        break;
-                                disp.Arg.Add((Expression)((COOLCommonTree)GetChild(j)).GetAST1());
-                            }
                            // return disp;
-                        }
+                        
                         
                     }
                     else
                     {
-                        j = 2;
-                        //b.c(...)
+
+                        //b[@T].c(...)
                         if (GetChild(1).Type != COOLLexer.OP_PARENT)
                         {
+
                             disp.Name = GetChild(0).Text;
-                            disp.MethodName = GetChild(1).Text;
-                            j = 3;
+                            if (disp.Type == null || disp.Type == "")
+                            {
+                                disp.MethodName = GetChild(1).Text;
+                                j = 3;
+                            }
+                                
                         }
-                        else//a(...)
-                            disp.MethodName=GetChild(0).Text;
-                        for (; j < ChildCount; j++)
-                        {
-                            if (j + 1 < ChildCount)
-                                if (( GetChild(j + 1).Type == COOLLexer.OP_PARENT) || GetChild(j).Type == COOLLexer.ARROBA)
-                                break;
-                            disp.Arg.Add((Expression)((COOLCommonTree)GetChild(j)).GetAST1());
-                        }
+                            for (; j < ChildCount; j++)
+                            {
+                                if (j + 1 < ChildCount)
+                                    if (( GetChild(j + 1).Type == COOLLexer.OP_PARENT) || GetChild(j).Type == COOLLexer.ARROBA)
+                                    break;
+                                if (GetChild(j).Type == COOLLexer.TYPE)
+                                    break;
+                                disp.Arg.Add((Expression)((COOLCommonTree)GetChild(j)).GetAST1());
+                            }
                         
                         
                        // return disp;
@@ -118,14 +138,24 @@ namespace LexingParsingCOOL
                                 j++;
                             if (j >= ChildCount)
                                 break;
-                            if (GetChild(j).Type == COOLLexer.ARROBA)
+                            if (GetChild(j).Type == COOLLexer.TYPE)
                             {
-                                throw new NotImplementedException("no implementado @ en multi-dispatch");
+                                disp2.Type = GetChild(j).Text;
+                                j++;
+                                disp2.MethodName = GetChild(j).Text;
+                                j += 2;
+                                //throw new NotImplementedException("no implementado @ en multi-dispatch");
                             }
-                            disp2.MethodName = GetChild(j).Text;
+                            else
+                            {
+                                disp2.MethodName = GetChild(j).Text;
+                                j += 2;
+                            }
                             j = InsertArg(disp2, j);
                             disp2.ExprDispatched = disp;
                             disp = disp2;
+                            if (j >= ChildCount)
+                                break;
                             disp2 = new Dispatch() { Line = GetChild(j).Line };
 
                         }
@@ -264,13 +294,17 @@ namespace LexingParsingCOOL
             int j = initArg;
             for (; j < ChildCount; j++)
             {
-                if ((j + 1 < ChildCount && GetChild(j + 1).Type == COOLLexer.OP_PARENT) || GetChild(j).Type == COOLLexer.ARROBA)
+                if(j+1<ChildCount)
+                    if ((j + 1 < ChildCount && GetChild(j + 1).Type == COOLLexer.OP_PARENT) || GetChild(j).Type == COOLLexer.ARROBA)
+                        break;
+                if (GetChild(j).Type == COOLLexer.TYPE)
                     break;
                 d.Arg.Add((Expression)((COOLCommonTree)GetChild(j)).GetAST1());
             }
-            if (j == initArg)
-                return j += 1;
-            else return j;
+            //if (j == initArg)
+            //    return j += 1;
+            //else 
+            return j;
         }
     }
 }

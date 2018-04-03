@@ -45,7 +45,7 @@ namespace COOLLenguage.SemanticCheck
             defineInt();
             var @int = Context.GetType("Int");
             str.DefineMethod("length", @int, new string[] { }, new IType[] { });
-            str.DefineMethod("substr", str, new string[] {"i","l" }, new IType[] {@int,str });
+            str.DefineMethod("substr", str, new string[] {"i","l" }, new IType[] {@int,@int });
             Context.GetType("Object").ChildTypes.Add(str);
         }
 
@@ -79,8 +79,11 @@ namespace COOLLenguage.SemanticCheck
             var io = Context.CreateType("IO");
             io.LevelHierachy = 1;
             io.TypeInherited = Context.GetType("Object");
-            io.DefineMethod("out_string", Context.GetType("Void"), new string[] { "string" }, new IType[] { Context.GetType("String") });
-            io.DefineMethod("out_int", Context.GetType("Void"), new string[] { "int" }, new IType[] { Context.GetType("Int") });
+            io.DefineMethod("out_string", io, new string[] { "string" }, new IType[] { Context.GetType("String") });
+            io.DefineMethod("out_int", io, new string[] { "int" }, new IType[] { Context.GetType("Int") });
+            io.DefineMethod("in_int", Context.GetType("Int"), new string[] { }, new IType[] { });
+            io.DefineMethod("in_string", Context.GetType("String"), new string[] { }, new IType[] { });
+            
             Context.GetType("Object").ChildTypes.Add(io);
 
         }

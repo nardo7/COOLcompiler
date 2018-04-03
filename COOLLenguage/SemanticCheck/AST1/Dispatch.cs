@@ -16,7 +16,7 @@ namespace COOLLenguage.SemanticCheck.AST1
         public string Name { get { return name; } set { name = value; } }
         public string MethodName { get { return methodName; } set { methodName = value; } }
         public List<Expression> Arg { get { return arg; } }
-
+        public string Type { get; set; }
         public Expression ExprDispatched
         {
             get
@@ -37,18 +37,21 @@ namespace COOLLenguage.SemanticCheck.AST1
             this.arg = arg;
         }
 
-        public Dispatch(string name, string methodname, List<Expression> arg)
+        public Dispatch(string name, string methodname, List<Expression> arg,string type=null)
         {
             this.name = name;
             methodName = methodname;
             this.arg = arg;
+            Type = type;
         }
-        public Dispatch(Expression expr, string methodname, List<Expression> arg)
+        public Dispatch(Expression expr, string methodname, List<Expression> arg,string type=null)
         {
             this.exprDispatched = expr;
             methodName = methodname;
+            Type = type;
             this.arg = arg;
         }
-
+        
+        
     }
 }

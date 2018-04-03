@@ -12,7 +12,10 @@ namespace COOL
     {
         static void Main(string[] args)
         {
+            var a = 2;
+
             Parser.parser(args[0]);
+
             var curdir = System.Environment.CurrentDirectory;
         }
     }
