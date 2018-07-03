@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MIPSCodeGenerator;
+//using CoolCompilator;
 
 namespace COOLLenguage.SemanticCheck.AST
 {
@@ -140,5 +142,15 @@ namespace COOLLenguage.SemanticCheck.AST
         {
             throw new NotImplementedException();
         }
+
+        public Class ToNodeCodeClass()
+        {
+            throw new NotImplementedException();
+        }
+
+        //public Class ToNodeCodeClass()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

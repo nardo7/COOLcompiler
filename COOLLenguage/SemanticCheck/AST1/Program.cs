@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//using CoolCompilator;
+using MIPSCodeGenerator;
 
 namespace COOLLenguage.SemanticCheck.AST1
 {
@@ -19,5 +21,16 @@ namespace COOLLenguage.SemanticCheck.AST1
             Classes = classes;
         }
 
+        public override TreeNode GetAstCodeGenerator(SymbolTable t)
+        {
+            Class[] classes = new Class[this.Classes.Count];
+            for (int i = 0; i < Classes.Count; i++)
+            {
+                classes[i] = (Class)Classes[i].GetAstCodeGenerator(t);
+            }
+            MIPSCodeGenerator.Program p = new MIPSCodeGenerator.Program(classes.ToList(), Line);
+            return p;
+            
+        }
     }
 }

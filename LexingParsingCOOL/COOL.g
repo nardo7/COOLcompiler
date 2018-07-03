@@ -53,7 +53,6 @@ attribute:  DOUBLEP! TYPE (ASSING expr)?  ;
  param: (ID  DOUBLEP  TYPE)->^(PARAM ID TYPE);
 
  expr: assignment
-	   
 	   |blocks
 	   |let
 	   |case
@@ -62,9 +61,8 @@ attribute:  DOUBLEP! TYPE (ASSING expr)?  ;
 	   |TYPE^
 	   |(NOT^ expr)
 	   |(ISVOID^  expr);
-	 //  | auxid;
-//auxid	:(ID|constant)? lvE	;
-exprList:	expr END! (expr END!)*;
+
+ exprList:	expr END! (expr END!)*;
  assignment: (ID ASSING^  expr) ;
  conditionals: (IF expr (THEN expr) (ELSE expr)? FI)->^(IF expr ^(THEN expr) ^(ELSE expr)?) ;
  loops: WHILE^  expr LOOP! expr POOL! ;//-> LOOP^ expr LOOP WHILE^ expr ;
@@ -84,17 +82,16 @@ exprList:	expr END! (expr END!)*;
  dispatch: (ARROBA! TYPE PNT!|PNT!) ID OP_PARENT (expr ( COMA! expr)*)? CL_PARENT! ;
  exprlist1
  	:	(expr ( COMA! expr)*)?;
- //dispatch1
- 	//:	(ARROBA! TYPE |PNT!) OP_PARENT! (expr ( COMA! expr)*)? CL_PARENT! ;
+
  dispatch2
  	:	 OP_PARENT (expr ( COMA! expr)*)? CL_PARENT! ;
  operations
  	:	 lv1 ;
- 	lv1:  lv2 ( LEQ^ lv1|GEQ^ lv1|L^ lv1|G^ lv1|EQ^ lv1)?;
- 	lv2: lv3 ( PLUS^  lv2|MINUS^  lv2)? ;
- 	lv3: lv4( MULT^  lv3|DIV^  lv3)? ;
+ 	lv1:  lv2 ( LEQ^ lv2|GEQ^ lv2|L^ lv2|G^ lv2|EQ^ lv2)*;
+ 	lv2: lv3 ( PLUS^  lv3|MINUS^  lv3)* ;
+ 	lv3: lv4( MULT^  lv4|DIV^  lv4)* ;
  	lv4: lv5 ;
- 	lv5: (NANARITA lv6)-> ^(NANARITA lv6 )|lv6  ;
+ 	lv5: (NANARITA (lv6))-> ^(NANARITA lv6 )| lv6  ;
  	lv6: ((ID->ID) (dispatchrec->^(DISPATCH $lv6 dispatchrec))?
  	|(tmp2->tmp2) (dispatchrec->^(DISPATCH $lv6 dispatchrec))?
  	|(constant->constant) dispatchrec?) |conditionals

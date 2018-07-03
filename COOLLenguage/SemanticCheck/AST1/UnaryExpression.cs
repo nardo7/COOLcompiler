@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace COOLLenguage.SemanticCheck.AST1
 {
-    public class UnaryExpression:Expression
+    public abstract class UnaryExpression:Expression
     {
         protected Expression expr;
         public Expression Expr { get { return expr; } }

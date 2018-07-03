@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace COOLLenguage.SemanticCheck.AST1
 {
-    public class BinaryExpression : Expression
+    public abstract class BinaryExpression : Expression
     {
 
         Expression left;

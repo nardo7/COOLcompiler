@@ -10,5 +10,10 @@ namespace COOLLenguage.SemanticCheck.AST1
     {
         public IType computedType;
 
+        public void SetGeneratorType(MIPSCodeGenerator.Expression expr)
+        {
+            expr.Type = computedType.Name;
+        }
+
     }
 }

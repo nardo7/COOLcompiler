@@ -14,6 +14,41 @@ namespace COOLLenguage.SemanticCheck
         Dictionary<string, IMethod> methods;
         public List<IType> ChildTypes { get; }
 
+        public MIPSCodeGenerator.Class ToNodeCodeClass()
+        {
+            // using(CoolCompilator)
+            List<MIPSCodeGenerator.Method> ms = new List<MIPSCodeGenerator.Method>();
+            var methods = Methods.ToArray();
+            for (int i = 0; i < methods.Length; i++)
+            {
+                var args = methods[i].Arguments.ToArray();
+                List<MIPSCodeGenerator.Formal> fr = new List<MIPSCodeGenerator.Formal>();
+
+
+                for (int j = 0; j < fr.Count; j++)
+                {
+                    fr.Add(new MIPSCodeGenerator.Formal(args[j].Name, args[j].Type.Name));
+                }
+                ms.Add( new MIPSCodeGenerator.Method(methods[i].Name, methods[i].ReturnType.Name, fr, new MIPSCodeGenerator.NoExpr()));
+            }
+            var attrs = Attributes.ToArray();
+            List<MIPSCodeGenerator.Attr> codeAttr = new List<MIPSCodeGenerator.Attr>();
+            for (int i = 0; i < attrs.Length; i++)
+            {
+                codeAttr.Add(new MIPSCodeGenerator.Attr(attrs[i].Name, attrs[i].Type.Name, new MIPSCodeGenerator.NoExpr()));
+
+            }
+            List<MIPSCodeGenerator.Feature> f = new List<MIPSCodeGenerator.Feature>();
+            f.AddRange(ms);
+            f.AddRange(codeAttr);
+            if (Name == "Object")
+            {
+                return new MIPSCodeGenerator.Class(Name, MIPSCodeGenerator.SymbolUtils.IdTable.Lookup("_no_class"),"", f);
+            }
+            return new MIPSCodeGenerator.Class(this.Name, this.TypeInherited.Name,"",f);
+            
+        }
+
         public int LevelHierachy { get; set; }
 
         public IEnumerable<IAttribute> Attributes

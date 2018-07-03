@@ -29,7 +29,6 @@ namespace COOLLenguage.SemanticCheck
                 {
                     currentType.TypeInherited = t;
                     t.ChildTypes.Add(currentType);
-                    //currentType.LevelHierachy = t.LevelHierachy + 1;
                 }
                 else
                     errorLog.LogError(string.Format(TYPEINHERITEDDOESNEXIST, node.Line, currentType.Name, node.typeInherited));
@@ -39,7 +38,6 @@ namespace COOLLenguage.SemanticCheck
             {
                 var obj= currentType.TypeInherited = Context.GetType("Object");
                 obj.ChildTypes.Add(currentType);
-                //currentType.LevelHierachy = 1;
             }
             foreach (var item in node.Attributes)
             {

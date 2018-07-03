@@ -21,7 +21,7 @@ namespace COOLLenguage.SemanticCheck
             Context = new Context();
             defineObject();
             defineBool();
-            //defineInt();
+           // defineInt();
             //defineString();
             defineVoid();
             defineIO();

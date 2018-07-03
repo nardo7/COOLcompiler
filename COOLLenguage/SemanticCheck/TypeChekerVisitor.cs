@@ -36,6 +36,10 @@ namespace COOLLenguage.SemanticCheck
         const string TypeNotInheritsFrom = "Line{0}: The type {1} does not inherit from {2}";
         const string ExprIsNotInt = "Line{0}: The expression must be type Int";
         const string ArgIMustBe = "Line{0}: Method: {1} ; the argument {2} must be type {3}";
+        const string argsMethodInerWrong = "Line {0}: Method: {1} is overriden and the argument {2} must be type {3}";
+        const string RetTypeMethodInerWrong = "Line {0}: Method: {1} is overriden and the return type must be type {2}";
+        const string argsCountMethodInerWrong = "Line {0}: Method: {1} is overriden and the number of arguments must be {2}";
+        
 
         public void Visit(New node)
         {
@@ -83,6 +87,33 @@ namespace COOLLenguage.SemanticCheck
 
         public void Visit(Method node)
         {
+
+            #region verifying if is overrided method
+            IMethod m;
+            if ((m = currentType.GetMethodInherited(node.Name)) != null)
+            {
+                
+                if (m.ReturnType.Name != node.ReturnType)
+                {
+                    errorLog.LogError(string.Format(RetTypeMethodInerWrong, node.Line, node.Name, m.ReturnType.Name));
+                    return;
+                }
+                var argsIner = m.Arguments.ToArray();
+                if(argsIner.Length!=node.Arguments.Count)
+                {
+                    errorLog.LogError(string.Format(argsCountMethodInerWrong, node.Line, node.Name, argsIner.Length));
+
+                }
+                for (int i = 0; i < argsIner.Length; i++)
+                {
+                    if (argsIner[i].Type.Name != node.Arguments[i].Type)
+                    {
+                        errorLog.LogError(string.Format(argsMethodInerWrong, node.Line, node.Name, i.ToString(), argsIner[i].Type.Name));
+                        return;
+                    }
+                }
+            }
+            #endregion
             currentContext = Context.CreateChildContext();
             foreach (var item in node.Arguments)
             {
@@ -285,53 +316,7 @@ namespace COOLLenguage.SemanticCheck
                 }
             }
             VerifyTypesInDispatch(type, node);
-            //if (node.Name != null&&node.Name!="")
-            //{
-            //    var type = currentContext.GetTypeFor(node.Name);
-            //    if (type == null)
-            //    {
-            //        var attr = currentType.GetAttribute(node.Name);
-            //        if (attr != null)
-            //        {
-            //            type = attr.Type;
-            //            VerifyTypesInDispatch(type, node);
-            //        }
-            //        else
-            //        {
-            //            errorLog.LogError(string.Format(VariableNotExist,node.Line, node.Name));
-            //            node.computedType = Context.GetType("Void");
-            //            return;
-            //        }
-            //    }
-            //    else VerifyTypesInDispatch(type, node);
-
-            //}
-            //else if (node.ExprDispatched != null)
-            //{
-            //    Visit(node.ExprDispatched);
-            //    var type = node.ExprDispatched.computedType;
-            //    if (type == null)
-            //    {
-            //        var attr = currentType.GetAttribute(node.Name);
-            //        if (attr != null)
-            //        {
-            //            type = attr.Type;
-            //            VerifyTypesInDispatch(type, node);
-            //        }
-            //        else
-            //        {
-            //            errorLog.LogError(string.Format(VariableNotExist,node.Line, node.Name));
-            //            node.computedType = Context.GetType("Void");
-            //            return;
-            //        }
-            //    }
-            //    else VerifyTypesInDispatch(type, node);
-                    
-            //}
-            //else
-            //{
-            //    VerifyTypesInDispatch(currentType, node);
-            //}
+            
             
         }
 
@@ -364,6 +349,17 @@ namespace COOLLenguage.SemanticCheck
                 else
                     errorLog.LogError(string.Format(MethodNumArgWrong,node.Line, M.Name, argDef.Length));
                 node.computedType = M.ReturnType;
+                if (node.Name != null && node.Name != "")
+                {
+                    var typeName = currentContext.GetTypeFor(node.Name);
+                    if (typeName == null)
+                        typeName = currentType.GetAttribute(node.Name).Type;
+                    node.typeName = typeName.Name;
+                }
+                else
+                {//self
+                    node.typeName = currentType.Name;
+                }
 
             }
         }

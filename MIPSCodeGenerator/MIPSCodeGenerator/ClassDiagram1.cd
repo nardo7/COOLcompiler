@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MIPSCodeGenerator.TreeNode" Collapsed="true">
+    <Position X="33" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Expression" Collapsed="true">
+    <Position X="26.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Program" Collapsed="true">
+    <Position X="56.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Class" Collapsed="true">
+    <Position X="61.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABQAQAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Feature" Collapsed="true">
+    <Position X="64.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Method" Collapsed="true">
+    <Position X="65.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAQAAAAAAAAQAAAAAAAEAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Attr" Collapsed="true">
+    <Position X="63.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAQAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Formal" Collapsed="true">
+    <Position X="54.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Case" Collapsed="true">
+    <Position X="59" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAQAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Assign" Collapsed="true">
+    <Position X="27.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.StaticDispatch" Collapsed="true">
+    <Position X="36.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACQAAAAAABAQAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Dispatch" Collapsed="true">
+    <Position X="45.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACQAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Cond" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAEAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Loop" Collapsed="true">
+    <Position X="9.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Typcase" Collapsed="true">
+    <Position X="18.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Block" Collapsed="true">
+    <Position X="29.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Let" Collapsed="true">
+    <Position X="38.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAABAAAAAAAAAAAAAAACQAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Plus" Collapsed="true">
+    <Position X="47.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Mul" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Sub" Collapsed="true">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Divide" Collapsed="true">
+    <Position X="20.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Neg" Collapsed="true">
+    <Position X="32" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Lt" Collapsed="true">
+    <Position X="41" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Eq" Collapsed="true">
+    <Position X="50" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Leq" Collapsed="true">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Comp" Collapsed="true">
+    <Position X="14" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.IntConst" Collapsed="true">
+    <Position X="23" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.BoolConst" Collapsed="true">
+    <Position X="34.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.StringConst" Collapsed="true">
+    <Position X="43.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.New" Collapsed="true">
+    <Position X="52.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.IsVoid" Collapsed="true">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.NoExpr" Collapsed="true">
+    <Position X="16.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.Object" Collapsed="true">
+    <Position X="25.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MIPSCodeGenerator.CGUtils" Collapsed="true">
+    <Position X="68.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBAhSIABglACBAIACCCIQgigAEAAIoAEABAIACAAoBA=</HashCode>
+      <FileName>AST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//using CoolCompilator;
+using MIPSCodeGenerator;
+
 
 namespace COOLLenguage.SemanticCheck.AST1
 {
@@ -51,6 +54,26 @@ namespace COOLLenguage.SemanticCheck.AST1
             methods = Methods;
             attributes = Attributes;
             typeInherited = TypeInherited;
+        }
+
+        public override TreeNode GetAstCodeGenerator(SymbolTable t)
+        {
+            
+            List<MIPSCodeGenerator.Feature> f = new List<MIPSCodeGenerator.Feature>();
+            var parent = t.AddString(typeInherited);
+            if (typeInherited == null)
+                parent = "Object";
+            var name = t.AddString(this.Type);
+            for (int i = 0; i < Attributes.Count; i++)
+            {
+                f.Add((MIPSCodeGenerator.Attr)Attributes[i].GetAstCodeGenerator(t));
+            }
+            for (int i = 0; i < Methods.Count; i++)
+            {
+                f.Add((MIPSCodeGenerator.Method)Methods[i].GetAstCodeGenerator(t));
+            }
+
+            return new Class(name,parent,"",f,Line);
         }
 
     }
