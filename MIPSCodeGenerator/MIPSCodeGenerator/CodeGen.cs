@@ -75,7 +75,6 @@ namespace MIPSCodeGenerator
 
         public string _g_filename;
 
-        //ClassInfoTab class_info_tab_;
         Program ast_root_;
         InheritanceTree inherit_tree_;
         int tag_cnt_;
@@ -216,6 +215,7 @@ namespace MIPSCodeGenerator
 
                     case '\\':
                         byte_mode(str);
+                        str.WriteLine();
                         str.WriteLine("\t.byte\t92");
                         break;
 
@@ -233,6 +233,7 @@ namespace MIPSCodeGenerator
                         else
                         {
                             byte_mode(str);
+                            str.WriteLine();
                             str.WriteLine("\t.byte\t" + (int)ch);
                         }
                         break;
@@ -383,7 +384,7 @@ namespace MIPSCodeGenerator
             }*/
             EmitClassMethods();
 
-            str_.WriteLine("main");
+           // str_.WriteLine("main");
             str_.Close();
         }
 
@@ -1323,7 +1324,7 @@ namespace MIPSCodeGenerator
             EmitBNE(str_, ACC, ZERO, label);
 
             // 2.3 abort
-            str_.WriteLine("\tla\t" + ACC + " ");
+            str_.Write("\tla\t" + ACC + " ");
             var p = SymbolUtils.StrTable.Lookup(env.filename);
             if (p == null)
             {
@@ -1392,7 +1393,7 @@ namespace MIPSCodeGenerator
             EmitBNE(str_, ACC, ZERO, label);
 
             // 2.3 abort
-            str_.WriteLine("\tla\t" + ACC + " ");
+            str_.Write("\tla\t" + ACC + " ");
             var p = SymbolUtils.StrTable.Lookup(env.filename);
             if (p == null)
             {
@@ -1493,7 +1494,7 @@ namespace MIPSCodeGenerator
             // 1.1 abort on void
             string label = AllocateNewJumpLabel();
             EmitBNE(str_, ACC, ZERO, label);
-            str_.WriteLine("\tla\t" + ACC + " ");
+            str_.Write("\tla\t" + ACC + " ");
             var p = SymbolUtils.StrTable.Lookup(env.filename);
             if (p == null)
             {

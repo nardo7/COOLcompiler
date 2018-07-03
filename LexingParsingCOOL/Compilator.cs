@@ -27,12 +27,18 @@ namespace LexingParsingCOOL
 
                 var t = Parse(code);
                 if (t == null)
-                    return;
+            {
+                Console.ReadLine();
+                return;
+            }
+                   
                 var ast1 = t.GetAST1();
             var semanticResults = SemantickCheck((COOLLenguage.SemanticCheck.AST1.Program)ast1);
             if (semanticResults.Item1 > 0)
             {
+                
                 Console.WriteLine("Compilation terminated because of semantic errors");
+                Console.ReadLine();
                 return;
             }
 
@@ -42,8 +48,10 @@ namespace LexingParsingCOOL
             var astgenerator = (MIPSCodeGenerator.Program)ast1.GetAstCodeGenerator(table);
             var inheritance = new InheritanceTree(astgenerator);
 
-            var Cg = new CodeGen(astgenerator, inheritance, new StreamWriter("./out.s"));
+            var Cg = new CodeGen(astgenerator, inheritance, new StreamWriter(outFileName));
             Cg.Generate();
+            Console.WriteLine("Compilation terminated sucessfully");
+            Console.ReadLine();
         }
 
         public static Tuple<int,Context> SemantickCheck(COOLLenguage.SemanticCheck.AST1.Program ast)
@@ -75,6 +83,5 @@ namespace LexingParsingCOOL
             }
             return tree.Tree;
         }
-       // static void FillAstCodeGen()
     }
 }

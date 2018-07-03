@@ -199,6 +199,8 @@ namespace MIPSCodeGenerator
             Init = init;
             Body = body;
             LineNumber = lineno;
+            if (init == null)
+                this.Init = new NoExpr();
         }
     }
     public class Plus : Expression
