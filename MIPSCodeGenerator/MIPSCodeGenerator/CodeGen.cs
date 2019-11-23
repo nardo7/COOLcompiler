@@ -78,7 +78,6 @@ namespace MIPSCodeGenerator
         Program ast_root_;
         InheritanceTree inherit_tree_;
         int tag_cnt_;
-        // tag number -> class name
         List<string> tag_to_class_name_ = new List<string>();
 
         TextWriter str_;
@@ -147,6 +146,7 @@ namespace MIPSCodeGenerator
 
         }
         #endregion
+
         public string GetProtoObjRef(string name)
         {
             return name + PROTOBJ_SUFFIX;
@@ -205,7 +205,8 @@ namespace MIPSCodeGenerator
                 {
                     case '\n':
                         ascii_mode(str);
-                        str.Write("\\n");
+                        str.WriteLine();
+                        //str.Write("\\n");
                         break;
 
                     case '\t':
@@ -252,13 +253,10 @@ namespace MIPSCodeGenerator
             this.str_ = os;
 
             CollectClassInfo();
-
-
         }
 
         public void Generate()
         {
-            //var log_flag = helper.g_log_cerr;
 
             SymbolUtils.IntTable.AddString("0");
             SymbolUtils.StrTable.AddString("");
@@ -267,124 +265,74 @@ namespace MIPSCodeGenerator
             this.str_.WriteLine(" # global data");
 
 
-            /* if (Helper.g_log_cerr > 0)
-             {
-                 Console.Error.WriteLine(" # global data ");
-
-             }*/
             EmitGlobalData();
 
             str_.WriteLine();
             str_.WriteLine(" # choosing gc");
-            /*if (Helper.g_log_cerr > 0)
-            {
-                Console.Error.WriteLine(" # choosing gc");
-            }*/
+ 
             EmitGCSelect();
 
             str_.WriteLine();
             str_.WriteLine(" # constants");
 
-            /*if (Helper.g_log_cerr > 0)
-            {
-                Console.Error.WriteLine(" # constants");
-            }*/
             EmitSymbolTabConstants();
 
             str_.WriteLine();
             str_.WriteLine(" # declare class tag name");
 
-            /*if (Helper.g_log_cerr > 0)
-            {
-                Console.Error.WriteLine(" # declare class tag name");
-            }*/
             EmitClassTagDeclaration();
 
             str_.WriteLine();
             str_.WriteLine(" # class tag definition");
 
-            /*if (Helper.g_log_cerr > 0)
-            {
-                Console.Error.WriteLine(" # declare class tag definition");
-            }*/
             EmitClassTagDefinition();
 
             str_.WriteLine();
             str_.WriteLine(" # class name table");
-            /* if (Helper.g_log_cerr > 0)
-             {
-                 Console.Error.WriteLine(" # class name table");
-             }*/
+
             EmitClassNameTab();
 
             str_.WriteLine();
             str_.WriteLine(" # class dispatch table");
 
-            /*if (Helper.g_log_cerr > 0)
-            {
-                Console.Error.WriteLine(" # class dispatch table");
-            }*/
             EmitClassDispatchTab();
 
             str_.WriteLine();
             str_.WriteLine(" # class prototype");
-            /*if (Helper.g_log_cerr > 0)
-            {
-                Console.Error.WriteLine(" # class prototype");
-            }*/
+
             EmitClassPrototype();
 
             str_.WriteLine();
             str_.WriteLine(" # class direct parent tab");
-            /*if (Helper.g_log_cerr > 0)
-            {
-                Console.Error.WriteLine(" # class direct parent tab");
-            }*/
+ 
             EmitClassDirectParentTab();
 
             str_.WriteLine();
             str_.WriteLine(" # class prototype obj tab");
 
-            /*if (Helper.g_log_cerr > 0)
-            {
-                Console.Error.WriteLine(" # class prototype obj tab");
-            }*/
+
             EmitClassProtObjTab();
 
             str_.WriteLine();
             str_.WriteLine(" # class init method tab");
-            /*if (Helper.g_log_cerr > 0)
-            {
-                Console.Error.WriteLine(" # class init method tab");
-            }*/
+
             EmitClassInitTab();
 
             str_.WriteLine();
             str_.WriteLine(" # global text");
 
-            /*if (Helper.g_log_cerr > 0)
-            {
-                Console.Error.WriteLine(" # global text");
-            }*/
             EmitGlobalText();
 
             str_.WriteLine();
             str_.WriteLine(" # class init");
-            /*if (Helper.g_log_cerr > 0)
-            {
-                Console.Error.WriteLine(" # class init");
-            }*/
+
             EmitClassInitMethod();
 
             str_.WriteLine();
             str_.WriteLine(" # class methods");
-            /*if (Helper.g_log_cerr > 0)
-            {
-                Console.Error.WriteLine(" # class methods");
-            }*/
+
             EmitClassMethods();
 
-           // str_.WriteLine("main");
             str_.Close();
         }
 
@@ -432,9 +380,7 @@ namespace MIPSCodeGenerator
                     var method_sig_tab = cinfo.method_sig_tab;
                     if (!method_sig_tab.ContainsKey(method_name))
                     {
-                        /*CoolDumpError(cerr)
-                          << "method_sig_tab cannot find " << method_name << endl;
-                        exit(-1);*/
+                       //
                     }
 
                     // 2.3 create method scope
@@ -586,9 +532,7 @@ namespace MIPSCodeGenerator
                 }
                 else
                 {
-                    /*CoolDumpError(cerr)
-                      << "Unknow Feature Class" << endl;
-                    exit(-1);*/
+                    //
                 }
             }
             #endregion
@@ -659,6 +603,7 @@ namespace MIPSCodeGenerator
                 }
             }
         }
+
         public void EmitSymbolTabConstants()
         {
             EmitStrSymbolTab();
@@ -672,17 +617,13 @@ namespace MIPSCodeGenerator
 
             if (!class_info_tab_.ContainsKey(c_sym.Bool.str_))
             {
-                /*CoolDumpError(cerr)
-                  << "class_info_tab_ cannot find "
-                  << c_sym->Bool->GetString()
-                  << endl;*/
+                //
             }
 
             var cinfo = class_info_tab_[c_sym.Bool.str_];
             if (cinfo == null)
-            {/*
-                CoolDumpError(cerr)
-                  << "cinfo is nullptr" << endl;*/
+            {
+                //
             }
 
             var tag_no = cinfo.layout.class_tag;
@@ -709,17 +650,13 @@ namespace MIPSCodeGenerator
             var c_sym = new ConstantSymbol();
             if (!class_info_tab_.ContainsKey(c_sym.Str.str_))
             {
-                /*CoolDumpError(cerr)
-                  << "class_info_tab_ cannot find "
-                  << c_sym->Str->GetString()
-                  << endl;*/
+                //
             }
 
             var cinfo = class_info_tab_[c_sym.Str.str_];
             if (cinfo == null)
             {
-                /*CoolDumpError(cerr)
-                  << "cinfo is nullptr" << endl;*/
+                //
             }
 
             var tag_no = cinfo.layout.class_tag;
@@ -733,17 +670,13 @@ namespace MIPSCodeGenerator
             var c_sym = new ConstantSymbol();
             if (!class_info_tab_.ContainsKey(c_sym.Int.str_))
             {
-                /*CoolDumpError(cerr)
-                  << "class_info_tab_ cannot find "
-                  << c_sym->Int->GetString()
-                  << endl;*/
+               //
             }
 
             var cinfo = class_info_tab_[c_sym.Int.str_];
             if (cinfo == null)
             {
-                /*CoolDumpError(cerr)
-                  << "cinfo is nullptr" << endl;*/
+                //
             }
             var tag_no = cinfo.layout.class_tag;
             foreach (var ele in SymbolUtils.IntTable.table)
@@ -759,26 +692,19 @@ namespace MIPSCodeGenerator
             // Get Int Tag Number
             if (!class_info_tab_.ContainsKey(c_sym.Int.str_))
             {
-                /* CoolDumpError(cerr)
-                         << "class_info_tab_ cannot find "
-                   << c_sym->Int->GetString()
-                         << endl;*/
+                //
             }
             var cinfo = class_info_tab_[c_sym.Int.str_];
             if (cinfo == null)
             {
-                /*CoolDumpError(cerr)
-                  << "cinfo is nullptr" << endl;*/
+                //
             }
             var int_tag_no = cinfo.layout.class_tag;
 
             // Get Bool Tag Number
             if (!class_info_tab_.ContainsKey(c_sym.Bool.str_))
             {
-                /*CoolDumpError(cerr)
-                  << "class_info_tab_ cannot find "
-                  << c_sym->Bool->GetString()
-                  << endl;*/
+                //
             }
             cinfo = class_info_tab_[c_sym.Bool.str_];
             var bool_tag_no = cinfo.layout.class_tag;
@@ -786,10 +712,7 @@ namespace MIPSCodeGenerator
             // Get Str Tag Number
             if (!class_info_tab_.ContainsKey(c_sym.Str.str_))
             {
-                /*CoolDumpError(cerr)
-                  << "class_info_tab_ cannot find "
-                  << c_sym->Str->GetString()
-                  << endl;*/
+                //
             }
             cinfo = class_info_tab_[c_sym.Str.str_];
             var str_tag_no = cinfo.layout.class_tag;
@@ -828,7 +751,6 @@ namespace MIPSCodeGenerator
             str_.WriteLine(GLOBAL + "_MemMgr_TEST");
             str_.WriteLine("_MemMgr_TEST:");
             str_.WriteLine(WORD + "0");
-           // str_ << WORD << (cgen_Memmgr_Test == GC_TEST) << endl;
         }
 
         public void EmitClassNameTab()
@@ -838,8 +760,8 @@ namespace MIPSCodeGenerator
             {
                 var sym = SymbolUtils.StrTable.Lookup(name);
                 if (sym == null)
-                {/*
-                    exit(-1);*/
+                {
+
                 }
                 str_.WriteLine(WORD + sym.ref_);
             }
@@ -854,10 +776,7 @@ namespace MIPSCodeGenerator
                 foreach (var method_name in cinfo.ordered_methods)
                 {
                     var l = (cinfo.method_tab[method_name]);
-                    //if(l.Count>0)
                     str_.WriteLine(WORD + l[l.Count - 1]);
-                    //str_.WriteLine(WORD+)
-                    //str_ << WORD << (cinfo->method_tab.at(method_name)).back() << endl;
                 }
                 str_.WriteLine();
             }
@@ -871,9 +790,7 @@ namespace MIPSCodeGenerator
                 var cinfo = ele.Value;
                 if (cinfo == null)
                 {
-                    /*CoolDumpError(cerr)
-                      << "cinfo is null" << endl;
-                    exit(-1);*/
+                    //
                 }
                 str_.WriteLine(WORD + cinfo.layout.gc_tag);
                 str_.WriteLine(cinfo.label + ":");
@@ -908,7 +825,6 @@ namespace MIPSCodeGenerator
 
         public void EmitGlobalText()
         {
-
             var c_syms = new ConstantSymbol();
             str_.WriteLine(GLOBAL + HEAP_START);
             str_.WriteLine(HEAP_START + ":");
@@ -948,12 +864,6 @@ namespace MIPSCodeGenerator
 
                 env.allocated_temp_space = temp_space << 2;
                 env.next_free_temp_space = 4;
-
-                /*if (cool_helper::g_log_cerr)
-                {
-                    CoolDump(cerr) << "total temp space:"
-                                   << env->allocated_temp_space << endl;
-                }*/
 
                 // 2. add attributes' location mapping (create a scope)
                 // attr_name -> offset from this pointer
@@ -999,9 +909,7 @@ namespace MIPSCodeGenerator
                     var l = env.loc.Lookup(name);
                     if (l == null)
                     {
-                        /*CoolDumpError(cerr)
-                          << "env->loc cannot find " << name << endl;
-                        exit(-1);*/
+                        //
                     }
                     EmitSW(str_, ACC, l);
                 }
@@ -1041,7 +949,6 @@ namespace MIPSCodeGenerator
                 ret = CalculateTemporaries(dispatch.Expression);
                 foreach (var e in dispatch.ActualExpressions)
                     ret = Math.Max(ret, CalculateTemporaries(e));
-
             }
             else if (expr is Dispatch)
             {
@@ -1049,7 +956,6 @@ namespace MIPSCodeGenerator
                 ret = CalculateTemporaries(dispatch.Expression);
                 foreach (var e in dispatch.ActualExpressions)
                     ret = Math.Max(ret, CalculateTemporaries(e));
-
             }
             else if (expr is Cond)
             {
@@ -1070,14 +976,12 @@ namespace MIPSCodeGenerator
                 ret = CalculateTemporaries(typcase.Expression);
                 foreach (var c in typcase.Cases)
                     ret = Math.Max(ret, 1 + CalculateTemporaries(c.Expression));
-
             }
             else if (expr is Block)
             {
                 var block = (Block)expr;
                 foreach (var e in block.Body)
                     ret = Math.Max(ret, CalculateTemporaries(e));
-
             }
             else if (expr is Let)
             {
@@ -1135,9 +1039,7 @@ namespace MIPSCodeGenerator
             }
             else
             {
-                /*CoolDumpError(cerr)
-                  << "unkonw expression class" << endl;
-                exit(1);*/
+                //
             }
             return ret;
         }
@@ -1146,15 +1048,9 @@ namespace MIPSCodeGenerator
         {
             if (!tab.ContainsKey(name))
             {
-                /*CoolDumpError(cerr)
-                  << "Cannot find " << name << " in attributes tab" << endl;
-                exit(-1);*/
+                //
             }
 
-            /*
-            std::ostringstream oss;
-            oss << ((tab.find(name))->second + 3) * 4 << "($s0)";
-            return oss.str();*/
             return ((tab[name] + 3) * 4).ToString() + "($s0)";
         }
 
@@ -1295,9 +1191,7 @@ namespace MIPSCodeGenerator
             var l = env.loc.Lookup(assign.Name.str_);
             if (l == null)
             {
-                /*CoolDumpError(cerr)
-                  << "cannot find " << assign->name->GetString() << endl;
-                exit(-1);*/
+                //
             }
             EmitSW(str_, ACC, l);
         }
@@ -1328,9 +1222,7 @@ namespace MIPSCodeGenerator
             var p = SymbolUtils.StrTable.Lookup(env.filename);
             if (p == null)
             {
-                /*CoolDumpError(cerr)
-                  << "StrTable cannot find " << env->filename << endl;
-                exit(-1);*/
+                //
             }
             str_.WriteLine(p.ref_);
             str_.WriteLine();
@@ -1345,9 +1237,7 @@ namespace MIPSCodeGenerator
             bool valid = env.class_info_tab.TryGetValue(class_name, out it);
             if (!valid)
             {
-                /*CoolDumpError(cerr)
-                  << "env->class_info_tab cannot find " << class_name << endl;
-                exit(-1);*/
+                //
             }
 
             // 3.2 find method
@@ -1361,9 +1251,7 @@ namespace MIPSCodeGenerator
 
             if (!valid)
             {
-                /*CoolDumpError(cerr)
-                  << "cinfo->method_tab cannot find " << method_name << endl;
-                exit(-1);*/
+                //
             }
 
             method_name = it2[it2.Count - 1];
@@ -1397,9 +1285,7 @@ namespace MIPSCodeGenerator
             var p = SymbolUtils.StrTable.Lookup(env.filename);
             if (p == null)
             {
-                /*CoolDumpError(cerr)
-                  << "StrTable cannot find " << env->filename << endl;
-                exit(-1);*/
+                //
             }
             str_.WriteLine(p.ref_);
             str_.WriteLine();
@@ -1413,9 +1299,7 @@ namespace MIPSCodeGenerator
             bool valid = env.class_info_tab.TryGetValue(class_name, out it);
             if (!valid)
             {
-                /*CoolDumpError(cerr)
-                  << "env->class_info_tab cannot find " << class_name << endl;
-                exit(-1);*/
+                //
             }
 
             // 3.2 lookup method offset
@@ -1427,11 +1311,7 @@ namespace MIPSCodeGenerator
 
             if (!valid)
             {
-                /* CoolDumpError(cerr)
-                   << "methods_offset_tab cannot find " << method_name << " in"
-                   << " class " << class_name
-                   << endl;
-                 exit(-1);*/
+                //
             }
             it2 *= 4;
 
@@ -1444,6 +1324,7 @@ namespace MIPSCodeGenerator
             EmitJALR(str_, T1);
 
         }
+
         public void HandleCond(Cond cond, Env env)
         {
             HandleExpression(cond.Predicate, env);
@@ -1689,9 +1570,7 @@ namespace MIPSCodeGenerator
             }
             else
             {
-                /*CoolDumpError(cerr)
-                  << "Uknow expression class" << endl;
-                exit(-1);*/
+                //
             }
         }
 
@@ -1760,9 +1639,7 @@ namespace MIPSCodeGenerator
             string l = env.loc.Lookup(obj.Name.str_);
             if (l == null)
             {
-                /*CoolDumpError(cerr)
-                  << "cannot find " << obj->name->GetString() << endl;
-                exit(-1);*/
+                //
             }
 
             // if expr is self, move $a0, $s0
@@ -2227,9 +2104,6 @@ namespace MIPSCodeGenerator
         string AllocateNewJumpLabel()
         {
             return "label" + cnt++;
-            /*std::ostringstream oss;
-            oss << "label" << cnt++;
-            return oss.str();*/
         }
 
         public string GetNextTempSpace(Env env)
@@ -2258,9 +2132,7 @@ namespace MIPSCodeGenerator
 
                 if (!valid)
                 {
-                    /*CoolDumpError(cerr)
-                      << "class_info_tab cannot find " << class_name << endl;
-                    exit(-1);*/
+                  //
                 }
 
                 int parent_tag_no = -1;
@@ -2271,9 +2143,7 @@ namespace MIPSCodeGenerator
                     valid = class_info_tab_.TryGetValue(parent_name, out cinfo);
                     if (!valid)
                     {
-                        /*CoolDumpError(cerr)
-                          << "class_info_tab cannot find " << parent_name << endl;
-                        exit(-1);*/
+                       //
                     }
                     parent_tag_no = cinfo.layout.class_tag;
                 }
@@ -2320,19 +2190,12 @@ namespace MIPSCodeGenerator
 
         public string GetArgumentOffset(int nth, int len)
         {
-
             return 4 * (len - 1 - nth + 3) + "($fp)";
-            /*std::ostringstream oss;
-            oss << 4 * (len - 1 - nth + 3) << "($fp)";
-            return oss.str();*/
         }
 
         public string GetRegOffset(int offset, string reg)
         {
             return offset + "(" + reg + ")";
-            /*std::ostringstream oss;
-            oss << offset << "(" << reg << ")";
-            return oss.str();*/
         }
 
     }

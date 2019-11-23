@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="COOLLenguage.SemanticCheck.AST1.ClassDef" Collapsed="true">
+  <Class Name="COOLLenguage.SemanticCheck.AST1.ClassDef">
     <Position X="4" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAQAAQAAAAEg=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAQAAAAEAAAAQAAQAAAAEg=</HashCode>
       <FileName>SemanticCheck\AST1\Class.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\Class.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -19,7 +19,7 @@
   <Class Name="COOLLenguage.SemanticCheck.AST1.Node" Collapsed="true">
     <Position X="12" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
       <FileName>SemanticCheck\AST1\Node.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\Node.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -27,7 +27,7 @@
   <Class Name="COOLLenguage.SemanticCheck.AST1.Program" Collapsed="true">
     <Position X="5.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SemanticCheck\AST1\Program.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\Program.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -35,7 +35,7 @@
   <Class Name="COOLLenguage.SemanticCheck.AST1.Attribute" Collapsed="true">
     <Position X="6.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAgAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAYAAAAgAAAA=</HashCode>
       <FileName>SemanticCheck\AST1\Attribute.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\Attribute.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -51,7 +51,7 @@
   <Class Name="COOLLenguage.SemanticCheck.AST1.Expression" Collapsed="true">
     <Position X="15.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
       <FileName>SemanticCheck\AST1\Expression.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\Expression.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -59,7 +59,7 @@
   <Class Name="COOLLenguage.SemanticCheck.AST1.ArithmeticOperation" Collapsed="true">
     <Position X="12.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAIAAAACAA=</HashCode>
       <FileName>SemanticCheck\AST1\ArithmeticOperation.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\ArithmeticOperation.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -67,7 +67,7 @@
   <Class Name="COOLLenguage.SemanticCheck.AST1.Assignment" Collapsed="true">
     <Position X="11.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAACAAAAAgAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAQAAAAEAAAACAAAAAgAAAA=</HashCode>
       <FileName>SemanticCheck\AST1\Assignment.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\Assignment.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -83,7 +83,7 @@
   <Class Name="COOLLenguage.SemanticCheck.AST1.Block" Collapsed="true">
     <Position X="9.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAEAAAABAAA=</HashCode>
       <FileName>SemanticCheck\AST1\Block.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\Block.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -91,7 +91,7 @@
   <Class Name="COOLLenguage.SemanticCheck.AST1.Case" Collapsed="true">
     <Position X="25.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAA=</HashCode>
+      <HashCode>AgAAAAIAAAAABAAAAAAAAAAAAAAAAAAAAAEAAAgBAAA=</HashCode>
       <FileName>SemanticCheck\AST1\Case.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\Case.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -99,7 +99,7 @@
   <Class Name="COOLLenguage.SemanticCheck.AST1.Comparison" Collapsed="true">
     <Position X="14.25" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAIAAAACAA=</HashCode>
       <FileName>SemanticCheck\AST1\Comparison.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\Comparison.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -107,7 +107,7 @@
   <Class Name="COOLLenguage.SemanticCheck.AST1.Conditional" Collapsed="true">
     <Position X="18.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAAAACAAAAAAAABAAAAAQgAAAAIAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAIAAAACABAAAAAABAAAAAQgAAAAIAAAAAAAAAAA=</HashCode>
       <FileName>SemanticCheck\AST1\Conditional.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\Conditional.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -115,7 +115,7 @@
   <Class Name="COOLLenguage.SemanticCheck.AST1.Constant" Collapsed="true">
     <Position X="15" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABACAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAABACAAAAAAAAAAAAA=</HashCode>
       <FileName>SemanticCheck\AST1\Constant.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\Constant.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -123,7 +123,7 @@
   <Class Name="COOLLenguage.SemanticCheck.AST1.Initializer" Collapsed="true">
     <Position X="9.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAFAAAACQAAAAgAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAQAAAAFAAAACQAAAAgAAAA=</HashCode>
       <FileName>SemanticCheck\AST1\Initializer.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\Initializer.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -131,7 +131,7 @@
   <Class Name="COOLLenguage.SemanticCheck.AST1.IsVoid" Collapsed="true">
     <Position X="17.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SemanticCheck\AST1\IsVoid.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\IsVoid.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -139,7 +139,7 @@
   <Class Name="COOLLenguage.SemanticCheck.AST1.Let" Collapsed="true">
     <Position X="22" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAEAAAABAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAABAAAAAQAAAAAAAAAEAAAABAA=</HashCode>
       <FileName>SemanticCheck\AST1\Let.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\Let.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -155,7 +155,7 @@
   <Class Name="COOLLenguage.SemanticCheck.AST1.New" Collapsed="true">
     <Position X="20.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>SemanticCheck\AST1\New.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\New.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -163,7 +163,7 @@
   <Class Name="COOLLenguage.SemanticCheck.AST1.Not" Collapsed="true">
     <Position X="16" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SemanticCheck\AST1\Not.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\Not.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -171,7 +171,7 @@
   <Class Name="COOLLenguage.SemanticCheck.AST1.Param" Collapsed="true">
     <Position X="11.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAQAAAAEAAAAAQAAAAAAAAA=</HashCode>
       <FileName>SemanticCheck\AST1\Param.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\Param.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -187,7 +187,7 @@
   <Class Name="COOLLenguage.SemanticCheck.AST1.While" Collapsed="true">
     <Position X="22.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SemanticCheck\AST1\While.cs</FileName>
       <NewMemberFileName>SemanticCheck\AST\While.cs</NewMemberFileName>
     </TypeIdentifier>

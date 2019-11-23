@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Antlr.Runtime;
 using Antlr.Runtime.Tree;
 using COOLLenguage.SemanticCheck;
-using COOLLenguage.SemanticCheck.AST1;
 using COOLLenguage.Utils;
 using System.IO;
-//using CoolCompilator;
 using MIPSCodeGenerator;
 
 namespace LexingParsingCOOL
@@ -18,8 +12,8 @@ namespace LexingParsingCOOL
     {
         public static void Compile(string code,string outFileName)
         {
-            System.IO.DirectoryInfo d = new DirectoryInfo("E:\\Universidad\\4to\\compilacion 2\\testing");
-            var files=d.GetFiles("*.cl");
+            //System.IO.DirectoryInfo d = new DirectoryInfo("E:\\Universidad\\4to\\compilacion 2\\testing");
+            //var files=d.GetFiles("*.cl");
             //foreach (var file in files)
             //{
 

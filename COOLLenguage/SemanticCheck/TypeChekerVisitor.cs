@@ -159,7 +159,6 @@ namespace COOLLenguage.SemanticCheck
             }
         }
 
-        //duda si se crea un contexto anidado
         public void Visit(Block node)
         {
             foreach (var item in node.Exprs)
@@ -268,7 +267,6 @@ namespace COOLLenguage.SemanticCheck
             node.computedType = Context.GetType("Object");
         }
         
-        //falta el arroba
         public void Visit(Dispatch node)
         {
             IType type = null;
@@ -357,7 +355,8 @@ namespace COOLLenguage.SemanticCheck
                     node.typeName = typeName.Name;
                 }
                 else
-                {//self
+                {
+                    //self
                     node.typeName = currentType.Name;
                 }
 

@@ -25,7 +25,7 @@ namespace MIPSCodeGenerator
             if (class_name == c_syms.Bool.str_ || class_name == c_syms.Int.str_ || class_name == c_syms.Str.str_)
             {
                 tag = tag.ToLower();
-                //std::transform(tag.begin(), tag.end(), tag.begin(), ::tolower);
+
             }
             return tag;
         }

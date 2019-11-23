@@ -155,7 +155,6 @@ namespace MIPSCodeGenerator
 
             // add user defined classes into tree and check whether there is a
             // redefinition
-            //var semant_error = SemantError::GetInstance(cerr);
             foreach (var p in user_classes_)
             {
                 var class_name = p.Name.str_;
@@ -163,15 +162,13 @@ namespace MIPSCodeGenerator
                 {
                     if (basic_classes_str_set_.Contains(class_name) || class_name == "SELF_TYPE")
                     {
-                        /*semant_error->Dump(p->filename, p)
-                          << "Redefinition of basic class " << class_name << "." << endl;*/
+                        //
                     }
                     else
                     {
-                        /*semant_error->Dump(p->filename, p)
-                          << "Class " << class_name << " was previously defined." << endl;*/
+                        //
                     }
-                    //semant_error->Abort();
+                    
                 }
 
                 nodes_tab_.Add(class_name, new Node(class_name, p));
@@ -181,12 +178,7 @@ namespace MIPSCodeGenerator
                 SymbolUtils.StrTable.AddString(class_name);
             }
 
-            // Check whether Main class is defined
-            /*if (!user_classes_str_set_.count("Main"))
-            {
-                semant_error->Dump() << "Class Main is not defined." << endl;
-                semant_error->Abort();
-            }*/
+           
 
             // Check whether there is a class inherits from basic classes or
             // undefined classes
@@ -198,35 +190,24 @@ namespace MIPSCodeGenerator
                 // inherits from basic classes except Object or IO
                 if ((parent_name != "Object" && parent_name != "IO" && basic_classes_str_set_.Contains(parent_name)) || parent_name == "SELF_TYPE")
                 {
-                    /*semant_error->Dump(p->filename, p)
-                      << "Class " << curr_name
-                      << " cannot inherit class " << parent_name << "." << endl;
-                    semant_error->Abort();*/
+                    //
                 }
 
                 // inherits from undefined classes
                 if (!user_classes_str_set_.Contains(parent_name) && !basic_classes_str_set_.Contains(parent_name))
                 {
-                    /*semant_error->Dump(p->filename, p)
-                      << "Class " << curr_name
-                      << " inherits from an undefined class "
-                      << parent_name << "." << endl;
-                    semant_error->Abort();*/
+                    //
                 }
 
                 // create link
                 if (!nodes_tab_.ContainsKey(parent_name))
                 {
-                    /*cerr << "Create Link in user_classes" << endl;
-                    cerr << "nodes_tab_ cannot find parent_name " << parent_name << endl;
-                    exit(1);*/
+                    //
                 }
 
                 if (!nodes_tab_.ContainsKey(curr_name))
                 {
-                    /*cerr << "Create Link in user_classes" << endl;
-                    cerr << "nodes_tab_ cannot find curr_name" << curr_name << endl;
-                    exit(1);*/
+                    //
                 }
 
                 Node parent_node = nodes_tab_[parent_name];
@@ -386,7 +367,7 @@ namespace MIPSCodeGenerator
             {
                 return;
             }
-            //auto semant_error = SemantError::GetInstance(cerr);
+  
             Class curr_class = node.ast_node_;
             foreach (var feature in curr_class.Features)
             {
@@ -403,44 +384,31 @@ namespace MIPSCodeGenerator
                     {
                         if (formal.Name.str_ == "self")
                         {
-                            /*semant_error->Dump(curr_class->filename, curr_class)
-                              << "\'self\' cannot be the name of a formal parameter." << endl;*/
+                            
                             continue;
                         }
                         if (formal.TypeDecl.str_ == "SELF_TYPE")
                         {
-                            /*semant_error->Dump(curr_class->filename, curr_class)
-                              << "Formal parameter " << formal->name->GetString()
-                              << " cannot have type SELF_TYPE." << endl;*/
+                            //
                         }
                         m_sig.Add(new Tuple<string, string>(formal.Name.str_, formal.TypeDecl.str_));
                         sig.Add(formal.TypeDecl.str_);
 
                         if (formal.TypeDecl.str_ != "SELF_TYPE" && !basic_classes_str_set_.Contains(formal.TypeDecl.str_) && !user_classes_str_set_.Contains(formal.TypeDecl.str_))
                         {
-                            /*cerr << curr_class->filename->GetString()
-                            << ":" << curr_class->GetLine() << ": "
-                            << "Undefined parameter type " << formal->type_decl->GetString()
-                            << " in method " << method_name << "."
-                            << endl;*/
+                            //
                         }
                     }
                     if (method.ReturnType.str_ != "SELF_TYPE" && !basic_classes_str_set_.Contains(method.ReturnType.str_) && !user_classes_str_set_.Contains(method.ReturnType.str_))
                     {
-                        /*cerr << curr_class->filename->GetString()
-                        << ":" << curr_class->GetLine() << ": "
-                        << "Undefined return type " << method->return_type->GetString()
-                        << " in method " << method_name << "."
-                        << endl;*/
+                       //
                     }
                     m_sig.Add(new Tuple<string, string>(method_name, method.ReturnType.str_));
                     // add method return type info
                     sig.Add(method.ReturnType.str_);
                     if (node.method_type_tab.ContainsKey(method_name))
                     {
-                        /*semant_error->Dump(curr_class->filename, curr_class)
-                            << "Method " << method_name << " is multiple defined." << endl;*/
-                        // only store the first defined method
+                        
                         continue;
                     }
 
@@ -457,15 +425,12 @@ namespace MIPSCodeGenerator
                     var attr_name = attr.Name.str_;
                     if (attr_name == "self")
                     {
-                        /*semant_error->Dump(curr_class->filename, curr_class)
-                            << "\'self\' cannot be the name of an attribute." << endl;*/
+                       
                         continue;
                     }
                     if (node.attr_type_tab.ContainsKey(attr_name))
                     {
-                        /*semant_error->Dump(curr_class->filename, curr_class)
-                          << "Attribute " << attr_name << " is multiple defined." << endl;*/
-                        // only store the first defined attribute
+                        
                         continue;
                     }
 
@@ -481,8 +446,7 @@ namespace MIPSCodeGenerator
                 }
                 else
                 {
-                    /*cerr << "CreateMethodAndAttrTypeInfoTab: Unkonw Subclass." << endl;
-                    exit(1);*/
+                    //
                 }
             }
 
@@ -498,9 +462,7 @@ namespace MIPSCodeGenerator
 
             List<string> ancestors = new List<string>(st);
             ancestor_tab_.Add(node.name, ancestors);
-            //var temp = new List<string>(ancestor_tab_[node.name]);
-            //ancestor_tab_[node.name] = new List<string>(ancestors);
-            //ancestors = new List<string>(temp);
+
             st.Add(node.name);
             foreach (var ch in node.children)
             {
@@ -519,15 +481,13 @@ namespace MIPSCodeGenerator
             }
             if (!ancestor_tab_.ContainsKey(node.name))
             {
-                /*CoolDumpError(cerr)
-                  << "ancestor_tab_ cannot find " << node->name << endl;
-                exit(1);*/
+                
             }
             // get current class's ancestors
             var ancestors = ancestor_tab_[node.name];
             var attr_type_tab = node.attr_type_tab;
             HashSet<string> redefined_attrs = new HashSet<string>();
-            //var semant_error = SemantError::GetInstance(cerr);
+
             // for each attr defined in current class
             foreach (var it in attr_type_tab)
             {
@@ -537,9 +497,7 @@ namespace MIPSCodeGenerator
                 {
                     if (!nodes_tab_.ContainsKey(ancestor_name))
                     {
-                        /*CoolDumpError(cerr) << "nodes_tab_ cannot find "
-                                            << ancestor_name << endl;
-                        exit(1);*/
+                        //
                     }
                     Node an = nodes_tab_[ancestor_name];
 
@@ -549,10 +507,7 @@ namespace MIPSCodeGenerator
                     }
 
                     redefined_attrs.Add(attr_name);
-                    /* semant_error->Dump(node->ast_node_->filename, node->ast_node_)
-                       << "Attribute " << attr_name
-                       << " is an attribute of an inherited class."
-                       << endl;*/
+                    //
                     break;
                 }
             }
@@ -598,9 +553,7 @@ namespace MIPSCodeGenerator
                 {
                     if (!nodes_tab_.ContainsKey(name))
                     {
-                        /*CoolDumpError(cerr)
-                          << "nodes_tab_ cannot find ancestor " << name << endl;
-                        exit(1);*/
+                       //
                     }
                     var an = nodes_tab_[name];
                     if (!an.method_sig_tab.ContainsKey(method_name))
@@ -623,9 +576,7 @@ namespace MIPSCodeGenerator
             bool ret = false;
             if (!ancestor_tab_.ContainsKey(type1))
             {
-                /*CoolDumpError(cerr)
-                  << "ancestor_tab_ cannot find type " << type1 << endl;
-                exit(1);*/
+                //
             }
             var ancestors = ancestor_tab_[type1];
             foreach (var name in ancestors)
